@@ -9,6 +9,9 @@
     "installed_plugins": {
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "com.metis.diese"
+        },
+        "cordova-plugin-keyboard": {
+            "PACKAGE_NAME": "com.metis.diese"
         }
     },
     "dependent_plugins": {}

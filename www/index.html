@@ -6,35 +6,74 @@
         <meta name="msapplication-tap-highlight" content="no">
         <meta charset="utf-8">
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+
+        <link rel="stylesheet" type="text/css" href="onsen/css/onsenui.css">
+        <link rel="stylesheet" type="text/css" href="onsen/css/onsen-css-components.css">
         <link rel="stylesheet" type="text/css" href="css/index.css">
-        <title>dièse</title>
-    </head>
-    <body>
-        <div class="app">
-            <div id="page-1"  class="active card">
-                <!--<div id="app-intro-connexion">Connexion</div>-->
-                <div id="app-intro-title"></div>
-                <p id="app-intro-desc">Trouve un pote de concert</p>
-                <p id="app-intro-slide">Glisse pour continuer ><span class="shake ui-icon-arrow-r ui-btn-icon-right ui-icon"></span</p>
-            </div>
-            <div id="page-2" class="card">
-                <form id="formulaire-inscription" method="post">
-                    <h1>Inscription</h1>
-                    <p id="inscription">
-                        <input type="text" name="pseudo" id="pseudo" placeholder="Pseudo" /><br/>
-                        <input type="text" name="email" id="email" placeholder="Email" /><br/>
-                        <input type="password" name="pass" id="pass" placeholder="Mot de passe" /><br/>
-                        <input type="text" name="firstname" id="firstname" placeholder="Prénom" /><br/>
-                        <input type="submit" value="Envoyer" />
-                    </p>
-                </form>
-            </div>
-        </div>
+
         <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/angular.min.js"></script>
+        <script type="text/javascript" src="onsen/js/onsenui.min.js"></script>
+        <script type="text/javascript" src="onsen/js/angular-onsenui.min.js"></script>
         <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
         <script type="text/javascript" src="js/hammer.js"></script>
         <script type="text/javascript" src="js/jquery.hammer.js"></script>
-        <script type="text/javascript" src="js/jquery.viewport.js"></script>
+        <script type="text/javascript" src="js/sha1.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
+
+        <script>
+            ons.bootstrap();
+        </script>
+
+        <title>dièse</title>
+    </head>
+    <body>
+    <ons-page>
+        <div class="app">
+            <ons-carousel swipeable overscrollable auto-scroll fullscreen var="carousel">
+                <ons-carousel-item>
+                    <div id="app-intro-title"></div>
+                    <p class="page-content" id="app-intro-desc">Trouve un pote de concert !</p>
+                    <p class="page-content" id="app-intro-slide">Glisse pour continuer ><span class="shake ui-icon-arrow-r ui-btn-icon-right ui-icon"></span></p>
+                </ons-carousel-item>
+                <ons-carousel-item>
+                    <h1 class="page-title">Pré-inscription</h1>
+                    <form id="formulaire-inscription" method="post">
+                        <p class="page-content"  id="inscription">
+                            <label for="pseudo">Ton pseudo :<span class="infobox" id="info-pseudo"></span></label>
+                            <input class="required" type="text" name="pseudo" id="pseudo" placeholder="Pseudo" /><br/>
+                            <label for="pseudo">Ton email :<span class="infobox" id="info-email"></span></label>
+                            <input class="required" type="text" name="email" id="email" placeholder="Email" /><br/>
+                            <label for="pseudo">Ton mot de passe :<span class="infobox" id="info-pass"></span></label>
+                            <input class="required" type="password" name="pass" id="pass" placeholder="Mot de passe" /><br/>
+                            <label for="pseudo">Ton prénom <em>(optionnel)</em> :<span class="infobox" id="info-firstname"></span></label>
+                            <input type="text" name="firstname" id="firstname" placeholder="Prénom" /><br/>
+                            <input class="button button--large" type="submit" id="form-submit" value="Envoyer" />
+                        </p>
+                    </form>
+                </ons-carousel-item>
+                <ons-carousel-cover>
+                    <div id="sign-in"><b>Connexion</b></div>
+                </ons-carousel-cover>
+            </ons-carousel>
+            <div id="ty-and-bye" class="hidden">
+                <h1>Merci de ton inscription !</h1>
+                <p class="page-content">Tu recevras un mail une fois l'application dispo ;)</p>
+                <button id="back-home" class="button button--large">Retour inscription</button>
+            </div>
+        </div>
+    </ons-page>
+
+    <ons-dialog id="creating-account">
+        <div id="creating-account-content">
+            <div id="creating-account-progress">
+                <svg class="progress-circular">
+                    <circle class="progress-circular__primary" cx="50%" cy="50%" r="40%" fill="none" stroke-width="10%" stroke-miterlimit="10"/>
+                </svg>
+            </div>
+            <p>Creation du compte...</p>
+        </div>
+    </ons-dialog>
+
     </body>
 </html>

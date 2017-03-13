@@ -21,7 +21,6 @@ body {
     width:100%;
 
     color: #fff;
-    overflow:hidden;
 }
 
 /* Portrait layout (default) */
@@ -44,43 +43,33 @@ body {
     }
 }
 
-/* jquery ui fixes */
-
-.ui-icon:after {
-    background-color:transparent!important;
-}
-
 /* CSS START */
-
-/* pages */
-.card {
-    position: absolute;
-    display:none;
+.hidden {
+    display: none;
 }
+/* page */
 
-.card.active {
-    display: block;
+#sign-in {
+    text-align: right;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 95%;
+    color: white;
 }
 
 /* Accueil */
 
-h1, p, div {
+p, div {
     color: #fff;
 }
 
-h1, p {
-    margin-top: 0;
-    text-transform: none;
-}
-
-h1 {
-    font-size: 8vh;
-}
-
-p {
+.page-content {
     width: 70vw;
     left: 15vw;
     position: absolute;
+    margin-top: 0;
+    text-transform: none;
 }
 
 #app-intro-connexion {
@@ -120,12 +109,71 @@ p {
 }
 
 /* Inscription */
+.page-title {
+    font-size: 6vh;
+    position:absolute;
+    top: 5vh;
+    text-align: center;
+    width: 100%;
+}
+
 #inscription {
-    top:35vh;
+    top:20vh;
+}
+
+#inscription label {
+    font-size: 2vh;
 }
 
 #inscription input {
     width: 100%;
     padding: 10px 0;
-    margin-bottom:10px;
+    margin-bottom:3vh;
+}
+
+.infobox {
+    float: right;
+    font-weight: bold;
+    color: red;
+}
+
+#form-submit {
+    margin-top: 5vh;
+}
+
+#creating-account-content {
+    padding: 20px;
+}
+
+#creating-account-content p {
+    color: black;
+    text-transform: none;
+}
+
+#creating-account-progress {
+    float:left;
+}
+
+/* Page merci */
+#ty-and-bye * {
+    position:absolute;
+}
+
+#ty-and-bye h1 {
+    font-size: 5vh;
+    text-align: center;
+    width: 100%;
+    top: 25vh;
+}
+
+#ty-and-bye p {
+    text-align: center;
+    top: 45vh;
+}
+
+#ty-and-bye button {
+    text-align: center;
+    top: 60vh;
+    width: 60vw;
+    left: 20vw;
 }
