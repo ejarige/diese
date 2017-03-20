@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">-->
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta charset="utf-8">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+
+        <link rel="stylesheet" type="text/css" href="css/ionicons.css">
+        <link rel="stylesheet" type="text/css" href="onsen/css/onsenui.css">
+        <link rel="stylesheet" type="text/css" href="onsen/css/onsen-css-components.css">
+        <link rel="stylesheet" type="text/css" href="css/overall.css">
+        <link rel="stylesheet" type="text/css" href="css/home.css">
+
+
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/angular.min.js"></script>
+        <script type="text/javascript" src="onsen/js/onsenui.min.js"></script>
+        <script type="text/javascript" src="onsen/js/angular-onsenui.min.js"></script>
+        <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+        <script type="text/javascript" src="js/hammer.js"></script>
+        <script type="text/javascript" src="js/jquery.hammer.js"></script>
+        <script type="text/javascript" src="js/sha1.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/home.js"></script>
+
+        <script>
+            ons.bootstrap();
+        </script>
+
+        <title>dièse</title>
+    </head>
+    <body>
+        <div class="concert">
+            <ons-carousel swipeable overscrollable auto-scroll auto-refresh fullscreen var="carousel">
+                <ons-carousel-cover>
+                    <div id="fav-zone">
+                        <button id="favorite" class="above fab fab--mini">
+                            <i class="zmdi zmdi-plus">*</i>
+                        </button>
+                    </div>
+                    <div id="search-zone" class="above">
+                        <form id="search-form">
+                            <input value=">" type="submit" id="go-search">
+                            <div id="search-field">
+                                <input id="search-input" type="search" placeholder="Rechercher un concert">
+                            </div>
+                        </form>
+                    </div>
+                </ons-carousel-cover>
+            </ons-carousel>
+        </div>
+        <div class="tab-bar">
+            <label class="tab-bar__item">
+            <input type="radio" name="tab-bar-a" checked="checked">
+            <button class="tab-bar__button">
+                <i class="tab-bar__icon ion-ios-volume-high"></i>
+                <div class="tab-bar__label">Concerts</div>
+            </button>
+            </label>
+
+            <label class="tab-bar__item">
+                <input type="radio" name="tab-bar-a">
+                <button class="tab-bar__button">
+                    <i class="tab-bar__ion-headphone"></i>
+                    <div class="tab-bar__label">Artistes</div>
+                </button>
+                </label>
+
+                <label class="tab-bar__item">
+                <input type="radio" name="tab-bar-a">
+                 <button class="tab-bar__button">
+                    <i class="tab-bar__icon ion-chatboxes"></i>
+                    <div class="tab-bar__label">Messagerie</div>
+                </button>
+                </label>
+
+                <label class="tab-bar__item">
+                <input type="radio" name="tab-bar-a" checked="checked">
+                <button class="tab-bar__button">
+                    <i class="tab-bar__icon ion-person"></i>
+                    <div class="tab-bar__label">Profil</div>
+                </button>
+                </label>
+
+                <label class="tab-bar__item">
+                <input type="radio" name="tab-bar-a" checked="checked">
+                <button class="tab-bar__button">
+                    <i class="tab-bar__icon ion-person-stalker"></i>
+                    <div class="tab-bar__label">Ami</div>
+                </button>
+                </label>
+            </div>
+        </div>
+    </body>
+</html>

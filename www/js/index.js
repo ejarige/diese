@@ -1,4 +1,5 @@
 var DIESE_SERVICE = 'http://diese.pe.hu/services/';
+
 $(function() {
     // MERCI ET TARPLU
     $('#back-home').on('click', function(){

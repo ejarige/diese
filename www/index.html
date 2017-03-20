@@ -9,6 +9,7 @@
 
         <link rel="stylesheet" type="text/css" href="onsen/css/onsenui.css">
         <link rel="stylesheet" type="text/css" href="onsen/css/onsen-css-components.css">
+        <link rel="stylesheet" type="text/css" href="css/overall.css">
         <link rel="stylesheet" type="text/css" href="css/index.css">
 
         <script type="text/javascript" src="cordova.js"></script>
@@ -48,6 +49,10 @@
                             <input class="required" type="password" name="pass" id="pass" placeholder="Mot de passe" /><br/>
                             <label for="pseudo">Ton prénom <em>(optionnel)</em> :<span class="infobox" id="info-firstname"></span></label>
                             <input type="text" name="firstname" id="firstname" placeholder="Prénom" /><br/>
+                            Indiquer votre sexe :<br />
+                            <input type="radio" name="sexe" value="femme" id="femme" /> <label for="femme">Femme</label>
+                            <input type="radio" name="sexe" value="autre" id="autre" /> <label for="autre">Autre</label>
+                            <input type="radio" name="sexe" value="homme" id="homme" /> <label for="homme">Homme</label>
                             <input class="button button--large" type="submit" id="form-submit" value="Envoyer" />
                         </p>
                     </form>
@@ -55,6 +60,17 @@
                 <ons-carousel-cover>
                     <div id="sign-in"><b>Connexion</b></div>
                 </ons-carousel-cover>
+                <ons-carousel-item>
+                <h1 class="page-connexion">Connexion</h1>
+                <form id="formulaire-connexion" method="post">
+                <p class="page-content" id ="connexion">
+                    <label for="pseudo">Ton pseudo :<span class="infobox" id="info-pseudo"></span></label>
+                    <input class="required" type="text" name="pseudo" id="pseudo" placeholder="Pseudo" /><br/>
+                    <label for="pseudo">Ton mot de passe :<span class="infobox" id="info-pass"></span></label>
+                    <input class="required" type="password" name="pass" id="pass" placeholder="Mot de passe" /><br/>
+                    <input class="button button--large" type="submit" id="form-submit" value="Envoyer" />
+                        </p>
+                </ons-carousel-item>
             </ons-carousel>
             <div id="ty-and-bye" class="hidden">
                 <h1>Merci de ton inscription !</h1>
