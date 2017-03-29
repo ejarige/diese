@@ -1,6 +1,7 @@
 var DIESE_SERVICE = 'http://diese.pe.hu/services/';
 
 $(function() {
+    addMenuListener();
     // MERCI ET TARPLU
     $('#back-home').on('click', function(){
         $('#ty-and-bye').addClass('hidden');
@@ -118,5 +119,11 @@ function askDiese(url, values, onSuccess, onError){
       data      : values,
       success   : onSuccess,
       error     : onError
+    });
+}
+
+function addMenuListener(){
+    $(".nav-bar__item").click(function(){
+        window.location.href=($(this).data("to"));
     });
 }

@@ -32,12 +32,12 @@
         <title>dièse</title>
     </head>
     <body>
-        <div class="concert">
+        <div class="concert app">
             <ons-carousel swipeable overscrollable auto-scroll auto-refresh fullscreen var="carousel">
                 <ons-carousel-cover>
-                    <div id="fav-zone">
-                        <button id="favorite" class="above fab fab--mini">
-                            <i class="zmdi zmdi-plus">*</i>
+                    <div id="fav-zone" class="above">
+                        <button id="fav" class="add_to_fav">
+                           <!--<img src="img/icons/BLANC/PNG/plus-button.png" alt="ajouter_aux_favoris">-->
                         </button>
                     </div>
                     <div id="search-zone" class="above">
@@ -51,44 +51,44 @@
                 </ons-carousel-cover>
             </ons-carousel>
         </div>
-        <div class="tab-bar">
-            <label class="tab-bar__item">
-            <input type="radio" name="tab-bar-a" checked="checked">
-            <button class="tab-bar__button">
-                <i class="tab-bar__icon ion-ios-volume-high"></i>
-                <div class="tab-bar__label">Concerts</div>
+        <div class="nav-bar">
+            <label class="nav-bar__item">
+            <input type="radio" name="nav-bar-a" checked="checked">
+            <button class="nav-bar__button">
+                <i class="nav-bar__icon_concert"><img src="img/icons/GRIS/PNG/005-electric-guitar.png" alt="icones_concert"></i>
+                <div class="nav-bar__label_concert">Concerts</div>
             </button>
             </label>
 
-            <label class="tab-bar__item">
-                <input type="radio" name="tab-bar-a">
-                <button class="tab-bar__button">
-                    <i class="tab-bar__ion-headphone"></i>
-                    <div class="tab-bar__label">Artistes</div>
+            <label class="nav-bar__item">
+                <input type="radio" name="nav-bar-a">
+                <button class="nav-bar__button">
+                    <i class="nav-bar__icon_artiste"><img src="img/icons/GRIS/PNG/004-musical-note.png" alt="icones_artiste"></i>
+                    <div class="nav-bar__label_artiste">Artistes</div>
                 </button>
                 </label>
 
-                <label class="tab-bar__item">
-                <input type="radio" name="tab-bar-a">
-                 <button class="tab-bar__button">
-                    <i class="tab-bar__icon ion-chatboxes"></i>
-                    <div class="tab-bar__label">Messagerie</div>
+                <label class="nav-bar__item">
+                <input type="radio" name="nav-bar-a">
+                 <button class="nav-bar__button">
+                    <i class="nav-bar__icon_messagerie"><img src="img/icons/GRIS/PNG/002-chat.png" alt="icones_messagerie"></i>
+                    <div class="nav-bar__label_messagerie">Messagerie</div>
                 </button>
                 </label>
 
-                <label class="tab-bar__item">
-                <input type="radio" name="tab-bar-a" checked="checked">
-                <button class="tab-bar__button">
-                    <i class="tab-bar__icon ion-person"></i>
-                    <div class="tab-bar__label">Profil</div>
+                <label class="nav-bar__item">
+                <input type="radio" name="nav-bar-a" checked="checked">
+                <button class="nav-bar__button">
+                    <i class="nav-bar__icon_profil"><img src="img/icons/GRIS/PNG/003-avatar.png" alt="icones_profil"></i>
+                    <div class="nav-bar__label_profil">Profil</div>
                 </button>
                 </label>
 
-                <label class="tab-bar__item">
-                <input type="radio" name="tab-bar-a" checked="checked">
-                <button class="tab-bar__button">
-                    <i class="tab-bar__icon ion-person-stalker"></i>
-                    <div class="tab-bar__label">Ami</div>
+                <label class="nav-bar__item">
+                <input type="radio" name="nav-bar-a" checked="checked">
+                <button class="nav-bar__button">
+                    <i class="nav-bar__icon_ami"><img src="img/icons/GRIS/PNG/001-friend-request.png" alt="icones_ami"></i>
+                    <div class="nav-bar__label_ami">Ami</div>
                 </button>
                 </label>
             </div>
