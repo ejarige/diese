@@ -15,7 +15,7 @@
 	margin-top:10px;
 	overflow-x:scroll;
     white-space: nowrap;
-    overflow: hidden;
+    overflow-y: scroll;
 }
 
 .cercle{
