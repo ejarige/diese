@@ -20,7 +20,6 @@ function searchConcerts(args){
     if(!args) args  = {};
 
     var onLoad = function(e){
-        console.log(e);
         var data = $.parseJSON(e);
         console.log(data, (data.length != 0));
         if(data && (data.length != 0)){
