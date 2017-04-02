@@ -76,7 +76,7 @@
   font-size: 17px;
   display: table;
   table-layout: fixed;
-  position: absolute;
+  position: fixed;
   bottom: 0px;
   left: 0px;
   right: 0px;

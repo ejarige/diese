@@ -28,6 +28,7 @@ body {
     
 	height: 100vh;
     width: 100vw;
+    overflow:hidden;
 
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#34016a+0,31689e+50,24cdd0+100&0.55+0,0.65+100 */
 background: -moz-linear-gradient(top, rgba(52,1,106,0.55) 0%, rgba(49,104,158,0.6) 50%, rgba(36,205,208,0.65) 100%); /* FF3.6-15 */
