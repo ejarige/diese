@@ -45,6 +45,21 @@
     float: right;
 }
 
+#concerts-loading {
+    position: fixed;
+    top: 10vh;
+    left: 5px;
+}
+
+#concerts-loading > svg {
+    height: 30px;
+    width: 30px;
+}
+
+#concerts-loading > svg > circle {
+    stroke: #fff;
+}
+
 #concerts-list {
     position: absolute;
     top: 10vh;

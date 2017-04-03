@@ -18,26 +18,56 @@ function addSearchListener(){
     });
 }
 
-function searchConcerts(args){
+function addScrollListener(){
+    $("#concerts-list").bind('scroll', function ()
+    {
+        var divHeight   = $(this).innerHeight();
+        var height      = $(this)[0].scrollHeight;
+        var pos         = $(this).scrollTop();
+        var limitPos    = height-divHeight-100;
+
+        if(pos > limitPos){
+            $("#concerts-list").unbind('scroll');
+            searchConcerts({
+                keywords : $('#search-input').val(),
+                page : parseInt($('#concerts-number').data('page'))+1
+            }, true);
+        }
+    });
+}
+
+function searchConcerts(args, append){
     if(!args) args  = {};
+    if(!append) $('#concerts-list').html('');
+
+    $('#concerts-loading').show();
 
     var onLoad = function(e){
+        console.log(e);
         var data = $.parseJSON(e);
         console.log(data);
 
-        var concertsNumber = (data && (data.length != 0) ? data.total_items : 'Aucun')
+        var notEmpty = data && (data.length != 0);
+
+        var concertsNumber =  (notEmpty ? data.total_items : 'Aucun')
             +' concert'+(data.total_items > 1 ? 's' : '')
             +' trouvé' +(data.total_items > 1 ? 's' : '');
 
-        $('#concerts-number').text(concertsNumber);
-        $('#concerts-list').html('');
+        var page = notEmpty ? data.page_number : 0;
 
-        if(data && (data.length != 0)){
+        $('#concerts-number')
+            .text(concertsNumber)
+            .data('page', page);
+
+        if(notEmpty){
             for(var i in data.events.event)
                 addItem(data.events.event[i])
         } else {
             alert('aucun résultat');
         }
+
+        $('#concerts-loading').hide();
+        addScrollListener();
     };
 
     var onError = function(e){
@@ -62,7 +92,7 @@ function addItem(event){
         + '</div>'
         + '</div>';
 
-    $('#concerts-list').prepend(item);
+    $('#concerts-list').append(item);
 }
 
 function addResponsive(){
