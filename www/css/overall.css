@@ -59,3 +59,215 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8c34016a', e
         /* offset horizontal: half of image width and text area width */
     }
 }
+
+
+
+.nav-bar {
+    font-family: -apple-system, 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 17px;
+    display: table;
+    table-layout: fixed;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    white-space: nowrap;
+    margin: 0;
+    padding: 0;
+    height: 49px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-top: 1px solid #ccc;
+    width: 100%;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .nav-bar {
+        border-top: none;
+        -webkit-background-size: 100% 1px;
+        background-size: 100% 1px;
+        background-repeat: no-repeat;
+        background-position: top;
+        background-image: -webkit-linear-gradient(270deg, #ccc, #ccc 50%, transparent 50%);
+        background-image: -moz-linear-gradient(270deg, #ccc, #ccc 50%, transparent 50%);
+        background-image: -o-linear-gradient(270deg, #ccc, #ccc 50%, transparent 50%);
+        background-image: linear-gradient(180deg, #ccc, #ccc 50%, transparent 50%);
+    }
+}
+.nav-bar__item {
+    font-family: -apple-system, 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 17px;
+    position: relative;
+    overflow: hidden;
+    display: table-cell;
+    width: auto;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+}
+.nav-bar__item > input {
+    position: absolute;
+    overflow: hidden;
+    right: 0px;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    padding: 0;
+    border: 0;
+    opacity: 0.001;
+    z-index: 1;
+    vertical-align: top;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    -webkit-appearance: none;
+    appearance: none;
+}
+.nav-bar__button {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    font-family: -apple-system, 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 17px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    color: inherit;
+    background: transparent;
+    border: none;
+    line-height: normal;
+    cursor: default;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    text-decoration: none;
+    padding: 0;
+    height: 49px;
+    letter-spacing: 0;
+    color: #999;
+    text-shadow: 0 1px none;
+    vertical-align: top;
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-top: none;
+    width: 100%;
+    font-weight: 400;
+    line-height: 49px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .nav-bar__button {
+        border-top: none;
+    }
+}
+.nav-bar__icon, .nav-bar__icon_concert, .nav-bar__icon_artiste, .nav-bar__icon_profil, .nav-bar__icon_messagerie, .nav-bar__icon_ami {
+    font-size: 24px;
+    padding: 0;
+    margin: 0;
+    line-height: 26px;
+    display: block;
+    height: 28px;
+}
+.nav-bar__label , .nav-bar__label_concert, .nav-bar__label_artiste, .nav-bar__label_messagerie, .nav-bar__label_profil, .nav-bar__label_ami{
+    font-family: -apple-system, 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 17px;
+}
+.nav-bar__badge.notification {
+    position: absolute;
+    top: 5px;
+    z-index: 10;
+    font-size: 12px;
+    height: 16px;
+    line-height: 16px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+}
+.nav-bar__icon + .nav-bar__label, .nav-bar__label_concert, .nav-bar__label_artiste, .nav-bar__label_messagerie, .nav-bar__label_profil, .nav-bar__label_ami {
+    font-size: 10px;
+    line-height: 1;
+    margin: 0;
+    font-weight: 400;
+}
+.nav-bar__label:first-child , .nav-bar__label_concert:first-child , .nav-bar__label_artiste:first-child , .nav-bar__label_messagerie:first-child , .nav-bar__label_profil:first-child , .nav-bar__label_ami:first-child {
+    font-size: 16px;
+    line-height: 49px;
+    margin: 0;
+    padding: 0;
+}
+.nav-bar__button {
+    color: #999;
+}
+:checked + .nav-bar__button {
+    color: rgba(24,103,194,0.81);
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-top: none;
+}
+.nav-bar__button:disabled {
+    opacity: 0.3;
+    cursor: default;
+    pointer-events: none;
+}
+.nav-bar__button:focus {
+    z-index: 1;
+    border-top: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    outline: 0;
+}
+.nav-bar__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 49px;
+    z-index: 0;
+}
+
+.nav-bar__icon_concert img, .nav-bar__icon_artiste img, .nav-bar__icon_profil img, .nav-bar__icon_messagerie img, .nav-bar__icon_ami img{
+    max-height: 85%;
+    width: auto;
+}
+/*
+#fav{
+position:absolute;
+}
+*/
+.add_to_fav{
+    top: 12%;
+    bottom: auto;
+    right: 5%;
+    left: auto;
+    position: fixed;
+    background: url(../img/icons/BLANC/PNG/plus-button.png);
+    background-size : 100%;
+    height: 50px;
+    width: 50px;
+    border: none;
+
+}
+
+/*.add_to_fav img{
+	max-height: 50px;
+	max-width: 50px;
+}*/

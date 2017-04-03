@@ -11,7 +11,7 @@
         <link rel="stylesheet" type="text/css" href="onsen/css/onsenui.css">
         <link rel="stylesheet" type="text/css" href="onsen/css/onsen-css-components.css">
         <link rel="stylesheet" type="text/css" href="css/overall.css">
-        <link rel="stylesheet" type="text/css" href="css/concerts.css">
+        <link rel="stylesheet" type="text/css" href="css/concerts2.css">
 
 
         <script type="text/javascript" src="cordova.js"></script>
@@ -23,7 +23,7 @@
         <script type="text/javascript" src="js/jquery.hammer.js"></script>
         <script type="text/javascript" src="js/sha1.js"></script>
         <script type="text/javascript" src="js/app.js"></script>
-        <script type="text/javascript" src="js/concerts.js"></script>
+        <script type="text/javascript" src="js/concerts2.js"></script>
 
         <script>
             ons.bootstrap();
@@ -33,23 +33,20 @@
     </head>
     <body>
         <div class="concert app">
-            <ons-carousel swipeable overscrollable auto-scroll auto-refresh fullscreen var="carousel">
-                <ons-carousel-cover>
-                    <div id="fav-zone" class="above">
-                        <button id="fav" class="add_to_fav">
-                           <!--<img src="img/icons/BLANC/PNG/plus-button.png" alt="ajouter_aux_favoris">-->
-                        </button>
-                    </div>
-                    <div id="search-zone" class="above">
-                        <form id="search-form">
-                            <input value=">" type="submit" id="go-search">
-                            <div id="search-field">
-                                <input id="search-input" type="search" placeholder="Rechercher un concert">
-                            </div>
-                        </form>
-                    </div>
-                </ons-carousel-cover>
-            </ons-carousel>
+            <div id="top-bar">
+                <div id="search-zone">
+                    <form id="search-form">
+                        <input value=">" type="submit" id="go-search">
+                        <div id="search-field">
+                            <input id="search-input" type="search" placeholder="Rechercher un concert">
+                        </div>
+                    </form>
+                    <div id="concerts-number"></div>
+                </div>
+            </div>
+            <div id="concerts-list">
+                <div id="anti-menu" style="width:100%;height:50px"></div>
+            </div>
         </div>
         <div class="nav-bar">
             <label class="nav-bar__item"  data-to="concerts.html">
