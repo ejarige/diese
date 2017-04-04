@@ -78,7 +78,8 @@ function searchConcerts(args, append){
         'get/concerts',
         args,
         onLoad,
-        onError);
+        onError
+    );
 }
 
 function addItem(event){

@@ -1,6 +1,10 @@
 // fonctions de l'appli
 var DIESE_SERVICE = 'http://diese.pe.hu/services/';
 
+$(function(){
+    addMenuListener();
+});
+
 function dateToStr(utc){
     var date = new Date(utc);
     var mois = [
@@ -9,7 +13,7 @@ function dateToStr(utc){
         'septembre',    'octobre',  'novembre', 'décembre'
     ];
 
-    return date.getDate()+' '+mois[date.getMonth()-1];
+    return date.getDate()+' '+mois[date.getMonth()];
 }
 
 function askDiese(url, values, onSuccess, onError){
