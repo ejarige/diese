@@ -88,12 +88,11 @@ function addItem(event){
     var item = '<div class="concert" id="'+event.id+'" style="background-image:url('+img+')">'
         + '<div class="info">'
             + '<div class="artist">'+event.title+'</div>'
-            + '<div class="event">Le '+dateToStr(event.start_time)+' à '+event.city_name
-                +'<br><span class="venue">('+event.venue_name+')</span></div>'
+            + '<div class="event">'+dateToStr(event.start_time)+', '+event.city_name+'</div>'
         + '</div>'
         + '</div>';
 
-    $('#concerts-list').append(item);
+    $('#concerts-list').append(item).children(':last').hide().fadeIn(2000);
 }
 
 function addResponsive(){

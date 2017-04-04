@@ -7,13 +7,8 @@ $(function(){
 
 function dateToStr(utc){
     var date = new Date(utc);
-    var mois = [
-        'janvier',      'février',  'mars',     'avril',
-        'mai',          'juin',     'juillet',  'août',
-        'septembre',    'octobre',  'novembre', 'décembre'
-    ];
 
-    return date.getDate()+' '+mois[date.getMonth()];
+    return date.getDate()+'/'+(date.getMonth() > 9 ? '0' : '')+date.getMonth()+'/'+date.getFullYear();
 }
 
 function askDiese(url, values, onSuccess, onError){
