@@ -15,7 +15,8 @@
     height: 8vh;
     width: 100%;
     font-size: 3vh;
-    padding-left: 40px;
+    padding-left: 42px;
+    padding-right: 40px;
 }
 
 #search-field {
@@ -24,15 +25,23 @@
     margin-left: 10vw;
 }
 
-#go-search {
+#search-form > input {
     position: absolute;
     top: 0;
-    left: 10vw;
     width: 8vh;
     height: 8vh;
-    background: url(../img/loupe.png) no-repeat center;
     background-size: 50% 50%;
     border: none;
+}
+
+#go-search {
+    left: 10vw;
+    background: url(../img/loupe.png) no-repeat center;
+}
+
+#filters {
+    left: 77vw;
+    background: url(../img/filtres.png) no-repeat center;
 }
 
 #concerts-number {

@@ -6,15 +6,25 @@ $(function(){
 });
 
 function addSearchListener(){
-    $('#search-form').on('submit', function(){
-        var key = $('#search-input').val();
-        if(key.length){
-            $('ons-carousel-item').remove();
-            searchConcerts({
-                keywords : key
-            });
+    var timerid;
+    $('#search-input').on("input",function(){
+        var key = $(this).val();
+        if($(this).data("lastval")!== key){
+            $(this).data("lastval", key);
+
+            clearTimeout(timerid);
+            timerid = setTimeout(function() {
+                if(key.length > 0){
+                    $('ons-carousel-item').remove();
+                    searchConcerts({
+                        keywords : key
+                    });
+                } else {
+                    searchConcerts();
+                }
+            }, 500);
+
         }
-        return false;
     });
 }
 
@@ -26,12 +36,18 @@ function addScrollListener(){
         var pos         = $(this).scrollTop();
         var limitPos    = height-divHeight-100;
 
+        var pageData    = $('#concerts-number');
+        var page        = parseInt(pageData.data('page'));
+        var pageCount   = parseInt(pageData.data('pageCount'));
+
         if(pos > limitPos){
-            $("#concerts-list").unbind('scroll');
-            searchConcerts({
-                keywords : $('#search-input').val(),
-                page : parseInt($('#concerts-number').data('page'))+1
-            }, true);
+            if(page < pageCount){
+                $("#concerts-list").unbind('scroll');
+                searchConcerts({
+                    keywords : $('#search-input').val(),
+                    page : page+1
+                }, true);
+            }
         }
     });
 }
@@ -43,7 +59,6 @@ function searchConcerts(args, append){
     $('#concerts-loading').show();
 
     var onLoad = function(e){
-        console.log(e);
         var data = $.parseJSON(e);
         console.log(data);
 
@@ -53,17 +68,17 @@ function searchConcerts(args, append){
             +' concert'+(data.total_items > 1 ? 's' : '')
             +' trouvé' +(data.total_items > 1 ? 's' : '');
 
-        var page = notEmpty ? data.page_number : 0;
+        var page       = notEmpty ? data.page_number : 0;
+        var pageCount  = notEmpty ? data.page_count  : 0;
 
         $('#concerts-number')
             .text(concertsNumber)
-            .data('page', page);
+            .data('page', page)
+            .data('pageCount', pageCount);
 
         if(notEmpty){
             for(var i in data.events.event)
                 addItem(data.events.event[i])
-        } else {
-            alert('aucun résultat');
         }
 
         $('#concerts-loading').hide();
@@ -71,6 +86,7 @@ function searchConcerts(args, append){
     };
 
     var onError = function(e){
+        console.log(e);
         alert('Erreur '+ e.status);
     };
 
@@ -92,10 +108,10 @@ function addItem(event){
         + '</div>'
         + '</div>';
 
-    $('#concerts-list').append(item).children(':last').hide().fadeIn(2000);
+    $('#concerts-list').append(item).children(':last').hide().fadeIn(1000);
 }
 
 function addResponsive(){
-    var vh = $(window).outerHeight()/100;
-    $('#concerts-list').css('height', ($(window).outerHeight()-10*vh-60)+'px');
+    var vh = $(window).height()/100;
+    $('#concerts-list').css('height', ($(window).height()-25*vh-49)+'px');
 }
