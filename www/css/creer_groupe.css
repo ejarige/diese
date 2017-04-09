@@ -1,0 +1,49 @@
+html {
+  font-size: 62.5%;
+}
+
+body{
+text-transform : none;
+}
+.pop_up{
+width:60%;
+background-color:pink;
+padding-left:7%;
+padding-right:7%;
+display: block;
+margin: auto;
+margin-top: 20%;
+padding-top:5%;
+padding-bottom:5%;
+font-size:14px;
+font-size:1.4rem;
+}
+
+.pop_up p{
+text-align:center;
+}
+
+.yeah{
+font-family:'lobster_1.3regular';
+font-size:23px;
+font-size:2.3rem;
+}
+
+p{
+font-family:'montserratregular';
+}
+
+.button_creer_grp{
+font-family: 'montserratregular';
+line-height: 10pt;
+font-style: bold;
+min-height:5rem;
+max-width:10rem;
+background-color:blue;
+text-align:center;
+border-radius:25%;
+margin-top:5vh;
+padding-top:1px;
+margin-left:auto;
+margin-right:auto;
+}

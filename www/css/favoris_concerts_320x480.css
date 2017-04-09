@@ -9,10 +9,9 @@ html {
 
 body{
 overflow-y:scroll;
-padding-bottom:50vh;
 background-position:fixed;
 }
-.favoris a{
+.back_link{
 
 	font-family: 'montserratregular', 'lobster_1.3regular', 'Comic Sans MS', Helvetica, Arial, sans-serif;
 	margin:  35vh 0 0 5vw;
@@ -29,10 +28,11 @@ background-position:fixed;
 
 #favoris_partie_concert{
 	font-family: 'montserratregular', 'lobster_1.3regular', 'Comic Sans MS', Helvetica, Arial, sans-serif;
-	font-size: 12px;
+	max-font-size: 12px;
 	font-size: 1.2rem;
 	float :left;
 	margin: 10% 0 0 18%;
+	text-decoration:underline;
 }
 
 #favoris_partie_artiste{
@@ -43,18 +43,18 @@ background-position:fixed;
 	margin: 10% 20% 0 0;
 }
 
-.rectangle_vert
+.liste_favoris_artiste_et_nbr_abo
 {
-height:50vh;
-width:auto;
+min-height:50vh;
+max-width:auto;
 /*background-color:green;*/
 margin-top:25vh;
 }
 
-.rectangle_jaune
+.favoris_artiste_et_nbr_abo
 {
-height:20vh;
-width:60vw;
+min-height:20vh;
+max-width:60vw;
 /*background-color:yellow;*/
 margin-top:3%;
 margin-left:auto;
@@ -62,46 +62,66 @@ margin-right:auto;
 border-bottom:1px solid black;
 }
 
-.cercle_bleu{
-	height:50px;
-	width:50px;
+.favoris_artiste_et_nbr_abo:last-child
+{
+padding-bottom:300rem;
+}
+.photo_artiste{
+	min-height:50px;
+	min-width:50px;
 	position:relative;
 	display: inline-block;
-	margin-top:11%;
 	margin-left:10%;
+	margin-top:11%;
 	margin-bottom:auto;
 	background-color:blue;
 	border-radius:45px;
 	float:left;
 }
 
-.nom_artiste{
-/*background-color:red;*/
+/*.nom_artiste{
+background-color:red;
 font-size:12px;
 font-size:1.2rem;
 padding-bottom:0;
 margin-bottom:0;
 padding-top:7vh;
-margin-left:25vw;
+text-align:left;
+}*/
+
+.nom_artiste_v2
+{
+/*background-color:red;*/
+padding-top:0;
+margin-top:3rem;
+display: inline-block;
+margin-left:5%;
 }
 
-.nbr_abo{
+
+.date_et_lieu{
 /*background-color:grey;*/
 padding-top:0;
 margin-top:0;
-margin-left:3vw;
+display: inline-block;
+margin-left:5%;
 }
 
 .bouton_trouver_plus{
 font-family: 'montserratregular';
-Line-Height: 10pt;
+line-height: 10pt;
 font-style: bold;
-height:5rem;
-width:10rem;
+min-height:5rem;
+max-width:10rem;
 background-color:blue;
 text-align:center;
 border-radius:25%;
 margin-top:5vh;
 padding-top:1px;
-margin-left:33%;
+margin-left:auto;
+margin-right:auto;
+}
+
+small{
+font-family: 'montserratregular';
 }

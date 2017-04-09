@@ -29,32 +29,33 @@ background-position:fixed;
 
 #favoris_partie_concert{
 	font-family: 'montserratregular', 'lobster_1.3regular', 'Comic Sans MS', Helvetica, Arial, sans-serif;
-	font-size: 12px;
-	font-size: 1.2rem;
+	font-size: 15px;
+	font-size: 1.5rem;
 	float :left;
 	margin: 10% 0 0 18%;
 }
 
 #favoris_partie_artiste{
 	font-family: 'montserratregular', 'lobster_1.3regular', 'Comic Sans MS', Helvetica, Arial, sans-serif;
-	font-size: 12px;
-	font-size: 1.2rem;
+	font-size: 15px;
+	font-size: 1.5rem;
 	float : right;
 	margin: 10% 20% 0 0;
+	text-decoration:underline;
 }
 
 .rectangle_vert
 {
-height:50vh;
-width:auto;
+min-height:50vh;
+max-width:auto;
 /*background-color:green;*/
 margin-top:25vh;
 }
 
 .rectangle_jaune
 {
-height:20vh;
-width:60vw;
+min-height:20vh;
+max-width:60vw;
 /*background-color:yellow;*/
 margin-top:3%;
 margin-left:auto;
@@ -63,12 +64,12 @@ border-bottom:1px solid black;
 }
 
 .cercle_bleu{
-	height:50px;
-	width:50px;
+	max-height:75rem;
+	max-width:75rem;
 	position:relative;
 	display: inline-block;
-	margin-top:11%;
 	margin-left:10%;
+	margin-top:11%;
 	margin-bottom:auto;
 	background-color:blue;
 	border-radius:45px;
@@ -89,15 +90,14 @@ margin-left:25vw;
 /*background-color:grey;*/
 padding-top:0;
 margin-top:0;
-margin-left:3vw;
 }
 
 .bouton_trouver_plus{
 font-family: 'montserratregular';
-Line-Height: 10pt;
+line-height: 10pt;
 font-style: bold;
-height:5rem;
-width:10rem;
+min-height:5rem;
+max-width:10rem;
 background-color:blue;
 text-align:center;
 border-radius:25%;

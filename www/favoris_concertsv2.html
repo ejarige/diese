@@ -11,8 +11,7 @@
         <link rel="stylesheet" type="text/css" href="onsen/css/onsenui.css">
         <link rel="stylesheet" type="text/css" href="onsen/css/onsen-css-components.css">
         <link rel="stylesheet" type="text/css" href="css/overall.css">
-		<link rel="stylesheet" type="text/css" href="css/messagerie.css">
-
+		<link rel="stylesheet" type="text/css" media="screen and (min-width:278px) and (min-height: 351px)" href="css/favoris_concerts_320x480.css">
 
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/angular.min.js"></script>
@@ -31,15 +30,59 @@
         <title>dièse</title>
     </head>
     <body>
-        <div class="messagerie">
-			<a class="back_link" href="profil.html">Retour</a>
-			<div class="photo_et_prenom">
-        		<div class="photo_profil"></div>
-				<div class="prenom_sous_photo"><p>Alice</p></div>
+       <div class="favoris">
+        	<a class="back_link" href="profil.html">Retour</a>
+			<div class="page_title"><p>Favoris</p>
 			</div>
-			<div class="bouton_lets_go_together"><p>Aller au concert ensemble</p></div>
-			<div class="conversation">
+			<div id="favoris_partie_concert"><a class="link_concerts" href="favoris_concerts.html">Concerts</a>
+				
 			</div>
+			<div id="favoris_partie_artiste"><a class="link_artistes" href="favoris_artistes.html">Artistes</a>
+			</div>
+			<div class="liste_favoris_artiste_et_nbr_abo">
+				<div class="favoris_artiste_et_nbr_abo">
+					<div class="photo_artiste">
+					</div>
+
+						<p class="nom_artiste">
+						</p>
+						<small class="nom_artiste_v2">Nom artiste 1
+						</small>
+						<small class="date_et_lieu">
+						date_et_lieu_1
+						</small>
+
+				</div>
+				<div class="favoris_artiste_et_nbr_abo">
+					<div class="photo_artiste">
+					</div>
+
+						<p class="nom_artiste">
+						</p>
+						<small class="nom_artiste_v2">Nom artiste 2
+						</small>
+						<small class="date_et_lieu">
+						date_et_lieu_2
+						</small>
+
+				</div>
+				<div class="favoris_artiste_et_nbr_abo">
+					<div class="photo_artiste">
+					</div>
+
+						<p class="nom_artiste">
+						</p>
+						<small class="nom_artiste_v2">Nom artiste 3
+						</small>
+						<small class="date_et_lieu">
+						date_et_lieu_3
+						</small>
+
+				</div>
+				<div class="bouton_trouver_plus">
+				<p>Trouver plus d'artistes</p>
+				</div>
+		</div>
         </div>
 		<div class="nav-bar">
 			<label class="nav-bar__item"  data-to="concerts.html">
@@ -61,7 +104,7 @@
 				<label class="nav-bar__item"  data-to="messagerie.html">
 				<input type="radio" name="nav-bar-a">
 				 <button class="nav-bar__button">
-					<i class="nav-bar__icon_messagerie"><img src="img/icons/BLEU/PNG/002-chat.png" alt="icones_messagerie"></i>
+					<i class="nav-bar__icon_messagerie"><img src="img/icons/GRIS/PNG/002-chat.png" alt="icones_messagerie"></i>
 					<div class="nav-bar__label_messagerie">Messagerie</div>
 				</button>
 				</label>
@@ -69,7 +112,7 @@
 				<label class="nav-bar__item"  data-to="profil.html">
 				<input type="radio" name="nav-bar-a" checked="checked">
 				<button class="nav-bar__button">
-					<i class="nav-bar__icon_profil"><img src="img/icons/GRIS/PNG/003-avatar.png" alt="icones_profil"></i>
+					<i class="nav-bar__icon_profil"><img src="img/icons/BLEU/PNG/003-avatar.png" alt="icones_profil"></i>
 					<div class="nav-bar__label_profil">Profil</div>
 				</button>
 				</label>
