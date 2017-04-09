@@ -109,6 +109,9 @@ function addItem(event){
         + '</div>';
 
     $('#concerts-list').append(item).children(':last').hide().fadeIn(1000);
+    $('[id='+event.id+']').on('click', function(){
+        window.location.href = "concert.html?id="+event.id;
+    });
 }
 
 function addResponsive(){
