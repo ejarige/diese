@@ -3,7 +3,8 @@
  */
 $(function(){
     RecupDataUser();
-})
+});
+
 function RecupDataUser(){
 
     var onLoad = function(e){
