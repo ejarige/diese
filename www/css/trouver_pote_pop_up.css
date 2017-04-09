@@ -1,0 +1,79 @@
+html {
+    font-size: 62.5%;
+}
+
+body{
+    text-transform : none;
+}
+.pop_up{
+    background-color:white;
+    width:60%;
+    padding-left:7%;
+    padding-right:7%;
+    display: block;
+    margin: auto;
+    margin-top: 35%;
+    padding-top:5%;
+    padding-bottom:5%;
+    font-size:14px;
+    font-size:1.4rem;
+}
+
+.pop_up p{
+    text-align:center;
+}
+
+.yeah{
+    font-family: 'lobster_1.3regular';
+    font-size:30px;
+    font-size:3rem;
+}
+
+p{
+    font-family: 'montserratregular', sans-serif;
+    color:#666666;
+}
+
+.photo_et_prenom_age_ville{
+    background-color:red;
+    height:auto;
+    width:auto;
+}
+
+.photo{
+    height:5.0rem;
+    width:5.0rem;
+    background-color:blue;
+    border-radius:45px;
+    float:left;
+}
+.prenom_age_ville{
+    float:right;
+    width:20rem;
+}
+
+.presentation{
+    float:bottom;
+}
+.lets_talk{
+    font-family: 'montserratregular', sans-serif;
+    line-height: 10pt;
+    font-style: bold;
+    min-height:4rem;
+    max-width:10rem;
+    background-color:#33cccc;
+    text-align:center;
+    border-radius:35%;
+    margin-top:5vh;
+    padding-top:0.25rem;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.lets_talk p{
+    color:white;
+}
+
+.sry_no{
+    margin-top: 2.5rem;
+}

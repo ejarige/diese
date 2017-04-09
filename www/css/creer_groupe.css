@@ -3,47 +3,56 @@ html {
 }
 
 body{
-text-transform : none;
+  text-transform : none;
 }
 .pop_up{
-width:60%;
-background-color:pink;
-padding-left:7%;
-padding-right:7%;
-display: block;
-margin: auto;
-margin-top: 20%;
-padding-top:5%;
-padding-bottom:5%;
-font-size:14px;
-font-size:1.4rem;
+  background-color:white;
+  width:60%;
+  padding-left:7%;
+  padding-right:7%;
+  display: block;
+  margin: auto;
+  margin-top: 35%;
+  padding-top:5%;
+  padding-bottom:5%;
+  font-size:14px;
+  font-size:1.4rem;
 }
 
 .pop_up p{
-text-align:center;
+  text-align:center;
 }
 
 .yeah{
-font-family:'lobster_1.3regular';
-font-size:23px;
-font-size:2.3rem;
+  font-family: 'lobster_1.3regular';
+  font-size:30px;
+  font-size:3rem;
 }
 
 p{
-font-family:'montserratregular';
+  font-family: 'montserratregular', sans-serif;
+  color:#666666;
 }
 
 .button_creer_grp{
-font-family: 'montserratregular';
-line-height: 10pt;
-font-style: bold;
-min-height:5rem;
-max-width:10rem;
-background-color:blue;
-text-align:center;
-border-radius:25%;
-margin-top:5vh;
-padding-top:1px;
-margin-left:auto;
-margin-right:auto;
+  font-family: 'montserratregular', sans-serif;
+  line-height: 10pt;
+  font-style: bold;
+  min-height:5rem;
+  max-width:10rem;
+  background-color:#33cccc;
+  text-align:center;
+  border-radius:25%;
+  margin-top:5vh;
+  padding-top:1px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.button_creer_grp p{
+  color:white;
+}
+
+.sry_no{
+  margin-top: 3rem;
 }
