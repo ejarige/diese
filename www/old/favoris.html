@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">-->
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta charset="utf-8">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+
+        <link rel="stylesheet" type="text/css" href="css/ionicons.css">
+        <link rel="stylesheet" type="text/css" href="onsen/css/onsenui.css">
+        <link rel="stylesheet" type="text/css" href="onsen/css/onsen-css-components.css">
+        <link rel="stylesheet" type="text/css" href="css/overall.css">
+        <link rel="stylesheet" type="text/css" href="css/home.css">
+		<link rel="stylesheet" type="text/css" href="css/profil.css">
+		<link rel="stylesheet" type="text/css" href="css/messagerie.css">
+		<link rel="stylesheet" type="text/css" href="css/favoris.css">
+
+
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/angular.min.js"></script>
+        <script type="text/javascript" src="onsen/js/onsenui.min.js"></script>
+        <script type="text/javascript" src="onsen/js/angular-onsenui.min.js"></script>
+        <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+        <script type="text/javascript" src="js/hammer.js"></script>
+        <script type="text/javascript" src="js/jquery.hammer.js"></script>
+        <script type="text/javascript" src="js/sha1.js"></script>
+        <script type="text/javascript" src="js/app.js"></script>
+
+        <script>
+            ons.bootstrap();
+        </script>
+
+        <title>dièse</title>
+    </head>
+    <body>
+        <div class="favoris">
+        	<a href="/retour">Retour</a>
+        	<h2>Favoris</h2>
+
+        	<h4>Concerts</h4>
+        	<h4>Artistes</h4>
+        </div>
+		<div class="nav-bar">
+			<label class="nav-bar__item"  data-to="concerts.html">
+			<input type="radio" name="nav-bar-a" checked="checked">
+			<button class="nav-bar__button">
+				<i class="nav-bar__icon_concert"><img src="img/icons/GRIS/PNG/005-electric-guitar.png" alt="icones_concert"></i>
+				<div class="nav-bar__label_concert">Concerts</div>
+			</button>
+			</label>
+
+			<label class="nav-bar__item"  data-to="artiste.html">
+				<input type="radio" name="nav-bar-a">
+				<button class="nav-bar__button">
+					<i class="nav-bar__icon_artiste"><img src="img/icons/GRIS/PNG/004-musical-note.png" alt="icones_artiste"></i>
+					<div class="nav-bar__label_artiste">Artistes</div>
+				</button>
+				</label>
+
+				<label class="nav-bar__item"  data-to="messagerie.html">
+				<input type="radio" name="nav-bar-a">
+				 <button class="nav-bar__button">
+					<i class="nav-bar__icon_messagerie"><img src="img/icons/GRIS/PNG/002-chat.png" alt="icones_messagerie"></i>
+					<div class="nav-bar__label_messagerie">Messagerie</div>
+				</button>
+				</label>
+
+				<label class="nav-bar__item"  data-to="profil.html">
+				<input type="radio" name="nav-bar-a" checked="checked">
+				<button class="nav-bar__button">
+					<i class="nav-bar__icon_profil"><img src="img/icons/BLEU/PNG/003-avatar.png" alt="icones_profil"></i>
+					<div class="nav-bar__label_profil">Profil</div>
+				</button>
+				</label>
+
+				<label class="nav-bar__item"  data-to="ami.html">
+				<input type="radio" name="nav-bar-a" checked="checked">
+				<button class="nav-bar__button">
+					<i class="nav-bar__icon_ami"><img src="img/icons/GRIS/PNG/001-friend-request.png" alt="icones_ami"></i>
+					<div class="nav-bar__label_ami">Amis</div>
+				</button>
+				</label>
+			</div>
+		</div>
+    </body>
+</html>
