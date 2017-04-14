@@ -31,9 +31,9 @@
 }
 
 .rectangle_blanc p{
-font-family: Montserrat;
-font-style: bold;
-margin-left:5%;
+	font-family: 'montserratregular', 'lobster_1.3regular', 'Comic Sans MS', Helvetica, Arial, sans-serif;
+	font-style: bold;
+	margin-left:5%;
 }
 
 .rectangle{
@@ -53,6 +53,8 @@ margin-left:5%;
 
 .prenom_age_ville{
 	text-align: center;
+	margin-left:auto;
+	margin-right:auto;
 	top:95%;
 }
 
@@ -73,10 +75,15 @@ margin-left:5%;
 	height:4rem;
 	width:4rem;
 	background-color:green;
+	background: url(../img/icons/BLANC/PNG/star.png);
+	background-size:100%;
+	margin-left:auto;
+	margin-right:auto;
+
 }
 
 .profil_favoris{
-    top: 27%;
+    top: 18%;
     bottom:auto;
     right: 13%;
     left:auto;
