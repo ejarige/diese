@@ -1,0 +1,52 @@
+html {
+    font-size: 62.5%;
+}
+
+body{
+    text-transform : none;
+}
+.pop_up{
+    background-color:white;
+    width:60%;
+    padding-left:7%;
+    padding-right:7%;
+    display: block;
+    margin: auto;
+    margin-top: 35%;
+    padding-top:5%;
+    padding-bottom:5%;
+    font-size:14px;
+    font-size:1.4rem;
+}
+
+.pop_up p{
+    text-align:center;
+}
+
+.patience{
+    font-family: 'lobster_1.3regular';
+    font-size:30px;
+    font-size:3rem;
+}
+
+p{
+    font-family: 'montserratregular', sans-serif;
+    color:#666666;
+}
+
+.recherche_en_cours{
+margin-top:4rem;
+width:80%;
+height:auto;
+margin-left:auto;
+margin-right:auto;
+}
+
+.image_loading{
+margin-left:auto;
+margin-right:auto;
+height:10rem;
+width:10rem;
+background: url(../img/icons/BLEU/PNG/loading.png) no-repeat center;
+background-size : auto 50%;
+}

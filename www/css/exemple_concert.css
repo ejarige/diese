@@ -5,6 +5,8 @@
 	height:55vh;
 	overflow-y:scroll;
 	color:black;
+	bottom:0;
+	position:absolute;
 }
 
 .ligne{
@@ -34,9 +36,39 @@
 font-family: Montserrat;
 font-style: bold;
 margin-left:5%;
+float:bottom;
 }
 
-.rectangle{
+.haut_de_page{
+width:100%;
+height:75vh;
+color:white;
+float:top;
+background-color:yellow;
+}
+
+.info_nom_date_lieu{
+bottom:2rem;
+left:3rem;
+line-height:0.8;
+}
+.bouton_trouver_un_pote_de_concert{
+font-family: 'montserratregular', sans-serif;
+    line-height: 10pt;
+    font-style: bold;
+    height:3rem;
+    width:10rem;
+    background-color:#33cccc;
+    text-align:center;
+    border-radius:20%;
+    margin-top:5vh;
+    margin-left:auto;
+    margin-right:auto;
+	padding-top:0.1rem;
+	color:white;
+	margin-bottom:2rem;
+}
+/*.rectangle{
 	background-color:blue;
 	margin-left:12vw;
 	margin-top:10vh;
@@ -66,13 +98,7 @@ margin-left:5%;
     background-size : 100%;
     height: 35px;
     width: 35px;
-	/*background-image: url("../img/icons/BLANC/PNG/settings.png");*/
-}
-
-.icone_fav{
-	height:4rem;
-	width:4rem;
-	background-color:green;
+	background-image: url("../img/icons/BLANC/PNG/settings.png");
 }
 
 .profil_favoris{
@@ -81,4 +107,4 @@ margin-left:5%;
     right: 13%;
     left:auto;
     position:fixed;
-}
+}*/

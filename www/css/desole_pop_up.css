@@ -23,7 +23,7 @@ body{
     text-align:center;
 }
 
-.yeah{
+.desole{
     font-family: 'lobster_1.3regular';
     font-size:30px;
     font-size:3rem;
@@ -34,47 +34,22 @@ p{
     color:#666666;
 }
 
-.photo_et_prenom_age_ville{
-    background-color:red;
-    height:auto;
-    width:auto;
-}
-
-.photo{
-    height:5.0rem;
-    width:5.0rem;
-    background-color:blue;
-    border-radius:45px;
-    float:left;
-	margin-left:1.5rem;
-}
-.prenom_age_ville{
-    float:right;
-    width:12.5rem;
-	font-size:1.2rem;
-}
-
-.presentation{
-    float:bottom;
-	font-size:1.2rem;
-	margin-top:10rem;
-}
-.lets_talk{
+.back_to_concert{
     font-family: 'montserratregular', sans-serif;
     line-height: 10pt;
     font-style: bold;
-    min-height:4rem;
-    max-width:10rem;
+    height:5.8rem;
+    width:10rem;
     background-color:#33cccc;
     text-align:center;
-    border-radius:35%;
+    border-radius:20%;
     margin-top:5vh;
-    padding-top:0.25rem;
     margin-left:auto;
     margin-right:auto;
+	padding-top:0.1rem;
 }
 
-.lets_talk p{
+.back_to_concert p{
     color:white;
 }
 
