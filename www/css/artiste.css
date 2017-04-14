@@ -1,0 +1,125 @@
+.haut_de_page{
+	position: absolute;
+	top:0;
+	height: 45vh;
+	width: 100%;
+	background: url(http://e-cdn-images.deezer.com/images/artist/adf3579be3f27e52bc1520e6c462037f/500x500.jpg) no-repeat center;
+	background-size:  100% auto;
+}
+.icone_fav{
+	height:2.5rem;
+	width:2.5rem;
+	background: url(../img/icons/BLANC/PNG/star.png);
+	background-size:100%;
+	top:5vh;
+	right:6vw;
+	position:absolute;
+}
+
+.save_to_fav{
+
+}
+
+.nom_artiste_et_nbr_abo{
+	margin-left:7vw;
+	margin-top:28vh;
+	line-height:0.3;
+}
+
+.nom_artiste{
+	font-family: 'montserratregular', 'lobster_1.3regular', 'Comic Sans MS', Helvetica, Arial, sans-serif;
+	font-size: 13px;
+	font-size: 1.3rem;
+}
+
+.nbr_abo{
+	font-family: 'montserratregular', 'lobster_1.3regular', 'Comic Sans MS', Helvetica, Arial, sans-serif;
+	font-size: 13px;
+	font-size: 1.3rem;
+	text-transform : none;
+}
+
+.rectangle_blanc{
+	background-color: white;
+	margin-top:10vh;
+	width:100%;
+	height:55vh;
+	overflow-y:scroll;
+	color:black;
+	bottom:0;
+	position:absolute;
+	padding:1.5rem;
+}
+
+.ligne{
+	height:60px;
+    width: auto;
+	background-color:red;
+	position:relative;
+	margin-top:10px;
+	overflow-x:scroll;
+    white-space: nowrap;
+    /*overflow-y: scroll;*/
+}
+
+.cercle{
+	height:50px;
+	width:50px;
+	position:relative;
+	display: inline-block;
+	margin-top:5px;
+	margin-left:5px;
+	margin-right:5px;
+	background-color:blue;
+	border-radius:45px;
+}
+
+.rectangle_blanc p{
+	font-family: 'montserratregular', 'lobster_1.3regular', 'Comic Sans MS', Helvetica, Arial, sans-serif;
+	font-style: bold;
+	margin-left:5%;
+	text-transform : none;
+}
+
+.discographie{
+	font-size: 13px;
+	font-size: 1.3rem;
+}
+
+.concert_a_venir_titre{
+	font-size: 13px;
+	font-size: 1.3rem;
+}
+.concerts_a_venir{
+	margin-top:5vh;
+}
+
+.icone_date_et_lieu{
+	margin-top:6vh;
+	width:auto;
+	height:auto;
+	margin-left:2vw;
+	line-height:0.2;
+}
+
+.icone_lets_rock{
+	float:left;
+	height:3.0rem;
+	width:3.0rem;
+	background: url(../img/icons/GRIS/PNG/rock-and-roll-2.png);
+	background-size:100%;
+	margin-right:2rem;
+}
+
+.date_lieu{
+	float:right;
+	line-height:0.5;
+}
+/*
+.date{
+	float:top;
+}
+.lieu{
+	float:bottom;
+}
+*/

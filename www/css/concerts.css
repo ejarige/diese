@@ -1,3 +1,7 @@
+body {
+    font-family: 'montserratregular', 'lobster_1.3regular', 'Comic Sans MS', Helvetica, Arial, sans-serif;
+}
+
 .above {
     z-index: 999;
 }
@@ -20,7 +24,6 @@
 #search-input {
     height: 8vh;
     font-size: 4vh;
-	font-family: Montserrat;
 	
 }
 
@@ -56,7 +59,6 @@
     color: black;
     font-weight: bold;
     text-align: center;
-    font-family: Montserrat;
     font-size: 17px;
 }
 
@@ -64,6 +66,5 @@
     color: black;
     font-weight: bold;
     text-align: center;
-    font-family: Montserrat;
     font-size: 14px;
 }

@@ -1,3 +1,6 @@
+p {
+    font-family: 'montserratregular', 'lobster_1.3regular', 'Comic Sans MS', Helvetica, Arial, sans-serif;
+}
 #banner {
     position: absolute;
     top:0;
@@ -8,12 +11,13 @@
 }
 
 #favorite {
-    position: absolute;
-    top: 5vh;
-    right: 10vw;
-    height: 10vh;
-    width: 10vh;
-    background-color: blue;
+    height:2.5rem;
+    width:2.5rem;
+    background: url(../img/icons/BLANC/PNG/star.png);
+    background-size:100%;
+    top:5vh;
+    right:6vw;
+    position:absolute;
 }
 
 #concert-name {
