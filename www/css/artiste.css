@@ -54,7 +54,7 @@
 .ligne{
 	height:60px;
     width: auto;
-	background-color:red;
+	/*background-color:red;*/
 	position:relative;
 	margin-top:10px;
 	overflow-x:scroll;

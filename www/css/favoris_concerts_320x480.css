@@ -11,6 +11,15 @@ body{
 overflow-y:scroll;
 background-position:fixed;
 }
+
+.favoris a{
+
+	font-family: 'montserratregular', 'lobster_1.3regular', 'Comic Sans MS', Helvetica, Arial, sans-serif;
+	margin:  35vh 0 0 5vw;
+	text-decoration:none;
+	color: white;
+	font-weight: bold;
+}
 .back_link{
 
 	font-family: 'montserratregular', 'lobster_1.3regular', 'Comic Sans MS', Helvetica, Arial, sans-serif;
@@ -48,12 +57,12 @@ background-position:fixed;
 min-height:50vh;
 max-width:auto;
 /*background-color:green;*/
-margin-top:25vh;
+margin-top:15vh;
 }
 
 .favoris_artiste_et_nbr_abo
 {
-min-height:20vh;
+min-height:15vh;
 max-width:60vw;
 /*background-color:yellow;*/
 margin-top:3%;
@@ -113,7 +122,7 @@ line-height: 10pt;
 font-style: bold;
 min-height:5rem;
 max-width:10rem;
-background-color:blue;
+background-color:#33cccc;
 text-align:center;
 border-radius:25%;
 margin-top:5vh;

@@ -41,6 +41,7 @@ background-position:fixed;
 	float : right;
 	margin: 10% 20% 0 0;
 	text-decoration:underline;
+
 }
 
 .liste_favoris_artiste_et_nbr_abo
@@ -48,12 +49,12 @@ background-position:fixed;
 min-height:50vh;
 max-width:auto;
 /*background-color:green;*/
-margin-top:25vh;
+margin-top:15vh;
 }
 
 .favoris_artiste_et_nbr_abo
 {
-min-height:20vh;
+min-height:15vh;
 max-width:60vw;
 /*background-color:yellow;*/
 margin-top:3%;
@@ -91,20 +92,22 @@ text-align:left;
 
 .nom_artiste_v2
 {
-background-color:red;
+/*background-color:red;*/
 padding-top:0;
 margin-top:3rem;
 display: inline-block;
 margin-left:5%;
+	font-family: 'montserratregular', 'lobster_1.3regular', 'Comic Sans MS', Helvetica, Arial, sans-serif;
 }
 
 
 .nbr_abo{
-background-color:grey;
+/*background-color:grey;*/
 padding-top:0;
 margin-top:0rem;
 display: inline-block;
 margin-left:5%;
+	font-family: 'montserratregular', 'lobster_1.3regular', 'Comic Sans MS', Helvetica, Arial, sans-serif;
 }
 
 .bouton_trouver_plus{
@@ -113,7 +116,7 @@ line-height: 10pt;
 font-style: bold;
 min-height:5rem;
 max-width:10rem;
-background-color:blue;
+background-color:#33cccc;
 text-align:center;
 border-radius:25%;
 margin-top:5vh;
@@ -124,5 +127,4 @@ margin-right:auto;
 
 small{
 display:table-cell;
-horizontal-align:bottom;
 }

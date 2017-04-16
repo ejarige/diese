@@ -1,0 +1,111 @@
+.hidden {
+    display: none;
+}
+/* page */
+
+#sign-in {
+    text-align: right;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 95%;
+    color: white;
+}
+
+/* Accueil */
+
+p, div {
+    font-family : 'montserratregular', 'lobster_1.3regular', 'Comic Sans MS', Helvetica, Arial, sans-serif;
+}
+
+.page-content {
+    width: 70vw;
+    left: 15vw;
+    position: absolute;
+    margin-top: 0;
+    text-transform: none;
+}
+/*
+#app-intro-connexion {
+    height: 5vh;
+    width: 40vw;
+    font-size : 3vh;
+    position: absolute;
+    top: 3vh;
+    right: 3vh;
+    text-transform: none;
+    text-align: right;
+}
+
+#app-intro-title {
+    top: 35vh;
+    left: 10vw;
+    position: absolute;
+    font-size: 8vh;
+    margin-top: 0;
+    width : 80vw;
+    height: 26vh;
+    background:url(../img/logo.png) no-repeat;
+    background-size: 100% auto;
+}
+
+#app-intro-desc {
+    font-size: 5vh;
+    margin-top: 0;
+    top: 60vh;
+}
+
+#app-intro-slide {
+    font-size: 3vh;
+    margin-top: 0;
+    top: 90vh;
+    text-align: center;
+}
+
+/* Inscription et Connexion*/
+.page-title, .page-connexion {
+    font-size: 6vh;
+    position:absolute;
+    top: 5vh;
+    text-align: center;
+    width: 100%;
+    font-family : 'lobster_1.3regular', 'montserratregular', 'Comic Sans MS', Helvetica, Arial, sans-serif;
+    text-transform: none;
+}
+
+#inscription, #connexion {
+    top:20vh;
+}
+
+#inscription label, #connexion label {
+    font-size: 2vh;
+}
+
+#inscription input, #connexion input {
+    width: 100%;
+    padding: 10px 0;
+    margin-bottom:3vh;
+}
+
+.infobox {
+    float: right;
+    font-weight: bold;
+    color: red;
+}
+
+#form-submit {
+    margin-top: 5vh;
+}
+
+#creating-account-content {
+    padding: 20px;
+}
+
+#creating-account-content p {
+    color: black;
+    text-transform: none;
+}
+
+#creating-account-progress {
+    float:left;
+}

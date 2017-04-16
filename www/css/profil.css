@@ -10,7 +10,7 @@
 .ligne{
 	height:60px;
     width: auto;
-	background-color:red;
+	/*background-color:red;*/
 	position:relative;
 	margin-top:10px;
 	overflow-x:scroll;
@@ -46,7 +46,7 @@
 }
 
 .photo{
-	background-color:hotpink;;
+	background-color:hotpink;
 	width:100%;
 	height:22.5vh;
 }
@@ -74,7 +74,7 @@
 .icone_fav{
 	height:4rem;
 	width:4rem;
-	background-color:green;
+	/*background-color:green;*/
 	background: url(../img/icons/BLANC/PNG/star.png);
 	background-size:100%;
 	margin-left:auto;
