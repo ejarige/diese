@@ -25,7 +25,6 @@ function addSearchListener(){
                     searchConcerts();
                 }
             }, 500);
-
         }
     });
 }
