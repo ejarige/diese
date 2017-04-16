@@ -1,4 +1,6 @@
 $(function(){
+    console.log("Connecté avec user " + sessionStorage.userId);
+
     addSearchListener();
     searchConcerts();
 
@@ -109,7 +111,7 @@ function addItem(event){
         + '</div>';
 
     $('#concerts-list').append(item).children(':last').hide().fadeIn(1000);
-    $('[id='+event.id+']').on('click', function(){
+    $(document.getElementById(event.id)).on('click', function(){
         window.location.href = "concert.html?id="+event.id;
     });
 }

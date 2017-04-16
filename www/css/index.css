@@ -95,19 +95,6 @@ p, div {
     margin-top: 5vh;
 }
 
-#creating-account-content {
-    padding: 20px;
-}
-
-#creating-account-content p {
-    color: black;
-    text-transform: none;
-}
-
-#creating-account-progress {
-    float:left;
-}
-
 /* Page merci */
 #ty-and-bye * {
     position:absolute;

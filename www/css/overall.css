@@ -18,6 +18,7 @@
     font-style: normal;
 
 }
+
 * {
     -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
 }
@@ -285,3 +286,18 @@ position:absolute;
 	max-height: 50px;
 	max-width: 50px;
 }*/
+
+
+
+#loading-modal {
+    padding: 20px;
+}
+
+#loading-modal p {
+    color: black;
+    text-transform: none;
+}
+
+#loading-progress {
+    float:left;
+}

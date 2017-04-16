@@ -40,3 +40,23 @@ function addMenuListener(){
         window.location.href=($(this).data("to"));
     });
 }
+
+function openLoading(text){
+    var modal = '<ons-dialog id="loading">'
+        +'<div id="loading-modal">'
+        +'<div id="loading-progress">'
+        +'<svg class="progress-circular">'
+        +'<circle class="progress-circular__primary" cx="50%" cy="50%" r="40%" fill="none" stroke-width="10%" stroke-miterlimit="10"/>'
+        +'</svg>'
+        +'</div>'
+        +'<p>'+text+'</p>'
+        +'</div>'
+        +'</ons-dialog>';
+
+    $('body').append(modal);
+    $('#loading').show();
+}
+
+function closeLoading(){
+    $('#loading').hide();
+}
