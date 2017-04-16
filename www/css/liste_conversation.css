@@ -2,15 +2,37 @@ html {
   font-size: 62.5%;
 }
 
-.favoris{
-	margin-top: 3vh;
+.liste_conversation_main{
+	margin-top: 11vh;
 	text-transform : none;
 }
 
 body{
-overflow-y:scroll;
-background-position:fixed;
+	overflow-y:scroll;
+	background-position:fixed;
 }
+
+.add_convers{
+	top: 10%;
+	bottom: auto;
+	right:10%;
+	left: auto;
+	position: fixed;
+	background: url(../img/icons/BLANC/PNG/plus-button.png);
+	background-size : 100%;
+	height: 40px;
+	width: 40px;
+	/*background-image: url("../img/icons/BLANC/PNG/settings.png");*/
+}
+
+.page_title{
+	font-family : 'lobster_1.3regular', 'montserratregular', 'Comic Sans MS', Helvetica, Arial, sans-serif;
+	text-transform : none;
+	font-size: 225%;
+	margin-left: 10vw;
+}
+
+/*
 .favoris a{
 
 	font-family: 'montserratregular', 'lobster_1.3regular', 'Comic Sans MS', Helvetica, Arial, sans-serif;
@@ -19,12 +41,6 @@ background-position:fixed;
 	color: white;
 	font-weight: bold;
 	}
-.page_title{
-	font-family : 'lobster_1.3regular', 'montserratregular', 'Comic Sans MS', Helvetica, Arial, sans-serif;
-	text-transform : none;
-	font-size: 225%;
-	margin-left: 10vw;
-}
 
 #favoris_partie_concert{
 	font-family: 'montserratregular', 'lobster_1.3regular', 'Comic Sans MS', Helvetica, Arial, sans-serif;
@@ -42,38 +58,37 @@ background-position:fixed;
 	margin: 10% 20% 0 0;
 	text-decoration:underline;
 }
-
-.liste_conversations
+*/
+.liste_conversation
 {
-min-height:80vh;
+min-height:50vh;
 max-width:auto;
 /*background-color:green;*/
-margin-top:5vh;
+/*margin-top:3vh;*/
 }
 
 .exemple_conversation
 {
-height:17vh;
-width:60vw;
-background-color:yellow;
+min-height:15vh;
+max-width:80vw;
+/*background-color:yellow;*/
 margin-top:3%;
 margin-left:auto;
 margin-right:auto;
-border-bottom:1px solid black;
+border-bottom:1px solid white;
 }
 
-.exemple_conversation:last-child
+/*.favoris_artiste_et_nbr_abo:last-child
 {
-padding-bottom:300rem;
-}
-
+padding-bottom:30rem;
+}*/
 .photo_ami{
 	min-height:50px;
 	min-width:50px;
 	position:relative;
 	display: inline-block;
-	margin-left:10%;
-	margin-top:11%;
+	margin-left:7%;
+	margin-top:6%;
 	margin-bottom:auto;
 	background-color:blue;
 	border-radius:45px;
@@ -90,24 +105,29 @@ padding-top:7vh;
 text-align:left;
 }*/
 
-.nom_artiste_v2
+.nom_ami
 {
-background-color:red;
+/*background-color:red;*/
 padding-top:0;
 margin-top:3rem;
 display: inline-block;
-margin-left:5%;
+/*margin-left:5%;*/
+	padding-left:10vw;
+	line-height:0.2;
 }
 
 
-.nbr_abo{
-background-color:grey;
+.apercu_conv{
+/*background-color:grey;*/
 padding-top:0;
 margin-top:0rem;
 display: inline-block;
-margin-left:5%;
+/*margin-left:5%;*/
+	padding-left:10vw;
+	line-height:0.2;
 }
 
+/*
 .bouton_trouver_plus{
 font-family: 'montserratregular';
 line-height: 10pt;
@@ -125,5 +145,5 @@ margin-right:auto;
 
 small{
 display:table-cell;
-horizontal-align:bottom;
 }
+*/
