@@ -60,3 +60,11 @@ function openLoading(text){
 function closeLoading(){
     $('#loading').hide();
 }
+
+function getUserId(){
+    if(sessionStorage.userId){
+        return sessionStorage.userId.length;
+    } else {
+        window.location.href = 'index.html';
+    }
+}

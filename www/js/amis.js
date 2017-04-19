@@ -28,7 +28,7 @@ function getFriends(){
     askDiese(
         'get/friends',
         {
-            user_id:sessionStorage.userId
+            user_id: getUserId()
         },
         onLoad,
         onError
