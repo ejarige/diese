@@ -63,7 +63,7 @@ function closeLoading(){
 
 function getUserId(){
     if(sessionStorage.userId){
-        return sessionStorage.userId.length;
+        return sessionStorage.userId;
     } else {
         window.location.href = 'index.html';
     }

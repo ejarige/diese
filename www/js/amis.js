@@ -11,11 +11,11 @@ function getFriends(){
 
         for(var i in data){
             var item = '<div class="friends-item" id="'+data[i].friend_id+'">'
-                +'<div class="avatar" style="url('+data[i].avatar+')"></div>'
+                +'<div class="avatar" style="background-image:url('+data[i].avatar+')"></div>'
                 +'<div class="name">'+data[i].login+'</div>'
                 +'</div>';
 
-            $('.friends-list').append(item);
+            $('#friends-list').append(item);
         }
 
         $('#friends-loading').hide();

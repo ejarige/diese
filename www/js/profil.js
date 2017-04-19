@@ -27,7 +27,8 @@ function RecupDataUser(){
             user_id:getUserId()
         },
         onLoad,
-        onError);
+        onError
+    );
 }
 
 function afficherInfo(data){
