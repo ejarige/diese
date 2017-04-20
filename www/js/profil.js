@@ -25,10 +25,11 @@ function recupDataUser(){
     askDiese(
         "get/user",
         {
-            user_id:28
+            user_id:getUserId()
         },
         onLoad,
-        onError);
+        onError
+    );
 }
 
 function afficherInfo(data){

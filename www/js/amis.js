@@ -9,7 +9,14 @@ function getFriends(){
         var data = $.parseJSON(e);
         console.log(data);
 
-        //TODO
+        for(var i in data){
+            var item = '<div class="friends-item" id="'+data[i].friend_id+'">'
+                +'<div class="avatar" style="background-image:url('+data[i].avatar+')"></div>'
+                +'<div class="name">'+data[i].login+'</div>'
+                +'</div>';
+
+            $('#friends-list').append(item);
+        }
 
         $('#friends-loading').hide();
     };
@@ -21,7 +28,7 @@ function getFriends(){
     askDiese(
         'get/friends',
         {
-            user_id:28
+            user_id: getUserId()
         },
         onLoad,
         onError
