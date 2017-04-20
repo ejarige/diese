@@ -2,10 +2,11 @@
  * Created by kgaillar on 29/03/2017.
  */
 $(function(){
-    RecupDataUser();
+    recupDataUser();
+    addEditListener();
 });
 
-function RecupDataUser(){
+function recupDataUser(){
 
     var onLoad = function(e){
         var data = $.parseJSON(e);
@@ -34,4 +35,10 @@ function afficherInfo(data){
     var infoLogin = '<p>'+data.login+'</p>';
 
     $('#prenom_age_ville').append(infoLogin);
+}
+
+function addEditListener(){
+    $('.roue').on('click', function(){
+        // TODO
+    });
 }

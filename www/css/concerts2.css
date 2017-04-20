@@ -81,6 +81,7 @@
     height: 85vh;
     padding: 10vh 4.5vw;
     background-color: #fff;
+    overflow-y: scroll;
 }
 
 #concerts-list .concert {

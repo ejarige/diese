@@ -6,8 +6,15 @@ p {
     top:0;
     height: 45vh;
     width: 100%;
-    background: url(http://e-cdn-images.deezer.com/images/artist/adf3579be3f27e52bc1520e6c462037f/500x500.jpg) no-repeat center;
+    background-repeat: no-repeat;
+    background-position: center;
     background-size:  100% auto;
+}
+
+#banner > div {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 #favorite {
@@ -27,7 +34,7 @@ p {
     height: 4vh;
     width: 80vw;
     color: #fff;
-    font-size: 4vh;
+    font-size: 3vh;
     font-weight: bold;
     text-transform: uppercase;
 }
@@ -39,7 +46,7 @@ p {
     height: 3vh;
     width: 80vw;
     color: #fff;
-    font-size: 3vh;
+    font-size: 2vh;
     font-weight: bold;
     text-transform: capitalize;
 }
