@@ -22,7 +22,7 @@ function getFriends(){
     };
 
     var onError = function(e){
-        alert('Erreur '+ e.status);
+        console.log('Erreur '+ e.status);
     };
 
     askDiese(

@@ -88,7 +88,7 @@ function searchConcerts(args, append){
 
     var onError = function(e){
         console.log(e);
-        alert('Erreur '+ e.status);
+        console.log('Erreur '+ e.status);
     };
 
     askDiese(
