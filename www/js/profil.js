@@ -17,12 +17,12 @@ function recupDataUser(){
             PROFIL_DATA = data;
             afficherInfo(data);
         } else {
-            alert('aucun résultat');
+            console.log('aucun résultat');
         }
     };
 
     var onError = function(e){
-        alert('Erreur '+ e.status);
+        console.log('Erreur '+ e.status);
     };
 
     askDiese(

@@ -26,12 +26,12 @@ function searchConcerts(args){
             for(var i in data.events.event)
                 createCard(data.events.event[i])
         } else {
-            alert('aucun résultat');
+            console.log('aucun résultat');
         }
     };
 
     var onError = function(e){
-        alert('Erreur '+ e.status);
+        console.log('Erreur '+ e.status);
     };
 
     askDiese(
