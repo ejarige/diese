@@ -2,7 +2,7 @@ html {
   font-size: 62.5%;
 }
 
-.liste_conversation_main{
+#liste_conversation_main{
 	margin-top: 11vh;
 	text-transform : none;
 }
@@ -67,12 +67,11 @@ max-width:auto;
 /*margin-top:3vh;*/
 }
 
-.exemple_conversation
+.conversation
 {
-min-height:15vh;
-max-width:80vw;
+height:15vh;
+width:80vw;
 /*background-color:yellow;*/
-margin-top:3%;
 margin-left:auto;
 margin-right:auto;
 border-bottom:1px solid white;
@@ -83,14 +82,15 @@ border-bottom:1px solid white;
 padding-bottom:30rem;
 }*/
 .photo_ami{
-	min-height:50px;
-	min-width:50px;
+	height:50px;
+	width:50px;
 	position:relative;
 	display: inline-block;
 	margin-left:7%;
 	margin-top:6%;
 	margin-bottom:auto;
-	background-color:blue;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
 	border-radius:45px;
 	float:left;
 }
@@ -105,26 +105,25 @@ padding-top:7vh;
 text-align:left;
 }*/
 
-.nom_ami
-{
-/*background-color:red;*/
-padding-top:0;
-margin-top:3rem;
-display: inline-block;
-/*margin-left:5%;*/
-	padding-left:10vw;
-	line-height:0.2;
+.info-conv {
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	left: 35vw;
+	width: 55vw;
 }
 
+.nom_ami
+{
+	position: absolute;
+	font-weight: bold;
+	font-size: 18px;
+}
 
-.apercu_conv{
-/*background-color:grey;*/
-padding-top:0;
-margin-top:0rem;
-display: inline-block;
-/*margin-left:5%;*/
-	padding-left:10vw;
-	line-height:0.2;
+.apercu_conv {
+	position: absolute;
+	margin-top: 50px;
+	font-size: 16px;
 }
 
 /*
