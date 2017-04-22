@@ -41,6 +41,7 @@ $(function() {
                 sessionStorage.userId = e;
                 window.location.href = "concerts.html";
             }
+            form.prop('disabled', false);
         };
 
         var onError = function(e){
@@ -52,7 +53,7 @@ $(function() {
             'get/session',
             {
                 login    : $('#signin-login').val(),
-                password : sha1($('#pass').val())
+                password : sha1($('#signin-pass').val())
             },
             onLoad,
             onError
