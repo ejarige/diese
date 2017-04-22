@@ -8,11 +8,11 @@
 }
 
 .ligne{
-	height:60px;
+	height:75px;
     width: auto;
 	/*background-color:red;*/
 	position:relative;
-	margin-top:10px;
+	margin-top:5px;
 	overflow-x:scroll;
     white-space: nowrap;
     /*overflow-y: scroll;*/
@@ -21,19 +21,48 @@
 .cercle{
 	height:50px;
 	width:50px;
-	position:relative;
-	display: inline-block;
 	margin-top:5px;
 	margin-left:5px;
 	margin-right:5px;
 	background-color:blue;
 	border-radius:45px;
+	position: absolute;
+	top: 35%;
+	left: 45%;
+	transform: translate(-50%, -50%); /* compatibilité : ie9+ */
 }
 
+.cercle_nom{
+	height:70px;
+	width:55px;
+	position:relative;
+	display: inline-block;
+	/*background-color:green;*/
+}
+
+.titre_profil{
+	font-size:12px;
+	font-size:1.2rem;
+}
+
+.nom_artiste p{
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:10px;
+	text-align:center;
+	font-size:10px;
+	height:20px;
+	width:15px;
+	position: absolute;
+	top: 80%;
+	left: 40%;
+	transform: translate(-50%, -50%); /* compatibilité : ie9+ */
+}
 .rectangle_blanc p{
 	font-family: 'montserratregular', 'lobster_1.3regular', 'Comic Sans MS', Helvetica, Arial, sans-serif;
 	font-style: bold;
 	margin-left:5%;
+	text-transform: none;
 }
 
 .rectangle{
@@ -47,14 +76,37 @@
 #photo{
 	background-repeat:no-repeat;
 	background-size: 100% 100%;
-	width:100%;
-	height:22.5vh;
+	height:7.0rem;
+	width:7.0rem;
+	background-color:blue;
+	border-radius:45px;
+	position: absolute;
+	top: 35%;
+	left: 45%;
+	transform: translate(-50%, -50%); /* compatibilité : ie9+ */
+
+	/*height:100px;
+	width:100px;
+	position:relative;
+	display: inline-block;
+	margin-top:5px;
+	margin-left:5px;
+	margin-right:5px;
+	background-color:blue;
+	border-radius:45px;*/
 }
 
 #prenom_age_ville{
-	margin: 5px;
-	text-transform: none;
-	top:95%;
+
+	position: absolute;
+	margin-top:1rem;
+	top: 80%;
+	left: 50%;
+	transform: translate(-50%, -50%); /* compatibilité : ie9+ */
+	font-family: 'montserratregular', 'lobster_1.3regular', 'Comic Sans MS', Helvetica, Arial, sans-serif;
+	text-align: center;
+	line-height:1.4;
+	font-size:1.0rem;
 }
 
 #roue{
@@ -78,6 +130,7 @@
 	background-size:100%;
 	margin-left:auto;
 	margin-right:auto;
+	margin-bottom:0.5rem;
 
 }
 
@@ -89,6 +142,9 @@
     position:fixed;
 }
 
+.profil_favoris a{
+	color:white;
+}
 /* EDIT MODAL */
 #edit-profile {
 	height: 0;
@@ -101,19 +157,27 @@
 	bottom:0;
 	right:0;
 	margin:auto;
-	background-color: #000;
+	/*background-color: #000;*/
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#34016a+0,31689e+50,24cdd0+100&0.55+0,0.65+100 */
+	background: -moz-linear-gradient(top, rgba(52,1,106,1) 0%, rgba(49,104,158,1) 50%, rgba(36,205,208,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, rgba(52,1,106,1) 0%,rgba(49,104,158,1) 50%,rgba(36,205,208,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, rgba(52,1,106,1) 0%,rgba(49,104,158,1) 50%,rgba(36,205,208,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	/*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8c34016a', endColorstr='#a624cdd0',GradientType=0 ); *//* IE6-9 */
 	z-index: 100;
 	text-align:center;
-	opacity: 0;
+	font-family: 'montserratregular', 'lobster_1.3regular', 'Comic Sans MS', Helvetica, Arial, sans-serif;
 }
 
 #edit-profile h1 {
 	width: 100%;
 	font-size: 28px;
+	font-family: 'lobster_1.3regular', 'Comic Sans MS', Helvetica, Arial, sans-serif;
+	text-transform: none;
 }
 
 #edit-profile #edit-avatar {
 	display: none;
+	margin-top:1rem;
 }
 
 #edit-profile #edit-avatar-label {
@@ -127,4 +191,8 @@
 
 #edit-profile #edit-name {
 	width: 60%;
+}
+
+#edit-name, #edit-age, #edit-location, #edit-actions{
+	margin-top:1rem;
 }

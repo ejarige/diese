@@ -45,8 +45,8 @@ p, div {
     margin-top: 0;
     width : 80vw;
     height: 26vh;
-    background:url(../img/logo.png) no-repeat;
-    background-size: 100% auto;
+    /*background:url(../img/logo.png) no-repeat;
+    background-size: 100% auto;*/
 }
 
 #app-intro-desc {

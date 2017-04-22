@@ -34,8 +34,7 @@ function recupDataUser(){
 }
 
 function afficherInfo(data){
-    var infoLogin = data.login+' ('+data.prenom+')<br>'
-        +data.age+' ans, '+data.lieu;
+    var infoLogin = data.login+' ('+data.prenom+')<br>' +data.age+' ans, '+data.lieu;
 
     $('#prenom_age_ville').html(infoLogin);
     $('#photo').css({backgroundImage:'url('+data.avatar+')'})
