@@ -1,5 +1,6 @@
 $(function(){
    getConcert();
+    addConcertListener();
 });
 
 function getConcert(){
@@ -32,4 +33,40 @@ function getConcert(){
         onLoad,
         onError
     );
+}
+
+function addConcertListener(){
+    $('#favorite').on('click', function(){
+        askDiese(
+            'create/favorite',
+            {
+                user_id: getUserId(),
+                concert_id: get('id')
+            },
+            function(){
+                console.log("Favori ajouté !");
+            },
+            function(e){
+                console.log("Error " + e);
+            }
+        )
+    });
+
+    $('#find-buddy').on('click', function(){
+       askDiese(
+           'get/buddy',
+           {
+               user_id: getUserId(),
+               concert_id:get('id')
+           },
+           function(e){
+               console.log(e);
+               var data = $.parseJSON(e);
+               console.log(data);
+           },
+           function(e){
+               console.log("Error " + e);
+           }
+       )
+    });
 }

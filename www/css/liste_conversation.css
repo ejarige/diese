@@ -12,7 +12,7 @@ body{
 	background-position:fixed;
 }
 
-.add_convers{
+#add_convers{
 	top: 10%;
 	bottom: auto;
 	right:10%;
@@ -23,6 +23,8 @@ body{
 	height: 40px;
 	width: 40px;
 	/*background-image: url("../img/icons/BLANC/PNG/settings.png");*/
+
+	display:none;
 }
 
 .page_title{
