@@ -1,29 +1,30 @@
-html {
-    font-size: 62.5%;
+#blocker {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(12,12,12,.8);
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: 998;
 }
 
-body{
-    text-transform : none;
-}
-.pop_up{
+#pop_up{
+    text-transform: none;
     background-color:white;
-    width:60%;
-    padding-left:7%;
-    padding-right:7%;
-    display: block;
-    margin: auto;
-    margin-top: 35%;
-    padding-top:5%;
-    padding-bottom:5%;
+    width:80vw;
+    height: 80vh;
+    position: fixed;
+    margin: 10vh 10vw;
     font-size:14px;
     font-size:1.4rem;
+    z-index: 999;
 }
 
-.pop_up p{
+#pop_up p{
     text-align:center;
 }
 
-.yeah{
+#yeah{
     font-family: 'lobster_1.3regular';
     font-size:30px;
     font-size:3rem;
@@ -34,32 +35,35 @@ p{
     color:#666666;
 }
 
-.photo_et_prenom_age_ville{
+#photo_et_prenom_age_ville{
     background-color:red;
     height:auto;
     width:auto;
 }
 
-.photo{
+#photo{
     height:5.0rem;
     width:5.0rem;
-    background-color:blue;
     border-radius:45px;
     float:left;
 	margin-left:1.5rem;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
-.prenom_age_ville{
+
+#prenom_age_ville{
     float:right;
     width:12.5rem;
 	font-size:1.2rem;
 }
 
-.presentation{
+#presentation{
     float:bottom;
 	font-size:1.2rem;
 	margin-top:10rem;
 }
-.lets_talk{
+
+#lets_talk{
     font-family: 'montserratregular', sans-serif;
     line-height: 10pt;
     font-style: bold;
@@ -74,10 +78,10 @@ p{
     margin-right:auto;
 }
 
-.lets_talk p{
+#lets_talk p{
     color:white;
 }
 
-.sry_no{
+#sry_no{
     margin-top: 2.5rem;
 }

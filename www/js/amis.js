@@ -4,19 +4,22 @@ $(function(){
 });
 
 function getFriends(){
-
     var onLoad = function(e){
         var data = $.parseJSON(e);
         console.log(data);
 
         for(var i in data){
-            var item = '<div class="friends-item" id="'+data[i].friend_id+'">'
+            var item = '<div class="friends-item" id="'+data[i].id+'">'
                 +'<div class="avatar" style="background-image:url('+data[i].avatar+')"></div>'
                 +'<div class="name">'+data[i].login+'</div>'
                 +'</div>';
 
             $('#friends-list').append(item);
         }
+
+        $('.friends-item').on('click', function(){
+            window.location.href = toPage('profil', {id: $(this).attr('id')});
+        });
 
         $('#friends-loading').hide();
     };

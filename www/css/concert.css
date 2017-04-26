@@ -51,7 +51,7 @@ p {
     text-transform: capitalize;
 }
 
-#find-buddy {
+.waiting-action {
     position: absolute;
     top: 47vh;
     left: 20vw;
@@ -61,8 +61,15 @@ p {
     font-size: 3vh;
     text-align: center;
     text-transform: none;
-    background-color: green;
     border-radius: 20px;
+}
+
+#find-buddy {
+    background-color: green;
+}
+
+#stop-waiting {
+    background-color: darkred;
 }
 
 #lists {
@@ -84,7 +91,6 @@ p {
 .list {
     height:60px;
     width: auto;
-    background-color:red;
     position:relative;
     margin-top:10px;
     overflow-x:scroll;
@@ -100,6 +106,7 @@ p {
     margin-top:5px;
     margin-left:5px;
     margin-right:5px;
-    background-color:blue;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
     border-radius:45px;
 }
