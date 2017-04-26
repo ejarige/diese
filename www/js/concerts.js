@@ -38,7 +38,8 @@ function searchConcerts(args){
         'get/concerts',
         args,
         onLoad,
-        onError);
+        onError
+    );
 }
 
 function createCard(event){

@@ -111,7 +111,7 @@ function addItem(event){
 
     $('#concerts-list').append(item).children(':last').hide().fadeIn(1000);
     $(document.getElementById(event.id)).on('click', function(){
-        window.location.href = "concert.html?id="+event.id;
+        window.location.href = toPage('concert', {id:event.id});
     });
 }
 

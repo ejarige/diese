@@ -33,6 +33,21 @@ function get(sParam) {
             return decodeURIComponent(sParameterName[1]);
         }
     }
+    return false;
+}
+
+function toPage(page, params){
+    var href = page+'.html?';
+
+    params.from = encodeURIComponent(
+        location.pathname.substring(location.pathname.lastIndexOf("/") + 1)
+        +window.location.search
+    );
+
+    for(var i in params)
+        href += i+'='+params[i]+'&';
+
+    return href;
 }
 
 function addMenuListener(){

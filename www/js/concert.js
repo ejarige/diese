@@ -1,9 +1,11 @@
 $(function(){
-   getConcert();
+    getConcert();
     addConcertListener();
 });
 
 function getConcert(){
+
+    openLoading('Chargement...');
 
     var onLoad = function(e){
         var data = $.parseJSON(e);
@@ -18,6 +20,33 @@ function getConcert(){
         $('#banner').css({
            'background' : 'url('+image+')'
         });
+        if(data.user_waiting){
+            $('#stop-waiting').removeClass('hide');
+        } else {
+            $('#find-buddy').removeClass('hide');
+        }
+
+        for(var i in data.friends_waiting){
+            $('#friends-list').append(
+                '<div data-id="'+data.friends_waiting[i].id+'" class="item" '
+                + ' style="background-image: url('+data.friends_waiting[i].avatar+')">'
+            )
+        }
+
+        for(var i in data.all_waiting){
+            $('#waiting-list').append(
+                '<div data-id="'+data.all_waiting[i].id+'" class="item" '
+                + ' style="background-image: url('+data.all_waiting[i].avatar+')">'
+            )
+        }
+
+        $('.item').on('click', function(){
+            window.location.href = toPage('profil', {id: $(this).data('id')});
+        });
+
+
+        closeLoading();
+
     };
 
     var onError = function(e){
@@ -28,6 +57,7 @@ function getConcert(){
     askDiese(
         'get/concert',
         {
+            user_id: getUserId(),
             concert_id: get('id')
         },
         onLoad,
@@ -59,7 +89,7 @@ function addConcertListener(){
         openLoading(loading);
 
         askDiese(
-            'get/buddy',
+            'get/waiting',
             {
                 user_id: getUserId(),
                 concert_id:get('id')
@@ -81,9 +111,61 @@ function addConcertListener(){
             }
         )
     });
+
+    $('#stop-waiting').on('click', function(){
+        var blocker = '<div id="blocker"></div>';
+        var modal = '<div id="pop_up">'
+            +'<p id="yeah">Confirmation</p>'
+            +'Es-tu sûr de vouloir te désinscrire de cette liste ?'
+            +'<input id="oui" type="button" value="Oui">'
+            +'<input id="non" type="button" value="Non">';
+
+        $('body').append(blocker+modal);
+
+        $('#oui').on('click', function(){
+            console.log("yes pls");
+            $('#pop_up, #blocker').remove();
+            openLoading('Désinscription en cours');
+            askDiese(
+                'remove/waiting',
+                {
+                    user_id: getUserId(),
+                    concert_id: get('id')
+                },
+                function(){
+                    console.log("Désinscription réussie");
+                    $('#stop-waiting').addClass('hide');
+                    $('#find-buddy').removeClass('hide');
+                    closeLoading();
+                },
+                function(e){
+                    console.log("Erreur " + e);
+                }
+            );
+        });
+
+        $('#non').on('click', function(){
+            console.log("not rly");
+            $('#pop_up, #blocker').remove();
+        });
+
+    });
 }
 
 function showBuddyModal(data, i){
+
+    var showNextModal = function(){
+        $('#pop_up, #blocker').remove();
+
+        if(i+1 < data.length){
+            showBuddyModal(data, i+1);
+        } else {
+            showNobodyModal();
+        }
+    };
+
+    if(!data[i].login) return showNextModal();
+
     var blocker = '<div id="blocker"></div>';
     var modal = '<div id="pop_up">'
         +'<p id="yeah">Yeah !</p>'
@@ -108,13 +190,7 @@ function showBuddyModal(data, i){
 
     $('#sry_no').on('click', function(){
         console.log("non merci");
-        $('#pop_up, #blocker').remove();
-
-        if(i+1 < data.length){
-            showBuddyModal(data, i+1);
-        } else {
-            showNobodyModal();
-        }
+        showNextModal();
     });
 
     $('#tarplu').on('click', function(){
@@ -137,8 +213,25 @@ function showNobodyModal(){
 
     $('#back_to_concert').on('click', function(){
         console.log("ajout liste");
-        // TODO AJOUT WAITING LIST
         $('#pop_up, #blocker').remove();
+        openLoading('Désinscription en cours');
+
+        askDiese(
+            'create/waiting',
+            {
+                user_id: getUserId(),
+                concert_id: get('id')
+            },
+            function(){
+                console.log("Inscription reussie");
+                closeLoading();
+                $('#find-buddy').addClass('hide');
+                $('#stop-waiting').removeClass('hide');
+            },
+            function(e){
+                console.log("Erreur " + e);
+            }
+        );
     });
 
     $('#tarplu').on('click', function(){

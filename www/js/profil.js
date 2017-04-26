@@ -1,7 +1,7 @@
 /**
  * Created by kgaillar on 29/03/2017.
  */
-var PROFIL_DATA;
+var PROFIL_DATA = {id:''};
 
 $(function(){
     recupDataUser();
@@ -9,12 +9,18 @@ $(function(){
 });
 
 function recupDataUser(){
+    openLoading('Chargement...');
+
+    PROFIL_DATA.id = get('id') ? get('id') : getUserId();
 
     var onLoad = function(e){
         var data = $.parseJSON(e);
         console.log(data, (data.length != 0));
+        closeLoading();
+
         if(data && (data.length != 0)){
-            PROFIL_DATA = data;
+            PROFIL_DATA.data = data;
+
             afficherInfo(data);
         } else {
             console.log('aucun résultat');
@@ -28,7 +34,7 @@ function recupDataUser(){
     askDiese(
         "get/user",
         {
-            user_id:getUserId()
+            user_id: PROFIL_DATA.id
         },
         onLoad,
         onError
@@ -41,6 +47,10 @@ function afficherInfo(data){
 
     $('#prenom_age_ville').html(infoLogin);
     $('#photo').css({backgroundImage:'url('+data.avatar+')'})
+
+    if(PROFIL_DATA.id != getUserId()){
+        $('#roue').remove();
+    }
 }
 
 function preFillForm(data){
@@ -72,7 +82,7 @@ function addEditListener(){
 
         $('body').append(modal);
 
-        preFillForm(PROFIL_DATA);
+        preFillForm(PROFIL_DATA.data);
 
         $('#cancel').on('click', function(){
             closeSettings();
