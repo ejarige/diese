@@ -1,3 +1,6 @@
+body{
+    background:white;
+}
 p {
     font-family: 'montserratregular', 'lobster_1.3regular', 'Comic Sans MS', Helvetica, Arial, sans-serif;
 }
@@ -17,6 +20,17 @@ p {
     overflow: hidden;
 }
 
+#filtre_violet {
+    position: absolute;
+    top:0;
+    height: 45vh;
+    width: 100%;
+    background: -moz-linear-gradient(top, rgba(52,1,106,0.55) 0%, rgba(49,104,158,0.6) 50%, rgba(36,205,208,0.65) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(52,1,106,0.55) 0%,rgba(49,104,158,0.6) 50%,rgba(36,205,208,0.65) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(52,1,106,0.55) 0%,rgba(49,104,158,0.6) 50%,rgba(36,205,208,0.65) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8c34016a', endColorstr='#a624cdd0',GradientType=0 ); /* IE6-9 */
+    z-index: 1;
+}
 #favorite {
     height:2.5rem;
     width:2.5rem;
@@ -25,6 +39,7 @@ p {
     top:5vh;
     right:6vw;
     position:absolute;
+    z-index: 998;
 }
 
 #concert-name {
@@ -37,6 +52,9 @@ p {
     font-size: 3vh;
     font-weight: bold;
     text-transform: uppercase;
+    z-index: 998;
+    font-family: 'montserratregular', 'lobster_1.3regular', 'Comic Sans MS', Helvetica, Arial, sans-serif;
+
 }
 
 #concert-venue {
@@ -49,6 +67,9 @@ p {
     font-size: 2vh;
     font-weight: bold;
     text-transform: capitalize;
+    z-index: 998;
+    font-family: 'montserratregular', 'lobster_1.3regular', 'Comic Sans MS', Helvetica, Arial, sans-serif;
+
 }
 
 .waiting-action {
@@ -72,6 +93,14 @@ p {
     background-color: darkred;
 }
 
+#stop-waiting p, #find-buddy p {
+    font-family: 'montserratregular', 'lobster_1.3regular', 'Comic Sans MS', Helvetica, Arial, sans-serif;
+    color:white;
+    padding-left:3%;
+    padding-right:3%;
+    margin-top:2vh;
+}
+
 #lists {
     position: absolute;
     top: 59vh;
@@ -86,6 +115,8 @@ p {
     text-transform: none;
     font-style: bold;
     margin-left:5%;
+    font-size:16px;
+    font-size:1.6rem;
 }
 
 .list {
@@ -103,10 +134,27 @@ p {
     width:50px;
     position:relative;
     display: inline-block;
-    margin-top:5px;
+    margin-top:0px;
     margin-left:5px;
     margin-right:5px;
     background-repeat: no-repeat;
     background-size: 100% 100%;
     border-radius:45px;
+}
+
+#pop_up{
+    text-transform: none;
+    background-color:white;
+    width:80vw;
+    height:80vh;
+    position: fixed;
+    margin: 10vh 10vw;
+    font-size:18px;
+    font-size:1.8rem;
+    z-index: 999;
+}
+
+#pop_up p{
+    text-align:center;
+    padding : 5%;
 }

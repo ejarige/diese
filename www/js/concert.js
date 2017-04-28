@@ -171,7 +171,7 @@ function showBuddyModal(data, i){
         +'<p id="yeah">Yeah !</p>'
         +'<div id="photo_et_prenom_age_ville">'
         +'<div id="photo" style="background-image: url('+data[i].avatar+')"></div>'
-        +'<div id="prenom_age_ville"><p>'+data[i].login+'<br>'+data[i].age+' ans<br>'+data[i].lieu+'</p></div>'
+        +'<div id="prenom_age_ville"><p>'+data[i].login+', '+data[i].age+' ans, '+data[i].lieu+'</p></div>'
         +'</div>'
         +'<div id="presentation">'
         +'<p>Voici '+data[i].login+' ! Il aime *data.musictag*, *data.musictag2* et son dernier concert était *data.last_concert*.</p>'

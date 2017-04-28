@@ -13,6 +13,8 @@
     <link rel="stylesheet" type="text/css" href="css/overall.css">
     <link rel="stylesheet" type="text/css" href="css/concert.css">
     <link rel="stylesheet" type="text/css" href="css/trouver_pote_pop_up.css">
+    <link rel="stylesheet" type="text/css" media="screen and (min-width:278px) and (min-height: 351px)" href="css/desole_pop_up.css">
+    <link rel="stylesheet" type="text/css" media="screen and (min-width:278px) and (min-height: 351px)" href="css/patience_pop_up.css">
 
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/angular.min.js"></script>
@@ -33,21 +35,22 @@
 </head>
 <body>
 <div class="concert app">
+    <div id="filtre_violet"></div>
     <div id="banner">
         <div id="favorite"></div>
         <div id="concert-name"></div>
         <div id="concert-venue"></div>
     </div>
     <div id="find-buddy" class="waiting-action hide">
-        Trouve un pote de concert
+        <p>Trouve un pote de concert</p>
     </div>
     <div id="stop-waiting" class="waiting-action hide">
-        Je ne cherche plus un pote
+        <p>Je ne cherche plus un pote</p>
     </div>
     <div id="lists">
-        <p>Tes potes qui y vont</p>
+        <p>Tes potes qui y vont : </p>
         <div id="friends-list" class="list"></div>
-        <p>Ils recherchent quelqu'un</p>
+        <p>Ils recherchent quelqu'un : </p>
         <div id="waiting-list" class="list"></div>
     </div>
 </div>

@@ -5,7 +5,7 @@ html {
 body{
     text-transform : none;
 }
-.pop_up{
+/*#pop_up{
     background-color:white;
     width:60%;
     padding-left:7%;
@@ -19,11 +19,11 @@ body{
     font-size:1.4rem;
 }
 
-.pop_up p{
+#pop_up p{
     text-align:center;
-}
+}*/
 
-.patience{
+#patience{
     font-family: 'lobster_1.3regular';
     font-size:30px;
     font-size:3rem;
@@ -34,7 +34,7 @@ p{
     color:#666666;
 }
 
-.recherche_en_cours{
+#recherche_en_cours{
 margin-top:4rem;
 width:80%;
 height:auto;
@@ -42,7 +42,7 @@ margin-left:auto;
 margin-right:auto;
 }
 
-.image_loading{
+#image_loading{
 margin-left:auto;
 margin-right:auto;
 height:10rem;
