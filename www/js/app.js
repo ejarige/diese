@@ -2,6 +2,7 @@
 var DIESE_SERVICE = 'http://diese.pe.hu/services/';
 
 $(function(){
+    console.log("Connecté avec user " + getUserId());
     addMenuListener();
 });
 
@@ -77,6 +78,8 @@ function closeLoading(){
 }
 
 function getUserId(){
+    if(window.location.pathname.substring(window.location.pathname.lastIndexOf('/')+1) == 'index.html') return;
+
     if(sessionStorage.userId){
         return sessionStorage.userId;
     } else {
