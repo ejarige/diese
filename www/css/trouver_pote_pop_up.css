@@ -8,7 +8,7 @@
     z-index: 998;
 }
 
-#pop_up{
+/*#pop_up{
     text-transform: none;
     background-color:white;
     width:80vw;
@@ -22,12 +22,14 @@
 
 #pop_up p{
     text-align:center;
-}
+}*/
 
 #yeah{
     font-family: 'lobster_1.3regular';
-    font-size:30px;
-    font-size:3rem;
+    font-size:35px;
+    font-size:3.5rem;
+    padding-top:2vh;
+    margin-top:2vh;
 }
 
 p{
@@ -42,11 +44,11 @@ p{
 }
 
 #photo{
-    height:5.0rem;
-    width:5.0rem;
+    height:6.5rem;
+    width:6.5rem;
     border-radius:45px;
     float:left;
-	margin-left:1.5rem;
+	margin-left:4.5rem;
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
@@ -54,34 +56,53 @@ p{
 #prenom_age_ville{
     float:right;
     width:12.5rem;
-	font-size:1.2rem;
+    margin-right:3.5rem;
+    /*background-color:yellow;*/
 }
 
+#prenom_age_ville p{
+    font-size:16px;
+    font-size:1.6rem;
+    font-style:bold;
+    font-family: 'montserratregular', sans-serif;
+}
 #presentation{
     float:bottom;
-	font-size:1.2rem;
-	margin-top:10rem;
+	margin-top:13rem;
+}
+
+#presentation p{
+    font-size:15px;
+    font-size:1.5rem;
+    font-family: 'montserratregular', sans-serif;
 }
 
 #lets_talk{
-    font-family: 'montserratregular', sans-serif;
     line-height: 10pt;
-    font-style: bold;
-    min-height:4rem;
-    max-width:10rem;
+    min-height:5rem;
+    max-width:14rem;
     background-color:#33cccc;
     text-align:center;
-    border-radius:35%;
-    margin-top:5vh;
-    padding-top:0.25rem;
+    border-radius:20%;
+    margin-top:3vh;
     margin-left:auto;
     margin-right:auto;
 }
 
 #lets_talk p{
     color:white;
+    padding-top:3vh;
+    font-family: 'montserratregular', sans-serif;
+    font-style: bold;
+    font-size: 22px;
+    font-size: 2.2rem;
 }
 
 #sry_no{
     margin-top: 2.5rem;
+}
+
+#tarplu p{
+    margin-top:0;
+    padding-top: 0;
 }
