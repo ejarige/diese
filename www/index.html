@@ -50,10 +50,16 @@
                             <input class="required" type="password" name="pass" id="pass" placeholder="Mot de passe" /><br/>
                             <label for="pseudo">Ton prénom <em>(optionnel)</em> :<span class="infobox" id="info-firstname"></span></label>
                             <input type="text" name="firstname" id="firstname" placeholder="Prénom" /><br/>
-                            Indiquer votre sexe :<br />
+                            <!--Indiquer votre sexe :<br />
                             <input type="radio" name="sexe" value="femme" id="femme" /> <label for="femme">Femme</label>
                             <input type="radio" name="sexe" value="autre" id="autre" /> <label for="autre">Autre</label>
-                            <input type="radio" name="sexe" value="homme" id="homme" /> <label for="homme">Homme</label>
+                            <input type="radio" name="sexe" value="homme" id="homme" /> <label for="homme">Homme</label>-->
+                            <label for="sexe">Sexe : </label>
+                            <select id="sexe">
+                                <option value="vide" name="sexe"></option>
+                                <option value="femme" name="sexe">Femme</option>
+                                <option value="home" name="sexe">Homme</option>
+                            </select><br>
                             <input class="button button--large" type="submit" id="form-submit" value="Envoyer" />
                         </p>
                     </form>

@@ -200,8 +200,8 @@ function openFiltersModal(){
 
             var categories = '';
             for(var i in CATEGORIES)
-                categories += '<div class="category" data-value="'+CATEGORIES[i].eventful_id+'">'
-                    +CATEGORIES[i].alias+'</div>';
+                categories += '<div class="category" data-value="'+CATEGORIES[i].eventful_id+'"><td>'
+                    +CATEGORIES[i].alias+'</td>';
 
             var modal = '<div id="edit-filters" class="hide">'
                 +'<div id="filters-loading" class="hide loading">'
@@ -211,17 +211,19 @@ function openFiltersModal(){
                 +'</div>'
                 +'<div id="close-filters">X</div>'
                 +'<div id="reset-filters">Réanitialiser les filtres</div>'
-                +'<strong>Ta distance géographique</strong><br>'
+                +'<strong id="reset_geo">Ta distance géographique</strong><br>'
                 +'<input type="text" id="location" placeholder="Pays, Ville..."><br>'
                 +'<input type="text" id="coordinates" class="hide filter-item"><br>'
                 +'<input type="range" id="range" class="range filter-item">'
                 +'<div id="range-value"><span>100</span>km</div><br>'
-                +'<strong>Tes genres musicaux</strong><br>'
-                +'<div class="categories">'+categories+'</div>'
-                +'<strong>Tes dates</strong><br>'
-                +'<label for="date-from">A partir de</label><br>'
-                +'<input type="date" class="filter-item" id="date-from">'
-                +'<label for="date-to">Jusqu\'au</label>'
+                +'<strong id="genre_music">Tes genres musicaux</strong><br>'
+                +'<div id="liste_categorie">'
+                    +'<div class="categories"><table>'+categories+'</table></div>'
+                +'</div>'
+                +'<strong id="dates">Tes dates</strong><br>'
+                +'<label for="date-from" id="date-from-title">A partir de</label>'
+                +'<input type="date" class="filter-item" id="date-from"><br>'
+                +'<label for="date-to" id="date-to-title">Jusqu\'au</label>'
                 +'<input type="date" class="filter-item" id="date-to">'
                 +'<div id="concerts-number-filters" class="concerts-number">'+$('#concerts-number').val()+'</div>'
                 +'</div>';

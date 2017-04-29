@@ -4,7 +4,20 @@
 	height: 45vh;
 	width: 100%;
 	background: url(http://e-cdn-images.deezer.com/images/artist/adf3579be3f27e52bc1520e6c462037f/500x500.jpg) no-repeat center;
-	background-size:  100% auto;
+	background-size: 100%;
+	z-index: 1;
+}
+
+#couverture_haut_de_page{
+	background: -moz-linear-gradient(top, rgba(52,1,106,0.55) 0%, rgba(49,104,158,0.6) 50%, rgba(36,205,208,0.65) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, rgba(52,1,106,0.55) 0%,rgba(49,104,158,0.6) 50%,rgba(36,205,208,0.65) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, rgba(52,1,106,0.55) 0%,rgba(49,104,158,0.6) 50%,rgba(36,205,208,0.65) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8c34016a', endColorstr='#a624cdd0',GradientType=0 ); /* IE6-9 */
+	position: absolute;
+	top:0;
+	height: 45vh;
+	width: 100%;
+	z-index: 2;
 }
 .icone_fav{
 	height:2.5rem;
@@ -14,6 +27,7 @@
 	top:5vh;
 	right:6vw;
 	position:absolute;
+	z-index: 100;
 }
 
 .save_to_fav{
@@ -22,7 +36,7 @@
 
 .nom_artiste_et_nbr_abo{
 	margin-left:7vw;
-	margin-top:28vh;
+	margin-top:33vh;
 	line-height:0.3;
 }
 
@@ -30,6 +44,7 @@
 	font-family: 'montserratregular', 'lobster_1.3regular', 'Comic Sans MS', Helvetica, Arial, sans-serif;
 	font-size: 13px;
 	font-size: 1.3rem;
+	z-index: 100;
 }
 
 .nbr_abo{
@@ -37,6 +52,7 @@
 	font-size: 13px;
 	font-size: 1.3rem;
 	text-transform : none;
+	z-index: 100;
 }
 
 .rectangle_blanc{
@@ -82,6 +98,7 @@
 }
 
 .discographie{
+	margin-top : 7.5vh;
 	font-size: 13px;
 	font-size: 1.3rem;
 }

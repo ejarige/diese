@@ -1,3 +1,7 @@
+body{
+    background-image: url("../img/home.jpg");
+    background-size: auto 100%;
+}
 .hidden {
     display: none;
 }
@@ -24,6 +28,7 @@ p, div {
     position: absolute;
     margin-top: 0;
     text-transform: none;
+    margin-top:7vh;
 }
 
 #app-intro-connexion {
@@ -35,6 +40,7 @@ p, div {
     right: 3vh;
     text-transform: none;
     text-align: right;
+    font-family: 'montserratregular', 'lobster_1.3regular', 'Comic Sans MS', Helvetica, Arial, sans-serif;
 }
 
 #app-intro-title {
@@ -45,8 +51,8 @@ p, div {
     margin-top: 0;
     width : 80vw;
     height: 26vh;
-    /*background:url(../img/logo.png) no-repeat;
-    background-size: 100% auto;*/
+    background:url(../img/logo.png) no-repeat;
+    background-size: 100% auto;
 }
 
 #app-intro-desc {
@@ -69,6 +75,8 @@ p, div {
     top: 5vh;
     text-align: center;
     width: 100%;
+    margin-top:10vh;
+    font-family: 'lobster_1.3regular', 'montserratregular', 'Comic Sans MS', Helvetica, Arial, sans-serif;
 }
 
 #inscription, #connexion {
@@ -117,4 +125,8 @@ p, div {
     top: 60vh;
     width: 60vw;
     left: 20vw;
+}
+
+#logo_diese{
+
 }

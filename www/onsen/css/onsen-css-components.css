@@ -49,7 +49,7 @@ h6 {
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
   font-size: 17px;
-  background-color: #f9f9f9;
+  /*background-color: #f9f9f9;*/
   position: absolute;
   top: 0px;
   left: 0px;
@@ -69,7 +69,7 @@ h6 {
   display: none;
 }
 .page__content {
-  background-color: #f9f9f9;
+  /*background-color: #f9f9f9;*/
   position: absolute;
   top: 0px;
   left: 0px;
@@ -80,7 +80,7 @@ h6 {
   box-sizing: border-box;
 }
 .page__background {
-  background-color: #f9f9f9;
+  /*background-color: #f9f9f9;*/
   position: absolute;
   top: 0px;
   left: 0px;
@@ -112,7 +112,7 @@ h6 {
   font-weight: 400;
 }
 .page--material__background {
-  background-color: #fff;
+  /*background-color: #fff;*/
 }
 /* topdoc
   name: Switch
@@ -182,7 +182,7 @@ h6 {
   z-index: -1;
 }
 .switch__toggle {
-  background-color: #fff;
+  /*background-color: #fff;*/
   position: absolute;
   top: 0px;
   left: 0px;

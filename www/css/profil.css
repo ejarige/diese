@@ -195,4 +195,5 @@
 
 #edit-name, #edit-age, #edit-location, #edit-actions{
 	margin-top:1rem;
+	margin-left : 3%;
 }
