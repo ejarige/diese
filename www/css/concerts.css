@@ -113,3 +113,26 @@
     text-overflow: ellipsis;
     white-space: nowrap;
 }
+
+#edit-filters {
+    position: absolute;
+    height: 0;
+    width: 100vw;
+    opacity: 0;
+    top:0;
+    left:0;
+    margin:auto;
+    /*background-color: #000;*/
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#34016a+0,31689e+50,24cdd0+100&0.55+0,0.65+100 */
+    background: -moz-linear-gradient(top, rgba(52,1,106,1) 0%, rgba(49,104,158,1) 50%, rgba(36,205,208,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(52,1,106,1) 0%,rgba(49,104,158,1) 50%,rgba(36,205,208,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(52,1,106,1) 0%,rgba(49,104,158,1) 50%,rgba(36,205,208,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    /*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8c34016a', endColorstr='#a624cdd0',GradientType=0 ); *//* IE6-9 */
+    z-index: 100;
+    text-align:center;
+    font-family: 'montserratregular', 'lobster_1.3regular', 'Comic Sans MS', Helvetica, Arial, sans-serif;
+}
+
+#edit-filters .selected{
+    color:red;
+}

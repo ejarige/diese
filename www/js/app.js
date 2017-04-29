@@ -23,6 +23,33 @@ function askDiese(url, values, onSuccess, onError){
     });
 }
 
+function askGoogleMapsCoordinates(where, callback){
+    console.log("Asking Google where is " + where);
+    openLoading('Vérification du lieu...');
+
+    var onLoad = function(e){
+        closeLoading();
+
+        if(e.status == 'OK'){
+            callback({
+                latitude    : e.results[0].geometry.location.lat,
+                longitude   : e.results[0].geometry.location.lng
+            });
+        } else {
+            onError(e);
+        }
+    };
+
+    var onError = function(e){
+        console.log("Error " + e);
+        return false;
+    };
+
+    $.ajax('https://maps.googleapis.com/maps/api/geocode/json?address='+encodeURIComponent(where), {
+        success: onLoad
+    });
+}
+
 function get(sParam) {
     var sPageURL = window.location.search.substring(1);
     var sURLVariables = sPageURL.split('&');
