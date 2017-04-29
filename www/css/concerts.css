@@ -136,3 +136,19 @@
 #edit-filters .selected{
     color:red;
 }
+
+#filters-loading {
+    position: fixed;
+    top: 5px;
+    left: 5px;
+    z-index: 999;
+}
+
+#filters-loading > svg {
+    height: 30px;
+    width: 30px;
+}
+
+#filters-loading > svg > circle {
+    stroke: #fff;
+}

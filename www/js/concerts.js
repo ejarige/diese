@@ -32,7 +32,7 @@ function addSearchListener(){
 }
 
 function addScrollListener(){
-    $("#concerts-list").bind('scroll', function ()
+    $("#concerts-list").unbind('scroll').bind('scroll', function ()
     {
         var divHeight   = $(this).innerHeight();
         var height      = $(this)[0].scrollHeight;
@@ -55,7 +55,7 @@ function addScrollListener(){
 function searchConcerts(append){
     if(!append) $('#concerts-list').html('');
 
-    $('#concerts-loading').show();
+    $('#concerts-loading').removeClass('hide');
 
     var args = {};
 
@@ -69,7 +69,7 @@ function searchConcerts(append){
     if(keywords && keywords.length) args.keywords = keywords;
     if(location && location.length) args.location = location;
     if(range && range.length)       args.within   = range*2;
-    if(category && category.length) args.category = category.join();
+    if(category && category.length) args.category = category.toArray().join();
     //if(dateFrom && dateFrom.length) params.date     = 'date'; //TODO
     //if(dateTo && dateTo.length)   params.date     += 'date';
     if(append) args.page = parseInt($('#concerts-number').data('page'))+1;
@@ -92,12 +92,11 @@ function searchConcerts(append){
             .data('page', page)
             .data('pageCount', pageCount);
 
-        if(notEmpty){
+        if(notEmpty)
             for(var i in data.events.event)
-                addItem(data.events.event[i])
-        }
+                addItem(data.events.event[i]);
 
-        $('#concerts-loading').hide();
+        $('.loading').addClass('hide');
         addScrollListener();
     };
 
@@ -131,12 +130,9 @@ function addItem(event){
 }
 
 function openFiltersModal(){
-    openLoading('Récupération des catégories...');
 
     var openFilters = function(){
-        addFiltersListener();
-        $('#edit-filters').animate({
-            width: '100%',
+        $('#edit-filters').removeClass('hide').animate({
             height: '100%',
             opacity: 1
         }, 'normal');
@@ -151,13 +147,23 @@ function openFiltersModal(){
         });
     };
 
+    var timeoutFilterSearch;
+
+    var searchFiltersConcerts = function(){
+        $('#filters-loading').removeClass('hide');
+        clearTimeout(timeoutFilterSearch);
+        timeoutFilterSearch = setTimeout(function(){
+            searchConcerts();
+        }, 500);
+    };
+
     var addFiltersListener = function(){
 
         $('#location').on('change', function(){
             askGoogleMapsCoordinates($(this).val(), function(coords){
                 if(coords){
                     $('#coordinates').val(coords.latitude+','+coords.longitude);
-                    searchConcerts();
+                    searchFiltersConcerts();
                 } else {
                     alert('lieu inconnu');
                 }
@@ -169,11 +175,16 @@ function openFiltersModal(){
         });
 
         $('.filter-item').on('change', function(){
-            searchConcerts();
+            var range = $('#range');
+            if(range.val() <= 0) range.val(1);
+
+            searchFiltersConcerts();
         });
 
         $('.category').on('click', function(){
             $(this).toggleClass('selected');
+
+            searchFiltersConcerts();
         });
 
         $('#close-filters').on('click', function(){
@@ -181,42 +192,58 @@ function openFiltersModal(){
         });
     };
 
-    var onLoad = function(e){
-        CATEGORIES = $.parseJSON(e);
+    var loadFromServer = function(){
+        openLoading('Récupération des catégories...');
 
-        var categories = '';
-        for(var i in CATEGORIES)
-            categories += '<div class="category" data-value="'+CATEGORIES[i].eventful_id+'">'
+        var onLoad = function(e){
+            CATEGORIES = $.parseJSON(e);
+
+            var categories = '';
+            for(var i in CATEGORIES)
+                categories += '<div class="category" data-value="'+CATEGORIES[i].eventful_id+'">'
                     +CATEGORIES[i].alias+'</div>';
 
-        var modal = '<div id="edit-filters">'
-            +'<div id="close-filters">X</div>'
-            +'<div id="reset-filters">Réanitialiser les filtres</div>'
-            +'<strong>Ta distance géographique</strong><br>'
-            +'<input type="text" id="location" placeholder="Pays, Ville..."><br>'
-            +'<input type="text" id="coordinates" class="hide filter-item"><br>'
-            +'<input type="range" id="range" class="range filter-item">'
-            +'<div id="range-value"><span>50</span>km</div><br>'
-            +'<strong>Tes genres musicaux</strong><br>'
-            +'<div class="categories">'+categories+'</div>'
-            +'<strong>Tes dates</strong><br>'
-            +'<label for="date-from">A partir de</label><br>'
-            +'<input type="date" class="filter-item" id="date-from">'
-            +'<label for="date-to">Jusqu\'au</label>'
-            +'<input type="date" class="filter-item" id="date-to">'
-            +'<div id="concerts-number-filters" class="concerts-number">'+$('#concerts-number').val()+'</div>'
-            +'</div>';
+            var modal = '<div id="edit-filters" class="hide">'
+                +'<div id="filters-loading" class="hide loading">'
+                +'<svg class="progress-circular">'
+                +'<circle class="progress-circular__primary" cx="50%" cy="50%" r="40%" fill="none" stroke-width="10%" stroke-miterlimit="10"/>'
+                +'</svg>'
+                +'</div>'
+                +'<div id="close-filters">X</div>'
+                +'<div id="reset-filters">Réanitialiser les filtres</div>'
+                +'<strong>Ta distance géographique</strong><br>'
+                +'<input type="text" id="location" placeholder="Pays, Ville..."><br>'
+                +'<input type="text" id="coordinates" class="hide filter-item"><br>'
+                +'<input type="range" id="range" class="range filter-item">'
+                +'<div id="range-value"><span>100</span>km</div><br>'
+                +'<strong>Tes genres musicaux</strong><br>'
+                +'<div class="categories">'+categories+'</div>'
+                +'<strong>Tes dates</strong><br>'
+                +'<label for="date-from">A partir de</label><br>'
+                +'<input type="date" class="filter-item" id="date-from">'
+                +'<label for="date-to">Jusqu\'au</label>'
+                +'<input type="date" class="filter-item" id="date-to">'
+                +'<div id="concerts-number-filters" class="concerts-number">'+$('#concerts-number').val()+'</div>'
+                +'</div>';
 
-        $('body').append(modal);
-        closeLoading();
+            $('body').append(modal);
+            addFiltersListener();
+            closeLoading();
+            openFilters();
+        };
+
+        var onError = function(e){
+            console.log("Error " + e);
+        };
+
+        askDiese('get/categories', {}, onLoad, onError);
+    };
+
+    if($('#edit-filters').length){
         openFilters();
-    };
-
-    var onError = function(e){
-        console.log("Error " + e);
-    };
-
-    askDiese('get/categories', {}, onLoad, onError);
+    } else {
+        loadFromServer();
+    }
 }
 
 function addResponsive(){
