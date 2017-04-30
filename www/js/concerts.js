@@ -240,7 +240,7 @@ function openFiltersModal(){
                     +'</div>'
                 +'</div>'
                 +'<div id="concerts-number-filters" class="concerts-number">'
-                    +$('#concerts-number').val()
+                    +$('#concerts-number').text()
                 +'</div>'
                 +'</div>';
 
