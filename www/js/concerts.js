@@ -132,6 +132,7 @@ function addItem(event){
 function openFiltersModal(){
 
     var openFilters = function(){
+        closeLoading();
         $('#edit-filters').removeClass('hide').animate({
             height: '100%',
             opacity: 1
@@ -178,7 +179,9 @@ function openFiltersModal(){
             var range = $('#range');
             if(range.val() <= 0) range.val(1);
 
-            searchFiltersConcerts();
+            if($('#location').val().length){
+                searchFiltersConcerts();
+            }
         });
 
         $('.category').on('click', function(){
@@ -187,21 +190,28 @@ function openFiltersModal(){
             searchFiltersConcerts();
         });
 
-        $('#close-filters').on('click', function(){
+        $('#reset-filters').on('click', function(){
+           $('#location, #coordinates, #date-from, #date-to').val('');
+            $('.selected').removeClass('selected');
+
+            searchFiltersConcerts();
+        });
+
+        $('#close-filters, #concerts-number-filters').on('click', function(){
             closeFilters();
         });
     };
 
     var loadFromServer = function(){
-        openLoading('Récupération des catégories...');
+        openLoading('Chargement des filtres...');
 
         var onLoad = function(e){
             CATEGORIES = $.parseJSON(e);
 
             var categories = '';
             for(var i in CATEGORIES)
-                categories += '<div class="category" data-value="'+CATEGORIES[i].eventful_id+'"><td>'
-                    +CATEGORIES[i].alias+'</td>';
+                categories += '<div class="category" data-value="'+CATEGORIES[i].eventful_id+'">'
+                    +CATEGORIES[i].alias+'</div>';
 
             var modal = '<div id="edit-filters" class="hide">'
                 +'<div id="filters-loading" class="hide loading">'
@@ -210,27 +220,32 @@ function openFiltersModal(){
                 +'</svg>'
                 +'</div>'
                 +'<div id="close-filters">X</div>'
-                +'<div id="reset-filters">Réanitialiser les filtres</div>'
-                +'<strong id="reset_geo">Ta distance géographique</strong><br>'
+                +'<div id="reset-filters">Réinitialiser les filtres</div>'
+                +'<div id="geo" class="title">Ta distance géographique</div><br>'
                 +'<input type="text" id="location" placeholder="Pays, Ville..."><br>'
                 +'<input type="text" id="coordinates" class="hide filter-item"><br>'
                 +'<input type="range" id="range" class="range filter-item">'
                 +'<div id="range-value"><span>100</span>km</div><br>'
-                +'<strong id="genre_music">Tes genres musicaux</strong><br>'
-                +'<div id="liste_categorie">'
-                    +'<div class="categories"><table>'+categories+'</table></div>'
+                +'<div id="genre_music" class="title">Tes genres musicaux</div><br>'
+                +'<div id="categories">'+categories+'</div>'
+                +'<div id="dates" class="title">Tes dates</div><br>'
+                +'<div id="date-inputs">'
+                    +'<div class="table-input-row">'
+                        +'<label for="date-from" id="date-from-title">A partir de</label>'
+                        +'<input type="date" class="filter-item" id="date-from"><br>'
+                    +'</div>'
+                    +'<div class="table-input-row">'
+                        +'<label for="date-to" id="date-to-title">Jusqu\'au</label>'
+                        +'<input type="date" class="filter-item" id="date-to">'
+                    +'</div>'
                 +'</div>'
-                +'<strong id="dates">Tes dates</strong><br>'
-                +'<label for="date-from" id="date-from-title">A partir de</label>'
-                +'<input type="date" class="filter-item" id="date-from"><br>'
-                +'<label for="date-to" id="date-to-title">Jusqu\'au</label>'
-                +'<input type="date" class="filter-item" id="date-to">'
-                +'<div id="concerts-number-filters" class="concerts-number">'+$('#concerts-number').val()+'</div>'
+                +'<div id="concerts-number-filters" class="concerts-number">'
+                    +$('#concerts-number').val()
+                +'</div>'
                 +'</div>';
 
             $('body').append(modal);
             addFiltersListener();
-            closeLoading();
             openFilters();
         };
 
