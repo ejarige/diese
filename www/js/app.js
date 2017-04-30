@@ -101,7 +101,7 @@ function openLoading(text){
 }
 
 function closeLoading(){
-    $('#loading').hide();
+    $('#loading').remove();
 }
 
 function getUserId(){

@@ -140,10 +140,6 @@ body{
     font-family: 'montserratregular', 'lobster_1.3regular', 'Comic Sans MS', Helvetica, Arial, sans-serif;
 }
 
-#edit-filters .selected{
-    color:red;
-}
-
 #filters-loading {
     position: fixed;
     top: 5px;
@@ -168,76 +164,121 @@ body{
 }
 
 #reset-filters{
-    right:6%;
-    top:4%;
     position:absolute;
+    right:6vw;
+    top:4vh;
+    font-weight: bold;
+    text-transform: none;
 }
 
-#reset_geo{
-    left:6%;
-    top:14%;
-    position:absolute;
+.title {
+    position:relative;
+    margin-top: 15px;
+    margin-left: 5vw;
+    width:90vw;
+    text-align: left;
+    font-weight: bold;
+    text-transform: none;
+    font-size: 18px;
 }
 
-#range, #coordinates{
-    margin-top:1%;
+#geo{
+    position:absolute;
+    top:12vh;
+}
+
+#location {
+    width: 90vw;
+    border: none;
+    color: #D0CCDF;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: transparent;
+}
+
+#location::placeholder {
+    color: #D0CCDF;
+}
+
+#range {
+    width: 90vw;
 }
 
 #range-value{
-    margin-top:3%;
+    margin-top:1vh;
 }
 
-#genre_music{
-    left:6%;
-    top:35%;
-    position:absolute;
-}
-
-#liste_categorie{
-    height:35%;
-    max-width:100%;
-    margin-top:5%;
-    /*text-align: justify;*/
-    /*table-layout: fixed;*/
-    background:red;
-    /*word-break: break-all;*/
+#categories{
+    margin-left: 5vw;
+    width: 90vw;
+    display:table;
 }
 
 .category{
-    /*border: 1px solid white;
-    border-radius: 20%;
-    padding:1%;*/
-
+    border-radius: 45px;
+    border: 1px solid #fff;
+    display: table-cell;
+    padding: 2px 5px;
+    margin:  5px 3px;
+    float:left;
+    text-transform: capitalize;
+    font-weight: bold;
 }
 
-#dates{
-    left:6%;
-    top:80%;
-    position:absolute;
+.category.selected {
+    background-color: #CAD5E4;
 }
 
 #location{
     margin-top:30%;
 }
 
-.categories{
-    /*table-layout: fixed;*/
-
+#date-inputs {
+    display: table;
+    table-layout: fixed;
+    margin-left: 5vw;
 }
 
-#date-from{
-    margin-top:10vh;
+#date-inputs .table-input-row {
+    display: table-row;
+    line-height: 35px;
 }
 
-#date-from-title{
-    padding-right:2vw;
+#date-inputs .table-input-row > * {
+    display: table-cell;
 }
 
-#date-to-title{
-    padding-right:2vw;
-    margin-top:2vh;
+#date-inputs label {
+    width: 30vw;
+    text-align: left;
+    font-weight: bold;
+    text-transform: none;
 }
 
-#date-to, #date-from{
-    background-color:whitesmoke;
+#date-inputs input {
+    width: 30vw;
+    text-align: right;
+    font-weight: bold;
+    border: none;
+    border-radius: 45px;
+    color: #fff;
+    background-color: #CAD5E4;
+    padding: 2px 5px;
+}
+
+#concerts-number-filters {
+    position: fixed;
+    width: 50vw;
+    height: 5vh;
+    line-height: 5vh;
+    vertical-align: middle;
+    left: 25vw;
+    bottom: 5vh;
+    color: #52D6D7;
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: none;
+    background-color: #fff;
+    border-radius: 45px;
+    z-index: 999;
 }
