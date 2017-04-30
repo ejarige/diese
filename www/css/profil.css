@@ -2,7 +2,7 @@
 	background-color: white;
 	margin-top:10vh;
 	width:100%;
-	height:55vh;
+	height:200vh;
 	overflow-y:scroll;
 	color:black;
 }
@@ -15,9 +15,12 @@
 	margin-top:5px;
 	overflow-x:scroll;
     white-space: nowrap;
-    /*overflow-y: scroll;*/
+    overflow-y: hidden;
 }
 
+.ligne:last-child{
+	padding-bottom:10vh;
+}
 .cercle{
 	height:50px;
 	width:50px;
@@ -144,6 +147,7 @@
 
 .profil_favoris a{
 	color:white;
+	font-family: 'montserratregular', 'lobster_1.3regular', 'Comic Sans MS', Helvetica, Arial, sans-serif;
 }
 /* EDIT MODAL */
 #edit-profile {

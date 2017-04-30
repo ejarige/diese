@@ -6,6 +6,7 @@ var PROFIL_DATA = {id:''};
 $(function(){
     recupDataUser();
     addEditListener();
+    addResponsive();
 });
 
 function recupDataUser(){
@@ -153,4 +154,9 @@ function addEditListener(){
     $('#roue').on('click', function(){
         openSettings();
     });
+}
+
+function addResponsive(){
+    var vh = $(window).height()/100;
+    $('.rectangle_blanc').css('height', ($(window).height()-24*vh-150)+'px');
 }
