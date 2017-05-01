@@ -1,0 +1,53 @@
+body{
+    padding-left:5vw;
+    padding-right:5vw;
+    overflow-y:scroll;
+    height:200vh;
+    width:auto;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding-bottom:5vh;
+}
+.title, h1, h2{
+   text-align:center;
+    font-size:16px;
+    font-family: 'lobster_1.3regular', 'montserratregular', 'Comic Sans MS', Helvetica, Arial, sans-serif;
+}
+
+h1{
+    font-size:25px;
+}
+.gras{
+    text-align:justify;
+    font-size:13px;
+    font-family: 'montserratregular', 'lobster_1.3regular', 'Comic Sans MS', Helvetica, Arial, sans-serif;
+    font-style:bold;
+}
+
+.italic{
+    text-align:center;
+    font-size:13px;
+    font-family: 'montserratregular', 'lobster_1.3regular', 'Comic Sans MS', Helvetica, Arial, sans-serif;
+    font-style:italic;
+}
+.texte{
+    text-align:justify;
+    font-size:13px;
+    font-family: 'montserratregular', 'lobster_1.3regular', 'Comic Sans MS', Helvetica, Arial, sans-serif;
+
+}
+
+p{
+    text-align:justify;
+    font-size:13px;
+    font-family: 'montserratregular', 'lobster_1.3regular', 'Comic Sans MS', Helvetica, Arial, sans-serif;
+}
+
+.back_to_home{
+    margin-top:5vh;
+    left:40%;
+    color:red;
+    font-size:13px;
+    font-family: 'montserratregular', 'lobster_1.3regular', 'Comic Sans MS', Helvetica, Arial, sans-serif;
+    padding-bottom:5vh;
+}

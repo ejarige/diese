@@ -1,5 +1,6 @@
 $(function() {
     addMenuListener();
+    /*addDocListener();*/
     // MERCI ET TARPLU
     $('#back-home').on('click', function(){
         $('#ty-and-bye').addClass('hidden');
@@ -157,4 +158,129 @@ $(function() {
     $('.required').on('change', function(){
        $('#info-'+$(this).attr('id')).text('');
     });
+
+
 });
+/*
+function addDocListener(){
+    var openConditionUtilisation = function(){
+        var modal = '<div id="read_CG">'
+            +'<h1>Condition d\'utilisation</h1>'
+            +'blablablablablablablabla'
+            +'blablablablablabla'
+            +'blablablabla';
+            /*+'<form id="edit-form">'
+            +'<label id="edit-avatar-label" for="edit-avatar"></label>'
+            +'<input id="edit-avatar" type="file">'
+            +'<label for="edit-name">Prénom :</label>'
+            +'<input type="text" id="edit-name" maxlength="16"><br>'
+            +'<label for="edit-age">Age :</label>'
+            +'<input type="number" id="edit-age" min="18" step="1" max="99"><br>'
+            +'<label for="edit-location">Ville :</label>'
+            +'<input type="text" id="edit-location" maxlength="32">'
+            +'<div id="edit-actions">'
+            +'<input type="submit" value="Valider">'
+            +'<input type="button" id="cancel" value="Annuler">'
+            +'</div>'
+            +'</form>'
+            +'</div>';*/
+
+        /*$('body').append(modal);
+    };
+    var openMentionLegales = function(){
+        var modal = '<div id="read_ML">'
+            +'<h1>Condition d\'utilisation</h1>'
+            +'blablablablablablablabla'
+            +'blablablablablabla'
+            +'blablablabla';*/
+        /*+'<form id="edit-form">'
+         +'<label id="edit-avatar-label" for="edit-avatar"></label>'
+         +'<input id="edit-avatar" type="file">'
+         +'<label for="edit-name">Prénom :</label>'
+         +'<input type="text" id="edit-name" maxlength="16"><br>'
+         +'<label for="edit-age">Age :</label>'
+         +'<input type="number" id="edit-age" min="18" step="1" max="99"><br>'
+         +'<label for="edit-location">Ville :</label>'
+         +'<input type="text" id="edit-location" maxlength="32">'
+         +'<div id="edit-actions">'
+         +'<input type="submit" value="Valider">'
+         +'<input type="button" id="cancel" value="Annuler">'
+         +'</div>'
+         +'</form>'
+         +'</div>';*/
+
+       /* $('body').append(modal);
+    };
+    var openChartePote = function(){
+        var modal = '<div id="read_CP">'
+            +'<h1>Condition d\'utilisation</h1>'
+            +'blablablablablablablabla'
+            +'blablablablablabla'
+            +'blablablabla';*/
+        /*+'<form id="edit-form">'
+         +'<label id="edit-avatar-label" for="edit-avatar"></label>'
+         +'<input id="edit-avatar" type="file">'
+         +'<label for="edit-name">Prénom :</label>'
+         +'<input type="text" id="edit-name" maxlength="16"><br>'
+         +'<label for="edit-age">Age :</label>'
+         +'<input type="number" id="edit-age" min="18" step="1" max="99"><br>'
+         +'<label for="edit-location">Ville :</label>'
+         +'<input type="text" id="edit-location" maxlength="32">'
+         +'<div id="edit-actions">'
+         +'<input type="submit" value="Valider">'
+         +'<input type="button" id="cancel" value="Annuler">'
+         +'</div>'
+         +'</form>'
+         +'</div>';*/
+
+        /*$('body').append(modal);
+    };
+
+    var openCharteConfi = function(){
+        var modal = '<div id="read_CF">'
+            +'<h1>Condition d\'utilisation</h1>'
+            +'blablablablablablablabla'
+            +'blablablablablabla'
+            +'blablablabla';*/
+        /*+'<form id="edit-form">'
+         +'<label id="edit-avatar-label" for="edit-avatar"></label>'
+         +'<input id="edit-avatar" type="file">'
+         +'<label for="edit-name">Prénom :</label>'
+         +'<input type="text" id="edit-name" maxlength="16"><br>'
+         +'<label for="edit-age">Age :</label>'
+         +'<input type="number" id="edit-age" min="18" step="1" max="99"><br>'
+         +'<label for="edit-location">Ville :</label>'
+         +'<input type="text" id="edit-location" maxlength="32">'
+         +'<div id="edit-actions">'
+         +'<input type="submit" value="Valider">'
+         +'<input type="button" id="cancel" value="Annuler">'
+         +'</div>'
+         +'</form>'
+         +'</div>';*/
+
+        /*$('body').append(modal);
+    };
+    var closeSettings = function(){
+        $('#read_CG').animate({
+            width: '0',
+            height: '0',
+            opacity: 0
+        }, 'normal', function(){
+            $(this).remove();
+        });
+    };
+
+    $('#conditions_utilisation').on('click', function(){
+        openConditionUtilisation();
+    });
+    $('#mentions_legales').on('click', function(){
+        openMentionLegales();
+    });
+    $('#openChartePote').on('click', function(){
+        openMentionLegales();
+    });
+    $('#charte_de_confidentialite').on('click', function(){
+        openCharteConfi();
+    });
+*/
+}

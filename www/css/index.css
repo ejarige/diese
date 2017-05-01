@@ -26,9 +26,8 @@ p, div {
     width: 70vw;
     left: 15vw;
     position: absolute;
-    margin-top: 0;
     text-transform: none;
-    margin-top:7vh;
+    margin-top:3vh;
 }
 
 #app-intro-connexion {
@@ -44,7 +43,7 @@ p, div {
 }
 
 #app-intro-title {
-    top: 35vh;
+    top: 30vh;
     left: 10vw;
     position: absolute;
     font-size: 8vh;
@@ -69,13 +68,13 @@ p, div {
 }
 
 /* Inscription et Connexion*/
-.page-title, .page-connexion {
+.page-title, #page-connexion {
     font-size: 6vh;
     position:absolute;
-    top: 5vh;
+    top: 4vh;
     text-align: center;
     width: 100%;
-    margin-top:10vh;
+    margin-top:7vh;
     font-family: 'lobster_1.3regular', 'montserratregular', 'Comic Sans MS', Helvetica, Arial, sans-serif;
 }
 
@@ -100,7 +99,7 @@ p, div {
 }
 
 #form-submit {
-    margin-top: 5vh;
+    margin-top: 3vh;
 }
 
 /* Page merci */
@@ -129,4 +128,22 @@ p, div {
 
 #logo_diese{
 
+}
+
+#legit{
+    top:87%;
+    position:absolute;
+    text-align:center;
+    font-size:0.6rem;
+    font-size:6;
+}
+
+#tab_legit{
+    font-size:0.7rem;
+    font-size:7;
+    top:93%;
+    position:absolute;
+    text-align:center;
+    color:red;
+    font-style:bold;
 }
