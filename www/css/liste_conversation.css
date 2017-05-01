@@ -1,5 +1,5 @@
 html {
-  font-size: 62.5%;
+	font-size: 62.5%;
 }
 
 #liste_conversation_main{
@@ -12,7 +12,7 @@ body{
 	background-position:fixed;
 }
 
-#add_convers{
+.add_convers{
 	top: 10%;
 	bottom: auto;
 	right:10%;
@@ -23,8 +23,6 @@ body{
 	height: 40px;
 	width: 40px;
 	/*background-image: url("../img/icons/BLANC/PNG/settings.png");*/
-
-	display:none;
 }
 
 .page_title{
@@ -63,20 +61,20 @@ body{
 */
 .liste_conversation
 {
-min-height:50vh;
-max-width:auto;
-/*background-color:green;*/
-/*margin-top:3vh;*/
+	min-height:50vh;
+	max-width:auto;
+	/*background-color:green;*/
+	/*margin-top:3vh;*/
 }
 
 .conversation
 {
-height:15vh;
-width:80vw;
-/*background-color:yellow;*/
-margin-left:auto;
-margin-right:auto;
-border-bottom:1px solid white;
+	height:15vh;
+	width:80vw;
+	/*background-color:yellow;*/
+	margin-left:auto;
+	margin-right:auto;
+	border-bottom:1px solid white;
 }
 
 /*.favoris_artiste_et_nbr_abo:last-child
