@@ -25,6 +25,7 @@ p{
 	position: relative;
 	transform-style: preserve-3d;
 }
+
 .photo_profil{
 	height:8.0rem;
 	width:8.0rem;
@@ -57,10 +58,78 @@ p{
 	Line-Height: 12pt;
 }
 
-.conversation{
+#conversation{
 	margin-top:18rem;
-	float:bottom;
-	width:100%;
+	width:90vw;
 	height:37rem;
-	/*background-color:pink;*/
+	overflow-y: scroll;
+}
+
+#conversation > div {
+	clear: both;
+	margin-bottom: 10px;
+	text-transform: none;
+}
+
+.system {
+	width: 90vw;
+	text-align: center;
+	float: left;
+	margin-top: 20px;
+	font-weight: bold;
+}
+
+.message {
+	display: table;
+}
+
+.time {
+	font-size: 12px;
+	font-weight: bold;
+	margin-top: 1.5em;
+}
+
+.content {
+	max-width: 35vw;
+	padding: .75em;
+	font-size: 18px;
+}
+
+.received, .received > div {
+	float: left;
+}
+
+.sent, .sent > div {
+	float: right;
+}
+
+.received > .content {
+	border: 1px solid #CBD0E2;
+	border-radius: 30px 30px 30px 0;
+}
+
+.sent > .content {
+	background-color: #CBD0E2;
+	border-radius: 30px 30px 0 30px;
+}
+
+.received > .time {
+	padding-right: 5px;
+}
+
+.sent > .time {
+	padding-left: 5px;
+}
+
+#new-message {
+	resize: none;
+	width: 70%;
+	height: 44px;
+}
+
+#send {
+	position: relative;
+	width: 20%;
+	top: -20px;
+	height: 50px;
 }
