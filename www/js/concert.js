@@ -184,8 +184,11 @@ function showBuddyModal(data, i){
     $('body').append(blocker+modal);
 
     $('#lets_talk').on('click', function(){
-        console.log("discutons");
-        $('#pop_up, #blocker').remove();
+        location.href = toPage('messagerie', {
+            type    : 'new_conv',
+            concert : get('id'),
+            to      : data[i].id
+        });
     });
 
     $('#sry_no').on('click', function(){

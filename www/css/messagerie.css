@@ -29,7 +29,8 @@ p{
 .photo_profil{
 	height:8.0rem;
 	width:8.0rem;
-	background-color:blue;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
 	border-radius:45px;
 	position: absolute;
 	top: 50%;
@@ -59,7 +60,7 @@ p{
 }
 
 #conversation{
-	margin-top:18rem;
+	margin-top:30vh;
 	width:90vw;
 	height:37rem;
 	overflow-y: scroll;

@@ -37,4 +37,8 @@ function updateConversationsView(data){
 
         list.append(item);
     }
+
+    $('.conversation').on('click', function(){
+        location.href = toPage('messagerie', {conv_id:$(this).attr('id')});
+    });
 }
