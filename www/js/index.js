@@ -53,8 +53,8 @@ $(function() {
         askDiese(
             'get/session',
             {
-                login    : $('#signin-login').val(),
-                password : sha1($('#signin-pass').val())
+                login    : $('#signin-login').val().toLowerCase(),
+                password : sha1($('#signin-pass').val().toLowerCase())
             },
             onLoad,
             onError
@@ -85,7 +85,7 @@ $(function() {
         }
 
         // verification login
-        var login      = $('#pseudo').val();
+        var login      = $('#pseudo').val().toLowerCase();
         var loginError = $('#info-pseudo');
         var loginRegex = /^[a-zA-Z0-9_]{3,16}$/;
 
@@ -96,7 +96,7 @@ $(function() {
         }
 
         // verification email
-        var email      = $('#email').val();
+        var email      = $('#email').val().toLowerCase();
         var emailError = $('#info-email');
         var emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
@@ -158,7 +158,6 @@ $(function() {
     $('.required').on('change', function(){
        $('#info-'+$(this).attr('id')).text('');
     });
-
 
 });
 /*
@@ -282,5 +281,5 @@ function addDocListener(){
     $('#charte_de_confidentialite').on('click', function(){
         openCharteConfi();
     });
-*/
 }
+         */
