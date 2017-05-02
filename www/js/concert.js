@@ -18,7 +18,7 @@ function getConcert(){
         $('#concert-name').text(data.title);
         $('#concert-venue').text(dateToStr(data.start_time)+', '+data.city);
         $('#banner').css({
-           'background' : 'url('+image+')'
+           'backgroundImage' : 'url('+image+')'
         });
         if(data.user_waiting){
             $('#stop-waiting').removeClass('hide');
@@ -217,7 +217,7 @@ function showNobodyModal(){
     $('#back_to_concert').on('click', function(){
         console.log("ajout liste");
         $('#pop_up, #blocker').remove();
-        openLoading('Désinscription en cours');
+        openLoading('Inscription en cours');
 
         askDiese(
             'create/waiting',

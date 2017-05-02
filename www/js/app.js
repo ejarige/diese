@@ -6,10 +6,15 @@ $(function(){
     addMenuListener();
 });
 
-function dateToStr(utc){
-    var date = new Date(utc);
+function dateToStr(utc, format){
+    var date = new Date(parseInt(utc));
 
-    return date.getDate()+'/'+(date.getMonth() > 9 ? '0' : '')+date.getMonth()+'/'+date.getFullYear();
+    switch(format){
+        case 'time':
+            return date.getHours()+':'+date.getMinutes();
+        default:
+            return (date.getDate() < 9 ? '0' : '')+date.getDate()+'/'+(date.getMonth()+1 < 9 ? '0' : '')+(+date.getMonth()+1)+'/'+date.getFullYear();
+    }
 }
 
 function askDiese(url, values, onSuccess, onError, retry){

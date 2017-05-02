@@ -15,14 +15,14 @@ $(function(){
 
 function getConv(convId){
     openLoading('Chargement des messages...');
-    $('#conversation').not('#new-message-warper').remove();
+    $('#conversation > *:not(#new-message-warper)').remove();
 
     var onLoad = function(e){
-        var data = $.parseJSON(data);
+        var data = $.parseJSON(e);
 
         var dayMap = {};
         for(var i in data){
-            var day = data[i].date - (data[i].date % 86400000);
+            var day = (data[i].date - data[i].date % 86400000);
             if(void 0 === dayMap[day]){
                 dayMap[day] = [data[i]];
             } else {
@@ -35,13 +35,13 @@ function getConv(convId){
         var user = getUserId();
         var conversation = '';
         for(var d in dayMap){
-            conversation += '<div class="system">'+d+'</div>';
+            conversation += '<div class="system">'+dateToStr(d)+'</div>';
             for(var m in dayMap[d]){
                 conversation += '<div class="message'
                     +(dayMap[d][m].sender_id == user ? ' sent' : ' received')
                     +'" id="'+dayMap[d][m].msg_id
                     +'">'
-                    +'<div class="time">'+dayMap[d][m].date+'</div>'
+                    +'<div class="time">'+dateToStr(dayMap[d][m].date, 'time')+'</div>'
                     +'<div class="content">'+dayMap[d][m].text+'</div>'
                     +'</div>';
             }
@@ -73,7 +73,7 @@ function getReceiverInfo(){
                 +concertData.title
                 +" le "+dateToStr(concertData.start_time)
                 +" à "+concertData.city+", "+concertData.venue_name+"."
-            ).focus();
+            ).data('name',concertData.title).focus();
 
             closeLoading();
         };
@@ -94,6 +94,7 @@ function addNewConvListener(){
         openLoading('Création de la conversation...');
 
         var onLoad = function(e){
+            console.log(e);
             location.href = toPage('messagerie', {conv_id:e});
         };
 
@@ -102,8 +103,10 @@ function addNewConvListener(){
             alert('Erreur, veuillez réessayer');
         };
 
+        var msg = $('#new-message');
         askDiese('create/conversation', {
-            name        : $("#receiver").text(),
+            text        : msg.val(),
+            name        : msg.data('name'),
             open        : false,
             user_ids    : get('to'),
             creator_id  : getUserId(),
@@ -115,10 +118,11 @@ function addNewConvListener(){
 
 function addConvListener(){
     $('#send').on('click', function(){
-        openLoading('Création de la conversation...');
+        openLoading('Envoi du message...');
 
         var onLoad = function(e){
-            location.href = toPage('messagerie', {conv_id:e});
+            closeLoading();
+            console.log('envoyé');
         };
 
         var onError = function(e){
