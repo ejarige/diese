@@ -18,7 +18,7 @@ function getConcert(){
         $('#concert-name').text(data.title);
         $('#concert-venue').text(dateToStr(data.start_time)+', '+data.city);
         $('#banner').css({
-           'background' : 'url('+image+')'
+           'backgroundImage' : 'url('+image+')'
         });
         if(data.user_waiting){
             $('#stop-waiting').removeClass('hide');
@@ -184,8 +184,11 @@ function showBuddyModal(data, i){
     $('body').append(blocker+modal);
 
     $('#lets_talk').on('click', function(){
-        console.log("discutons");
-        $('#pop_up, #blocker').remove();
+        location.href = toPage('messagerie', {
+            type    : 'new_conv',
+            concert : get('id'),
+            to      : data[i].id
+        });
     });
 
     $('#sry_no').on('click', function(){
@@ -214,7 +217,7 @@ function showNobodyModal(){
     $('#back_to_concert').on('click', function(){
         console.log("ajout liste");
         $('#pop_up, #blocker').remove();
-        openLoading('Désinscription en cours');
+        openLoading('Inscription en cours');
 
         askDiese(
             'create/waiting',
