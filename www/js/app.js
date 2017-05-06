@@ -6,20 +6,33 @@ $(function(){
     addMenuListener();
 });
 
-function dateToStr(utc){
-    var date = new Date(utc);
+function dateToStr(utc, format){
+    var date = new Date(parseInt(utc));
 
-    return date.getDate()+'/'+(date.getMonth() > 9 ? '0' : '')+date.getMonth()+'/'+date.getFullYear();
+    switch(format){
+        case 'time':
+            return date.getHours()+':'+date.getMinutes();
+        default:
+            return (date.getDate() < 9 ? '0' : '')+date.getDate()+'/'+(date.getMonth()+1 < 9 ? '0' : '')+(+date.getMonth()+1)+'/'+date.getFullYear();
+    }
 }
 
-function askDiese(url, values, onSuccess, onError){
-    console.log("Requesting " + url + ' with values ' + JSON.stringify(values));
+function askDiese(url, values, onSuccess, onError, retry){
+    if(!retry) retry = 1;
+    console.log('Try ' + retry +' : '+ url + ' with values ' + JSON.stringify(values));
+
     $.ajax({
         type      : 'POST',
         url       : DIESE_SERVICE+url+'.php',
         data      : values,
         success   : onSuccess,
-        error     : onError
+        error     : function(){
+            if(retry < 3){
+                askDiese(url, values, onSuccess, onError, retry+1);
+            } else {
+                onError();
+            }
+        }
     });
 }
 

@@ -16,7 +16,7 @@ function recupDataUser(){
 
     var onLoad = function(e){
         var data = $.parseJSON(e);
-        console.log(data, (data.length != 0));
+        console.log(data);
         closeLoading();
 
         if(data && (data.length != 0)){
