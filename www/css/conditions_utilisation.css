@@ -1,0 +1,16 @@
+.body{
+    padding-left:5vw;
+    overflow-y:scroll;
+}
+.titre{
+   text-align:center;
+    font-size:16px;
+    font-family: 'lobster_1.3regular', 'montserratregular', 'Comic Sans MS', Helvetica, Arial, sans-serif;
+}
+.gras{
+
+}
+.texte{
+    text-align:justify;
+    font-size:13px;
+}

@@ -10,7 +10,7 @@ body{
 }
 .title, h1, h2{
    text-align:center;
-    font-size:16px;
+    font-size:25px;
     font-family: 'lobster_1.3regular', 'montserratregular', 'Comic Sans MS', Helvetica, Arial, sans-serif;
 }
 
@@ -44,10 +44,11 @@ p{
 }
 
 .back_to_home{
-    margin-top:5vh;
-    left:40%;
-    color:red;
-    font-size:13px;
+    margin-top: 5vh;
+    color: red;
+    font-size: 13px;
     font-family: 'montserratregular', 'lobster_1.3regular', 'Comic Sans MS', Helvetica, Arial, sans-serif;
-    padding-bottom:5vh;
+    padding-bottom: 5vh;
+    text-align: center;
+    width:100%;
 }

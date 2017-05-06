@@ -1,6 +1,11 @@
 body{
     background-image: url("../img/home.jpg");
-    background-size: auto 100%;
+    background-size: 100% 100%;
+	/*overflow-y:scroll;*/
+	background-repeat:no-repeat;
+}
+.app{
+	/*overflow-y:scroll;*/
 }
 .hidden {
     display: none;
@@ -27,7 +32,8 @@ p, div {
     left: 15vw;
     position: absolute;
     text-transform: none;
-    margin-top:3vh;
+    margin-top:7vh;
+    /*overflow-y:scroll;*/
 }
 
 #app-intro-connexion {
@@ -68,13 +74,13 @@ p, div {
 }
 
 /* Inscription et Connexion*/
-.page-title, #page-connexion {
+#page-title, #page-connexion {
     font-size: 6vh;
     position:absolute;
     top: 4vh;
     text-align: center;
     width: 100%;
-    margin-top:7vh;
+    margin-top:12vh;
     font-family: 'lobster_1.3regular', 'montserratregular', 'Comic Sans MS', Helvetica, Arial, sans-serif;
 }
 
@@ -87,9 +93,13 @@ p, div {
 }
 
 #inscription input, #connexion input {
-    width: 100%;
+    /*width: 100%;*/
     padding: 10px 0;
     margin-bottom:3vh;
+}
+
+#firstname, #pass, #email, #pseudo, #signin-login, #signin-pass{
+    width:100%;
 }
 
 .infobox {
@@ -102,6 +112,22 @@ p, div {
     margin-top: 3vh;
 }
 
+#sexe{
+margin-top:2vh;
+}
+
+#accept_condition_label{
+float:right;
+  text-align: justify;
+  width:50vw;
+  margin-top:3vh;
+  margin-bottom:4vh;
+}
+#accept_condition_input{
+  float:left;
+  margin-top:7vh;
+  margin-left:8vw;
+}
 /* Page merci */
 #ty-and-bye * {
     position:absolute;
@@ -126,17 +152,13 @@ p, div {
     left: 20vw;
 }
 
-#logo_diese{
-
-}
-
-#legit{
+/*#legit{
     top:87%;
     position:absolute;
     text-align:center;
     font-size:0.6rem;
     font-size:6;
-}
+}*/
 
 #tab_legit{
     font-size:0.7rem;

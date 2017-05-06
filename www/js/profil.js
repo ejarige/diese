@@ -46,7 +46,7 @@ function afficherInfo(data){
     var infoLogin = data.login+' ('+data.prenom+')<br>' +data.age+' ans, '+data.lieu;
 
     $('#prenom_age_ville').html(infoLogin);
-    $('#photo').css({backgroundImage:'url('+data.avatar+')'})
+    $('#photo').css({backgroundImage:'url('+data.avatar+')'});
 
     if(PROFIL_DATA.id != getUserId()){
         $('#roue').remove();
@@ -67,14 +67,14 @@ function addEditListener(){
             +'<form id="edit-form">'
                 +'<label id="edit-avatar-label" for="edit-avatar"></label>'
                 +'<input id="edit-avatar" type="file">'
-                +'<label for="edit-name">Prénom :</label>'
+                +'<label for="edit-name" id="info-prenom">Prénom :</label>'
                 +'<input type="text" id="edit-name" maxlength="16"><br>'
-                +'<label for="edit-age">Age :</label>'
+                +'<label for="edit-age" id="info-age">Age :</label>'
                 +'<input type="number" id="edit-age" min="18" step="1" max="99"><br>'
-                +'<label for="edit-location">Ville :</label>'
+                +'<label for="edit-location" id="info-ville">Ville :</label>'
                 +'<input type="text" id="edit-location" maxlength="32">'
                 +'<div id="edit-actions">'
-                    +'<input type="submit" value="Valider">'
+                    +'<input type="submit" id ="valid" value="Valider">'
                     +'<input type="button" id="cancel" value="Annuler">'
                 +'</div>'
             +'</form>'

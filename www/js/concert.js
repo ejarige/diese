@@ -16,6 +16,8 @@ function getConcert(){
         ) : '';
 
         $('#concert-name').text(data.title);
+        /*Kévin a écrit ce truc juste en dessous*/
+        $('#favorite').css({backgroundImage:'url(./img/icons/BLANC/PNG/star.png'});
         $('#concert-venue').text(dateToStr(data.start_time)+', '+data.city);
         $('#banner').css({
            'background' : 'url('+image+')'
@@ -67,6 +69,7 @@ function getConcert(){
 
 function addConcertListener(){
     $('#favorite').on('click', function(){
+
         askDiese(
             'create/favorite',
             {
@@ -75,6 +78,9 @@ function addConcertListener(){
             },
             function(){
                 console.log("Favori ajouté !");
+                /*Kévin a écrit ça aussi*/
+                $('#annonce_add_to_fav').text('Ce concert a été ajouté à tes favoris');
+                $('#favorite').css({backgroundImage:'url(./img/icons/BLANC/PNG/white_star.png'});
             },
             function(e){
                 console.log("Error " + e);

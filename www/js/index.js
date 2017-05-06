@@ -159,7 +159,10 @@ $(function() {
        $('#info-'+$(this).attr('id')).text('');
     });
 
-
+    //Kévin a fait ça aussi
+    $('#sign-in').on('click', function(){
+        carousel.last();
+    });
 });
 /*
 function addDocListener(){
@@ -282,5 +285,5 @@ function addDocListener(){
     $('#charte_de_confidentialite').on('click', function(){
         openCharteConfi();
     });
-*/
-}
+
+}*/
