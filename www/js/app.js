@@ -15,7 +15,7 @@ function dateToStr(utc, format){
 
     switch(format){
         case 'time':
-            return date.getHours()+':'+date.getMinutes();
+            return (date.getHours() < 9 ? '0' : '')+date.getHours()+':'+(date.getMinutes() < 9 ? '0' : '')+date.getMinutes();
         case 'eventful':
             var from = utc.split(" ")[0].split("-");
             var finalDate = new Date(from[0], +from[1] - 1, from[2]);

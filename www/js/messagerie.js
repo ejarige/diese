@@ -5,6 +5,8 @@ $(function(){
     if(messageType && messageType == 'new_conv'){
         getReceiverInfo();
         addNewConvListener();
+
+        $('.bouton_lets_go_together').addClass('hide');
     } else if(convId){
         getConv(convId);
         addConvListener();
@@ -117,6 +119,10 @@ function addNewConvListener(){
 }
 
 function addConvListener(){
+    $('.bouton_lets_go_together').on('click', function(){
+       alert('SOON');
+    });
+
     $('#send').on('click', function(){
         openLoading('Envoi du message...');
 
