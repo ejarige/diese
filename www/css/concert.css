@@ -98,11 +98,11 @@ p {
 }
 
 #find-buddy {
-    background-color: green;
+    background-color: #33cccc;
 }
 
 #stop-waiting {
-    background-color: darkred;
+    background-color: #321b75;
 }
 
 #stop-waiting p, #find-buddy p {

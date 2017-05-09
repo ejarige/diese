@@ -114,7 +114,7 @@ function searchConcerts(append){
 }
 
 function addItem(event){
-    var mulan = "http://static1.purebreak.com/articles/5/11/12/55/@/481104-mulan-aura-le-droit-a-son-film-en-live-a-200x200-1.jpg";
+    var mulan = "http://diese.pe.hu/avatar/default-image-concert.jpg";
     var img = event.image != null ? event.image.large.url : mulan;
     var item = '<div class="concert" id="'+event.id+'" style="background-image:url('+img+')">'
         + '<div class="info">'
