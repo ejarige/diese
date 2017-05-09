@@ -1,50 +1,8 @@
-@font-face {
-    font-family: Montserrat;
-    src: url(font/Montserrat-Regular.ttf);
+body{
+    background-image: url("../img/home.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
-* {
-    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
-}
-
-body {
-    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
-    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
-    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
-
-    background-attachment:fixed;
-    font-family: 'Montserrat', 'Comic Sans MS', 'Comic Sans MS', Helvetica, Arial, sans-serif;
-    font-size:12px;
-    height:100%;
-    margin:0px;
-    padding:0px;
-    text-transform:uppercase;
-    width:100%;
-
-    color: #fff;
-    overflow-y: scroll;
-}
-
-/* Portrait layout (default) */
-.app {
-    background:url(../img/background-3000.jpg) no-repeat center top;
-    /*background-color: dodgerblue;*/
-    background-size: auto 100%;
-    height: 100vh;
-    width: 100vw;
-    position: absolute;
-}
-
-/* Landscape layout (with min-width) */
-@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
-    .app {
-        background-position:left center;
-        padding:75px 0px 75px 170px;  /* padding-top + padding-bottom + text area = image height */
-        margin:-90px 0px 0px -198px;  /* offset vertical: half of image height */
-        /* offset horizontal: half of image width and text area width */
-    }
-}
-
-/* CSS START */
 .hidden {
     display: none;
 }
@@ -69,8 +27,8 @@ p, div {
     width: 70vw;
     left: 15vw;
     position: absolute;
-    margin-top: 0;
     text-transform: none;
+    margin-top:3vh;
 }
 
 #app-intro-connexion {
@@ -82,10 +40,11 @@ p, div {
     right: 3vh;
     text-transform: none;
     text-align: right;
+    font-family: 'montserratregular', 'lobster_1.3regular', 'Comic Sans MS', Helvetica, Arial, sans-serif;
 }
 
 #app-intro-title {
-    top: 35vh;
+    top: 30vh;
     left: 10vw;
     position: absolute;
     font-size: 8vh;
@@ -109,24 +68,26 @@ p, div {
     text-align: center;
 }
 
-/* Inscription */
-.page-title {
+/* Inscription et Connexion*/
+#page-title, #page-connexion {
     font-size: 6vh;
     position:absolute;
-    top: 5vh;
+    top: 4vh;
     text-align: center;
     width: 100%;
+    margin-top:7vh;
+    font-family: 'lobster_1.3regular', 'montserratregular', 'Comic Sans MS', Helvetica, Arial, sans-serif;
 }
 
-#inscription {
+#inscription, #connexion {
     top:20vh;
 }
 
-#inscription label {
+#inscription label, #connexion label {
     font-size: 2vh;
 }
 
-#inscription input {
+#inscription input, #connexion input {
     width: 100%;
     padding: 10px 0;
     margin-bottom:3vh;
@@ -139,20 +100,7 @@ p, div {
 }
 
 #form-submit {
-    margin-top: 5vh;
-}
-
-#creating-account-content {
-    padding: 20px;
-}
-
-#creating-account-content p {
-    color: black;
-    text-transform: none;
-}
-
-#creating-account-progress {
-    float:left;
+    margin-top: 3vh;
 }
 
 /* Page merci */
@@ -177,4 +125,26 @@ p, div {
     top: 60vh;
     width: 60vw;
     left: 20vw;
+}
+
+#logo_diese{
+
+}
+
+#legit{
+    top:87%;
+    position:absolute;
+    text-align:center;
+    font-size:0.6rem;
+    font-size:6;
+}
+
+#tab_legit{
+    font-size:0.7rem;
+    font-size:7;
+    top:93%;
+    position:absolute;
+    text-align:center;
+    color:red;
+    font-style:bold;
 }
