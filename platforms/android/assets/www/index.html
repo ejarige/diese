@@ -9,6 +9,7 @@
 
         <link rel="stylesheet" type="text/css" href="onsen/css/onsenui.css">
         <link rel="stylesheet" type="text/css" href="onsen/css/onsen-css-components.css">
+        <link rel="stylesheet" type="text/css" href="css/overall.css">
         <link rel="stylesheet" type="text/css" href="css/index.css">
 
         <script type="text/javascript" src="cordova.js"></script>
@@ -19,6 +20,7 @@
         <script type="text/javascript" src="js/hammer.js"></script>
         <script type="text/javascript" src="js/jquery.hammer.js"></script>
         <script type="text/javascript" src="js/sha1.js"></script>
+        <script type="text/javascript" src="js/app.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
 
         <script>
@@ -37,7 +39,7 @@
                     <p class="page-content" id="app-intro-slide">Glisse pour continuer ><span class="shake ui-icon-arrow-r ui-btn-icon-right ui-icon"></span></p>
                 </ons-carousel-item>
                 <ons-carousel-item>
-                    <h1 class="page-title">Pré-inscription</h1>
+                    <h1 id="page-title">Pré-inscription</h1>
                     <form id="formulaire-inscription" method="post">
                         <p class="page-content"  id="inscription">
                             <label for="pseudo">Ton pseudo :<span class="infobox" id="info-pseudo"></span></label>
@@ -48,13 +50,50 @@
                             <input class="required" type="password" name="pass" id="pass" placeholder="Mot de passe" /><br/>
                             <label for="pseudo">Ton prénom <em>(optionnel)</em> :<span class="infobox" id="info-firstname"></span></label>
                             <input type="text" name="firstname" id="firstname" placeholder="Prénom" /><br/>
+                            <!--Indiquer votre sexe :<br />
+                            <input type="radio" name="sexe" value="femme" id="femme" /> <label for="femme">Femme</label>
+                            <input type="radio" name="sexe" value="autre" id="autre" /> <label for="autre">Autre</label>
+                            <input type="radio" name="sexe" value="homme" id="homme" /> <label for="homme">Homme</label>-->
+                            <label for="sexe">Sexe : </label>
+                            <select id="sexe">
+                                <option value="vide" name="sexe"></option>
+                                <option value="femme" name="sexe">Femme</option>
+                                <option value="home" name="sexe">Homme</option>
+                            </select><br>
                             <input class="button button--large" type="submit" id="form-submit" value="Envoyer" />
                         </p>
                     </form>
+                    <p id="legit">En m'inscrivant, je certifie avoir lu et accepter les différentes règles consultable ci-dessous :</p>
+                    <table id="tab_legit">
+                        <td>
+                            <a id="conditions_utilisation" href="conditions_utilisation.html">Conditions d'utilisation</a>
+                        </td>
+                        <td >
+                            <a id="mentions_legales" href="mentions_legales.html">Mentions légales</a>
+                        </td>
+                        <td>
+                            <a id="charte_du_bon_pote_de_concert" href="charte_du_bon_pote_de_concert.html">Charte du bon pote de concert</a>
+                        </td>
+                        <td>
+                            <a id="charte_de_confidentialite" href="charte_de_confidentialite.html">Charte de confidentialité</a>
+                        </td>
+                    </table>
                 </ons-carousel-item>
                 <ons-carousel-cover>
-                    <div id="sign-in"><b>Connexion</b></div>
+                    <a href="#page-connexion" id="sign-in"><b>Connexion</b></a>
                 </ons-carousel-cover>
+                <ons-carousel-item>
+                <h1 id="page-connexion">Connexion</h1>
+                <form id="formulaire-connexion" method="post">
+                <p class="page-content" id ="connexion">
+                    <label for="signin-login">Ton pseudo :<span class="infobox" id="info-signin-login"></span></label>
+                    <input class="required" type="text" name="pseudo" id="signin-login" placeholder="Pseudo" /><br/>
+                    <label for="signin-pass">Ton mot de passe :<span class="infobox" id="info-signin-pass"></span></label>
+                    <input class="required" type="password" name="pass" id="signin-pass" placeholder="Mot de passe" /><br/>
+                    <input id="signin-submit" class="button button--large" type="submit" value="Envoyer" />
+                        </p>
+                </form>
+                </ons-carousel-item>
             </ons-carousel>
             <div id="ty-and-bye" class="hidden">
                 <h1>Merci de ton inscription !</h1>
@@ -63,17 +102,6 @@
             </div>
         </div>
     </ons-page>
-
-    <ons-dialog id="creating-account">
-        <div id="creating-account-content">
-            <div id="creating-account-progress">
-                <svg class="progress-circular">
-                    <circle class="progress-circular__primary" cx="50%" cy="50%" r="40%" fill="none" stroke-width="10%" stroke-miterlimit="10"/>
-                </svg>
-            </div>
-            <p>Creation du compte...</p>
-        </div>
-    </ons-dialog>
 
     </body>
 </html>

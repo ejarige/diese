@@ -119,7 +119,7 @@ function addItem(event){
     var item = '<div class="concert" id="'+event.id+'" style="background-image:url('+img+')">'
         + '<div class="info">'
             + '<div class="artist">'+event.title+'</div>'
-            + '<div class="event">'+dateToStr(event.start_time)+', '+event.city_name+'</div>'
+            + '<div class="event">'+dateToStr(event.start_time, 'eventful')+', '+event.city_name+'</div>'
         + '</div>'
         + '</div>';
 
