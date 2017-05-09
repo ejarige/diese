@@ -90,10 +90,16 @@ function addEditListener(){
 
         $('#edit-avatar').on('change', function(){
             if (this.files && this.files[0]) {
+                var file = this.files[0];
                 var reader = new FileReader();
 
                 reader.onload = function (e) {
-                    $('#edit-avatar-label').css({backgroundImage:'url('+ e.target.result+')'});
+                    console.log(e.target);
+                    if (file.size>3000){
+                        alert("Votre avatar est trop grand");
+                    } else {
+                        $('#edit-avatar-label').css({backgroundImage:'url('+ e.target.result+')'});
+                    }
                 };
 
                 reader.readAsDataURL(this.files[0]);

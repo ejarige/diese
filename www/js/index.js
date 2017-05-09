@@ -119,7 +119,7 @@ $(function() {
         // callback erreur
         var onError = function(e){
             console.log(e);
-            if(e.status == 401){
+            if(void 0 === e){
                 var data = $.parseJSON(e.responseText);
                 closeLoading();
 
