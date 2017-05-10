@@ -9,11 +9,19 @@ $(function(){
 function dateToStr(utc, format){
     var date = new Date(parseInt(utc));
 
+    var fullDate = function(date){
+        return (date.getDate() < 9 ? '0' : '')+date.getDate()+'/'+(date.getMonth()+1 < 9 ? '0' : '')+(+date.getMonth()+1)+'/'+date.getFullYear();
+    };
+
     switch(format){
         case 'time':
-            return date.getHours()+':'+date.getMinutes();
+            return (date.getHours() < 9 ? '0' : '')+date.getHours()+':'+(date.getMinutes() < 9 ? '0' : '')+date.getMinutes();
+        case 'eventful':
+            var from = utc.split(" ")[0].split("-");
+            var finalDate = new Date(from[0], +from[1] - 1, from[2]);
+            return fullDate(finalDate);
         default:
-            return (date.getDate() < 9 ? '0' : '')+date.getDate()+'/'+(date.getMonth()+1 < 9 ? '0' : '')+(+date.getMonth()+1)+'/'+date.getFullYear();
+            return fullDate(date);
     }
 }
 

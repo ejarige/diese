@@ -4,9 +4,11 @@ body{
 	/*overflow-y:scroll;*/
 	background-repeat:no-repeat;
 }
-.app{
-	/*overflow-y:scroll;*/
+
+#inscription-item {
+    overflow-y: scroll;
 }
+
 .hidden {
     display: none;
 }
