@@ -6,6 +6,12 @@ $(function() {
         $('#ty-and-bye').addClass('hidden');
         $('ons-carousel-item').removeClass('hidden');
     });
+    /* Kévin here*/
+    $('#go-to-sign').on('click', function(){
+        $('#ty-and-bye').addClass('hidden');
+        $('ons-carousel-item').removeClass('hidden');
+        carousel.last();
+    });
 
     // CONNEXION
     $('#formulaire-connexion').on('submit', function(){

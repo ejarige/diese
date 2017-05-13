@@ -110,6 +110,7 @@ p {
     color:white;
     padding-left:3%;
     padding-right:3%;
+    padding-bottom:1vh;
     margin-top:2vh;
 }
 
@@ -197,4 +198,16 @@ p {
 
 #oui:hover , #non:hover{
     text-decoration: none;
+}
+
+#back_link{
+    font-family: 'montserratregular', 'lobster_1.3regular', 'Comic Sans MS', Helvetica, Arial, sans-serif;
+    text-decoration:none;
+    color: white;
+    font-weight: bold;
+    float:left;
+    position:absolute;
+    top:2vh;
+    left:3vw;
+    z-index: 998;
 }

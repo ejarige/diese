@@ -2,6 +2,9 @@ html {
 	font-size: 62.5%;
 }
 
+p{
+	font-family: 'montserratregular', 'lobster_1.3regular', 'Comic Sans MS', Helvetica, Arial, sans-serif;
+}
 #liste_conversation_main{
 	margin-top: 11vh;
 	text-transform : none;

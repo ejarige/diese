@@ -180,7 +180,7 @@ function showBuddyModal(data, i){
         +'<div id="prenom_age_ville"><p>'+data[i].login+', '+data[i].age+' ans, '+data[i].lieu+'</p></div>'
         +'</div>'
         +'<div id="presentation">'
-        +'<p>Voici '+data[i].login+' ! Il aime *data.musictag*, *data.musictag2* et son dernier concert était *data.last_concert*.</p>'
+        +'<p>Voici '+data[i].login+' ! Ses genres musicaux favoris sont : *data.musictag*, *data.musictag2* et son dernier concert était *data.last_concert*.</p>'
         +'</div>'
         +'<div id="lets_talk"><p>Discutons</p></div>'
         +'<div id="sry_no"><p>Non, pas tout de suite</p></div>'

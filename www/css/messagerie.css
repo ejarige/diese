@@ -1,8 +1,8 @@
+#conversation{
+	font-family: 'montserratregular', sans-serif;
+}
 html{
 	font-size: 62.5%;
-}
-p{
-	font-family: 'montserratregular', sans-serif;
 }
 .messagerie{
 	padding:2rem;
@@ -14,8 +14,8 @@ p{
 	font-weight: bold;
 	float:left;
 	position:absolute;
-	top:3rem;
-	left:4rem;
+	top:2vh;
+	left:3vw;
 	}
 
 .photo_et_prenom{
@@ -56,7 +56,10 @@ p{
 	margin-top: 6.5rem;
 	margin-right:2rem;
 	border-radius:20%;
-	Line-Height: 12pt;
+	line-Height: 12pt;
+	font-size:15px;
+	font-size:1.5rem;
+	font-family: 'montserratregular', 'lobster_1.3regular', 'Comic Sans MS', Helvetica, Arial, sans-serif;
 }
 
 #conversation{
@@ -126,6 +129,7 @@ p{
 	resize: none;
 	width: 70%;
 	height: 44px;
+	margin-top:3vh;
 }
 
 #send {

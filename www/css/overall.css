@@ -298,10 +298,12 @@ position:absolute;
 
 
 #loading-modal {
-    padding: 40px 0 0 30px;
+    padding: 14px 0 0 13px;
 }
 
 #loading-modal p {
+    margin-left:18vw;
+    margin-top: 7vw;
     color: black;
     text-transform: none;
 }
