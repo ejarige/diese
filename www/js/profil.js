@@ -2,6 +2,7 @@
  * Created by kgaillar on 29/03/2017.
  */
 var PROFIL_DATA = {id:''};
+var CATEGORIES;
 
 $(function(){
     recupDataUser();
@@ -62,92 +63,26 @@ function preFillForm(data){
 
 function addEditListener(){
     var openSettings = function(){
+        var categories = '';
+        for(var i in CATEGORIES)
+            categories += '<div class="category" data-value="'+CATEGORIES[i].eventful_id+'">'
+                +CATEGORIES[i].alias+'</div>';
+
         var modal = '<div id="edit-profile">'
             +'<h1>Modifier mon profil</h1>'
             +'<form id="edit-form">'
                 +'<label id="edit-avatar-label" for="edit-avatar"></label>'
                 +'<input id="edit-avatar" type="file">'
-                +'<label for="edit-name" id="info-prenom">Prénom :</label>'
-                +'<input type="text" id="edit-name" maxlength="16"><br>'
-                +'<label for="edit-age" id="info-age">Age :</label>'
-                +'<input type="number" id="edit-age" min="18" step="1" max="99"><br>'
-                +'<label for="edit-location" id="info-ville">Ville :</label>'
-                +'<input type="text" id="edit-location" maxlength="32"><br>'
-                +'<label for="edit-tags1" id="info-tags1">Tags 1 :</label>'
-                +'<select name="tags1" id="tags1">'
-                +'<option value="vide"></option>'
-                +'<option value="Alternatif">Alternatif</option>'
-                +'<option value="Blues">Blues</option>'
-                +'<option value="Classique">Classique</option>'
-                +'<option value="Country">Country</option>'
-                +'<option value="Dance">Dance</option>'
-                +'<option value="Electro">Electro</option>'
-                +'<option value="Enfants">Enfants</option>'
-                +'<option value="Folk">Folk</option>'
-                +'<option value="Hip Hop/Rap">Hip Hop/Rap</option>'
-                +'<option value="Jazz">Jazz</option>'
-                +'<option value="Latino">Latino</option>'
-                +'<option value="Metal">Metal</option>'
-                +'<option value="Opera">Opéra</option>'
-                +'<option value="Pop">Pop</option>'
-                +'<option value="R&B/Soul">R&B/Soul</option>'
-                +'<option value="Reggae">Reggae</option>'
-                +'<option value="Religieux">Religieux</option>'
-                +'<option value="Rock">Rock</option>'
-                +'<option value="Variete">Variete</option>'
-                +'<option value="Vocale">Vocale</option>'
-                +'<option value="World">World</option>'
-                +'</select><br>'
-                +'<label for="edit-tags2" id="info-tags2">Tags 2 :</label>'
-                +'<select name="tags2" id="tags2">'
-                +'<option value="vide"></option>'
-                +'<option value="Alternatif">Alternatif</option>'
-                +'<option value="Blues">Blues</option>'
-                +'<option value="Classique">Classique</option>'
-                +'<option value="Country">Country</option>'
-                +'<option value="Dance">Dance</option>'
-                +'<option value="Electro">Electro</option>'
-                +'<option value="Enfants">Enfants</option>'
-                +'<option value="Folk">Folk</option>'
-                +'<option value="Hip Hop/Rap">Hip Hop/Rap</option>'
-                +'<option value="Jazz">Jazz</option>'
-                +'<option value="Latino">Latino</option>'
-                +'<option value="Metal">Metal</option>'
-                +'<option value="Opera">Opéra</option>'
-                +'<option value="Pop">Pop</option>'
-                +'<option value="R&B/Soul">R&B/Soul</option>'
-                +'<option value="Reggae">Reggae</option>'
-                +'<option value="Religieux">Religieux</option>'
-                +'<option value="Rock">Rock</option>'
-                +'<option value="Variete">Variete</option>'
-                +'<option value="Vocale">Vocale</option>'
-                +'<option value="World">World</option>'
-                +'</select><br>'
-                +'<label for="edit-tags3" id="info-tags3">Tags 3 :</label>'
-                +'<select name="tags3" id="tags3">'
-                +'<option value="vide"></option>'
-                +'<option value="Alternatif">Alternatif</option>'
-                +'<option value="Blues">Blues</option>'
-                +'<option value="Classique">Classique</option>'
-                +'<option value="Country">Country</option>'
-                +'<option value="Dance">Dance</option>'
-                +'<option value="Electro">Electro</option>'
-                +'<option value="Enfants">Enfants</option>'
-                +'<option value="Folk">Folk</option>'
-                +'<option value="Hip Hop/Rap">Hip Hop/Rap</option>'
-                +'<option value="Jazz">Jazz</option>'
-                +'<option value="Latino">Latino</option>'
-                +'<option value="Metal">Metal</option>'
-                +'<option value="Opera">Opéra</option>'
-                +'<option value="Pop">Pop</option>'
-                +'<option value="R&B/Soul">R&B/Soul</option>'
-                +'<option value="Reggae">Reggae</option>'
-                +'<option value="Religieux">Religieux</option>'
-                +'<option value="Rock">Rock</option>'
-                +'<option value="Variete">Variete</option>'
-                +'<option value="Vocale">Vocale</option>'
-                +'<option value="World">World</option>'
-                +'</select><br>'
+                +'<div id="edit-fields">'
+                    +'<label for="edit-name" id="info-prenom">Prénom :</label><br>'
+                    +'<input type="text" id="edit-name" maxlength="16"><br>'
+                    +'<label for="edit-age" id="info-age">Age :</label><br>'
+                    +'<input type="number" id="edit-age" min="18" step="1" max="99"><br>'
+                    +'<label for="edit-location" id="info-ville">Ville :</label><br>'
+                    +'<input type="text" id="edit-location" maxlength="32">'
+                    +'<div id="genre_music" class="title">Tes genres musicaux</div><br>'
+                    +'<div id="categories">'+categories+'</div>'
+                +'</div>'
                 +'<div id="edit-actions">'
                     +'<input type="submit" id ="valid" value="Valider">'
                     +'<input type="button" id="cancel" value="Annuler">'
@@ -156,6 +91,10 @@ function addEditListener(){
             +'</div>';
 
         $('body').append(modal);
+
+        $('.category').on('click', function(){
+            $(this).toggleClass('selected');
+        });
 
         preFillForm(PROFIL_DATA.data);
 
@@ -229,11 +168,29 @@ function addEditListener(){
             opacity: 0
         }, 'normal', function(){
             $(this).remove();
+            $('#back_link').show();
         });
     };
 
     $('#roue').on('click', function(){
-        openSettings();
+        $('#back_link').hide();
+        if(void 0 === CATEGORIES){
+            openLoading('Récupération des tags...');
+            askDiese(
+                'get/categories', {},
+                function(e){
+                    closeLoading();
+                    CATEGORIES = $.parseJSON(e);
+                    openSettings();
+                },
+                function(e){
+                    closeLoading();
+                    console.log('Erreur '+e);
+                }
+            )
+        } else {
+            openSettings();
+        }
     });
 }
 

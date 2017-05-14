@@ -1,6 +1,8 @@
 // fonctions de l'appli
 var DIESE_SERVICE = 'http://diese.pe.hu/services/';
 
+document.addEventListener("deviceready", onDeviceReady, false);
+
 $(function(){
     console.log("Connecté avec user " + getUserId());
     addMenuListener();
@@ -133,4 +135,11 @@ function getUserId(){
     } else {
         window.location.href = 'index.html';
     }
+}
+function onDeviceReady() {
+    document.addEventListener("backbutton", onBackKeyDown, false);
+}
+
+function onBackKeyDown() {
+    alert('lel');
 }

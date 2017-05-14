@@ -172,6 +172,7 @@
 	z-index: 100;
 	text-align:center;
 	font-family: 'montserratregular', 'lobster_1.3regular', 'Comic Sans MS', Helvetica, Arial, sans-serif;
+	overflow-y: scroll;
 }
 
 #edit-profile h1 {
@@ -194,39 +195,28 @@
 	background-size: 100% 100%;
 	margin: 20px auto;
 }
-#edit-form input {
 
+#edit-fields {
+	margin-left: 5vw;
+	width: 90vw;
+	text-align: left;
 }
 
-#info-prenom{
-	margin-right:2vw;
+#edit-fields input {
+	color: #fff;
+	width: 90vw;
+	border: none;
+	font-size: 22px;
+	border-bottom: solid 1px darkslategrey;
+	background-color: transparent;
+	margin-bottom: 15px;
 }
-#info-age{
-	margin-right:2vw;
+
+#edit-fields input:focus {
+	border-color: #fff;
 }
-#info-ville{
-	margin-right:2vw;
-}
-#edit-name{
-	/*margin-right:2vw;*/
-	width: 60%;
-	padding: 10px 0;
-	margin-bottom:3vh;
-}
-#edit-age{
-	/*margin-right:2vw;*/
-	margin-left:5vw;
-	width: 60%;
-	padding: 10px 0;
-	margin-bottom:3vh;
-}
-#edit-location{
-	/*margin-right:2vw;*/
-	margin-left:4vw;
-	width: 60%;
-	padding: 10px 0;
-	margin-bottom:3vh;
-}
+
+
 /*#edit-profile label, #edit-name label, #edit-name label, #edit-age label, #edit-location label{
 	margin-right:5vw;
 }*/
@@ -252,6 +242,37 @@
 	right:75vw;
 	position:absolute;
 }*/
+
+label, .title {
+	position:relative;
+	margin-top: 15px;
+	width:90vw;
+	text-align: left;
+	font-weight: bold;
+	text-transform: none;
+	font-size: 18px;
+}
+
+#categories{
+	width: 90vw;
+	display:table;
+}
+
+.category{
+	border-radius: 45px;
+	border: 1px solid #fff;
+	display: table-cell;
+	padding: 2px 5px;
+	margin:  5px 3px;
+	float:left;
+	text-transform: capitalize;
+	font-weight: bold;
+}
+
+.category.selected {
+	background-color: #CAD5E4;
+}
+
 #valid{
 	background-color:white;
 	color: #33cccc;
@@ -282,3 +303,4 @@
 	margin-bottom:3vh;
 	margin-top: 3vh;
 }
+

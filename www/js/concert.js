@@ -17,7 +17,9 @@ function getConcert(){
 
         $('#concert-name').text(data.title);
         /*Kévin a écrit ce truc juste en dessous*/
-        $('#favorite').css({backgroundImage:'url(./img/icons/BLANC/PNG/star.png'});
+        if(data.favorite){
+            $('#favorite').css({backgroundImage:'url(./img/icons/BLANC/PNG/white_star.png'});
+        }
         $('#concert-venue').text(dateToStr(data.start_time)+', '+data.city);
         $('#banner').css({
            'backgroundImage' : 'url('+image+')'
