@@ -6,6 +6,12 @@ $(function() {
         $('#ty-and-bye').addClass('hidden');
         $('ons-carousel-item').removeClass('hidden');
     });
+    /* Kévin here*/
+    $('#go-to-sign').on('click', function(){
+        $('#ty-and-bye').addClass('hidden');
+        $('ons-carousel-item').removeClass('hidden');
+        carousel.last();
+    });
 
     // CONNEXION
     $('#formulaire-connexion').on('submit', function(){
@@ -159,6 +165,10 @@ $(function() {
        $('#info-'+$(this).attr('id')).text('');
     });
 
+    //Kévin a fait ça aussi
+    $('#sign-in').on('click', function(){
+        carousel.last();
+    });
 });
 /*
 function addDocListener(){
@@ -281,5 +291,6 @@ function addDocListener(){
     $('#charte_de_confidentialite').on('click', function(){
         openCharteConfi();
     });
-}
-         */
+<<<<<<< HEAD
+
+}*/

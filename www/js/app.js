@@ -1,5 +1,6 @@
 // fonctions de l'appli
 var DIESE_SERVICE = 'http://diese.pe.hu/services/';
+//var DIESE_SERVICE = 'http://diese-app.ouvaton.org/services/';
 
 $(function(){
     console.log("Connecté avec user " + getUserId());
