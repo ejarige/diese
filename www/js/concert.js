@@ -68,10 +68,10 @@ function getConcert(){
             $('#find-buddy').removeClass('hide');
         }
 
-        for(var i in data.friends_waiting){
+        for(var i in data.friend_waiting){
             $('#friends-list').append(
-                '<div data-id="'+data.friends_waiting[i].id+'" class="item" '
-                + ' style="background-image: url('+data.friends_waiting[i].avatar+')">'
+                '<div data-id="'+data.friend_waiting[i].id+'" class="item" '
+                + ' style="background-image: url('+data.friend_waiting[i].avatar+')">'
             )
         }
 

@@ -21,9 +21,16 @@ function getConv(convId){
 
     var onLoad = function(e){
         var data = $.parseJSON(e);
+        console.log(data);
 
         var dayMap = {};
         for(var i in data){
+            if(i == 'open'){
+                $('.bouton_lets_go_together').hide();
+                $('#open_concert').show().data('id', data.concert_id);
+                break;
+            }
+
             var day = (data[i].date - data[i].date % 86400000);
             if(void 0 === dayMap[day]){
                 dayMap[day] = [data[i]];
@@ -120,7 +127,24 @@ function addNewConvListener(){
 
 function addConvListener(){
     $('.bouton_lets_go_together').on('click', function(){
-       alert('SOON');
+        openLoading('Chargement...');
+        var onLoad = function(e){
+            closeLoading();
+            console.log('go');
+            alert('Vous allez au concert ensemble !');
+            location.reload();
+        };
+
+        var onError = function(e){
+            console.log('Erreur '+e);
+            alert('Erreur, veuillez réessayer');
+        };
+
+        askDiese('edit/conversation', {conv_id:get('conv_id')}, onLoad, onError)
+    });
+
+    $('#open_concert').on('click', function(){
+        location.href = toPage('concert', {id:$(this).data('id')});
     });
 
     $('#send').on('click', function(){
