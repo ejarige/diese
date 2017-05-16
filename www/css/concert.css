@@ -167,9 +167,30 @@ p {
     z-index: 999;
 }
 
-#pop_up p{
+#pop_up p {
     text-align:center;
     padding : 5%;
+}
+
+#presentation p {
+    padding: 0;
+}
+
+#categories{
+    width: 90vw;
+    display:table;
+}
+
+.category{
+    border-radius: 45px;
+    border: 1px solid #31669D;
+    display: table-cell;
+    padding: 2px 5px;
+    margin:  5px 3px;
+    float:left;
+    text-transform: capitalize;
+    color: #31669D;
+    font-size: 14px;
 }
 
 #tarplu{

@@ -200,7 +200,19 @@ function showBuddyModal(data, i){
         +'<div id="prenom_age_ville"><p>'+data[i].login+', '+data[i].age+' ans, '+data[i].lieu+'</p></div>'
         +'</div>'
         +'<div id="presentation">'
-        +'<p>Voici '+data[i].login+' ! Ses genres musicaux favoris sont : *data.musictag*, *data.musictag2* et son dernier concert était *data.last_concert*.</p>'
+        +'<p>Voici '+data[i].login
+        +'!<br><em>Ses goûts musicaux :</em>';
+
+    if(data[i].tags.length){
+        var categories = '';
+
+        for(var j in data[i].tags)
+            categories += '<div class="category">'+data[i].tags[j].alias+'</div>';
+
+        modal += '<div id="categories">'+categories+'</div>';
+    }
+
+    modal += '</p>'
         +'</div>'
         +'<div id="lets_talk"><p>Discutons</p></div>'
         +'<div id="sry_no"><p>Non, pas tout de suite</p></div>'
