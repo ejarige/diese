@@ -311,3 +311,7 @@ position:absolute;
 #loading-progress {
     float:left;
 }
+
+::-webkit-scrollbar {
+    display:none;
+}

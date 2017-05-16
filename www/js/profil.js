@@ -63,9 +63,17 @@ function preFillForm(data){
 
 function addEditListener(){
     var openSettings = function(){
+        var isFav = function(id){
+            for(var tag in PROFIL_DATA.data.user_tags)
+                if(id == PROFIL_DATA.data.user_tags[tag].category_id)
+                    return true;
+            return false
+        };
+
         var categories = '';
         for(var i in CATEGORIES)
-            categories += '<div class="category" data-value="'+CATEGORIES[i].eventful_id+'">'
+            categories += '<div class="category'
+                +(isFav(CATEGORIES[i].eventful_id) ? ' selected' : '')+'" data-value="'+CATEGORIES[i].eventful_id+'">'
                 +CATEGORIES[i].alias+'</div>';
 
         var modal = '<div id="edit-profile">'
