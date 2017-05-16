@@ -69,26 +69,41 @@
 }
 
 .rectangle{
-	margin-left:12vw;
-	margin-top:10vh;
-	width:40vw;
-	height:29vh;
+	/*margin-left:12vw;*/
+	margin-top:12vh;
+	width:auto;
+	height:auto;
 	position:relative;
+	/*background-color:red;*/
 }
 
+.haut_de_page{
+	width: auto;
+	height:25vh;
+}
 #photo{
 	background-repeat:no-repeat;
 	background-size: 100% 100%;
 	height:18vh;
 	width:32vw;
-	/*background-color:blue;*/
 	border-radius:45px;
-	position: absolute;
+
+	/*Photo à gauche et prenom_age_ville l'un en dessous de l'autre*/
+	/*float:left;
+	margin-top:3vh;
+	margin-left:8vw;*/
+
+	/*Photo au dessus et prenom_age_ville en dessous*/
+	margin-left:auto;
+	margin-right:auto;
+
+	/*margin-left:auto;
+	margin-right:auto;
+	background-color:blue;
 	top: 35%;
 	left: 45%;
-	transform: translate(-50%, -50%); /* compatibilité : ie9+ */
-
-	/*height:100px;
+	transform: translate(-50%, -50%);
+	height:100px;
 	width:100px;
 	position:relative;
 	display: inline-block;
@@ -100,17 +115,27 @@
 }
 
 #prenom_age_ville{
-
-	position: absolute;
-	margin-top:5vh;
-	top: 80%;
-	left: 47%;
-	transform: translate(-50%, -50%); /* compatibilité : ie9+ */
+	height:auto;
+	width:37vw;
 	font-family: 'montserratregular', 'lobster_1.3regular', 'Comic Sans MS', Helvetica, Arial, sans-serif;
 	text-align: center;
 	line-height:1.4;
 	font-size:3vh;
-	width:35vw;
+
+	/*Photo à gauche et prenom_age_ville l'un en dessous de l'autre*/
+	/*float:right;
+	margin-top:4vh;
+	margin-right:10vw;*/
+
+	/*Photo au dessus et prenom_age_ville en dessous*/
+	margin-left:auto;
+	margin-right:auto;
+
+	/*margin-left:auto;
+	margin-right:auto;
+	background-color:red;
+	top: 12vh;
+	transform: translate(-50%, -50%); */
 }
 
 #roue{
@@ -172,7 +197,7 @@
 	z-index: 100;
 	text-align:center;
 	font-family: 'montserratregular', 'lobster_1.3regular', 'Comic Sans MS', Helvetica, Arial, sans-serif;
-	overflow-y: scroll;
+	overflow-y:scroll;
 }
 
 #edit-profile h1 {
@@ -195,28 +220,48 @@
 	background-size: 100% 100%;
 	margin: 20px auto;
 }
+#edit-form input {
 
-#edit-fields {
-	margin-left: 5vw;
-	width: 90vw;
-	text-align: left;
 }
 
-#edit-fields input {
-	color: #fff;
-	width: 90vw;
-	border: none;
-	font-size: 22px;
-	border-bottom: solid 1px darkslategrey;
-	background-color: transparent;
-	margin-bottom: 15px;
+#info-prenom{
+	margin-right:2vw;
 }
-
-#edit-fields input:focus {
-	border-color: #fff;
+#info-age{
+	margin-right:2vw;
 }
-
-
+#info-ville{
+	margin-right:2vw;
+}
+#info-tags1, #info-tags2, #info-tags3{
+	margin-right:2vw;
+}
+#tags1, #tags2, #tags3{
+	/*margin-right:2vw;*/
+	width: 60%;
+	padding: 10px 0;
+	margin-bottom:3vh;
+}
+#edit-name{
+	/*margin-right:2vw;*/
+	width: 60%;
+	padding: 10px 0;
+	margin-bottom:3vh;
+}
+#edit-age{
+	/*margin-right:2vw;*/
+	margin-left:5vw;
+	width: 60%;
+	padding: 10px 0;
+	margin-bottom:3vh;
+}
+#edit-location{
+	/*margin-right:2vw;*/
+	margin-left:4vw;
+	width: 60%;
+	padding: 10px 0;
+	margin-bottom:3vh;
+}
 /*#edit-profile label, #edit-name label, #edit-name label, #edit-age label, #edit-location label{
 	margin-right:5vw;
 }*/
@@ -242,37 +287,6 @@
 	right:75vw;
 	position:absolute;
 }*/
-
-label, .title {
-	position:relative;
-	margin-top: 15px;
-	width:90vw;
-	text-align: left;
-	font-weight: bold;
-	text-transform: none;
-	font-size: 18px;
-}
-
-#categories{
-	width: 90vw;
-	display:table;
-}
-
-.category{
-	border-radius: 45px;
-	border: 1px solid #fff;
-	display: table-cell;
-	padding: 2px 5px;
-	margin:  5px 3px;
-	float:left;
-	text-transform: capitalize;
-	font-weight: bold;
-}
-
-.category.selected {
-	background-color: #CAD5E4;
-}
-
 #valid{
 	background-color:white;
 	color: #33cccc;
@@ -303,4 +317,13 @@ label, .title {
 	margin-bottom:3vh;
 	margin-top: 3vh;
 }
-
+#back_link{
+	font-family: 'montserratregular', 'lobster_1.3regular', 'Comic Sans MS', Helvetica, Arial, sans-serif;
+	text-decoration:none;
+	color: white;
+	font-weight: bold;
+	float:left;
+	position:absolute;
+	top:2vh;
+	left:3vw;
+}
