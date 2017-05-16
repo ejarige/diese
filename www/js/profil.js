@@ -60,7 +60,7 @@ function afficherInfo(data){
         for(var j in data.user_tags)
             categories += '<div class="tag">'+data.user_tags[j].alias+'</div>';
 
-        $('#ligne-favori').append(categories);
+        $('#ligne-favori').html(categories);
     }
 
 }
