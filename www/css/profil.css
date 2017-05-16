@@ -176,6 +176,22 @@
 	color:white;
 	font-family: 'montserratregular', 'lobster_1.3regular', 'Comic Sans MS', Helvetica, Arial, sans-serif;
 }
+
+#ligne-favori {
+	margin-left: 5vw;
+}
+
+.tag{
+	border-radius: 45px;
+	border: 1px solid #292929;
+	color: #292929;
+	display: table-cell;
+	padding: 2px 5px;
+	margin:  5px 3px;
+	float:left;
+	text-transform: capitalize;
+}
+
 /* EDIT MODAL */
 #edit-profile {
 	height: 0;

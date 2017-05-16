@@ -52,6 +52,17 @@ function afficherInfo(data){
     if(PROFIL_DATA.id != getUserId()){
         $('#roue').remove();
     }
+
+    // tags
+    if(data.user_tags.length){
+        var categories = '';
+
+        for(var j in data.user_tags)
+            categories += '<div class="tag">'+data.user_tags[j].alias+'</div>';
+
+        $('#ligne-favori').append(categories);
+    }
+
 }
 
 function preFillForm(data){
