@@ -130,6 +130,11 @@ function addEditListener(){
             form.append('ville',    $('#edit-location').val());
             form.append('avatar',   $('#edit-avatar').prop('files')[0]);
             form.append('userId',   getUserId());
+            form.append('categories',
+                $('.selected').map( function() {
+                    return $(this).data('value');
+                }).get().join(",")
+            );
 
             $.ajax({
                 url: DIESE_SERVICE+'edit/profile.php',

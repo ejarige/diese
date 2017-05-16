@@ -18,8 +18,46 @@ function getConcert(){
         $('#concert-name').text(data.title);
         /*Kévin a écrit ce truc juste en dessous*/
         if(data.favorite){
-            $('#favorite').css({backgroundImage:'url(./img/icons/BLANC/PNG/white_star.png'});
+            $('#favorite')
+                .css({backgroundImage:'url(./img/icons/BLANC/PNG/white_star.png'})
+                .on('click', function(){
+                   askDiese(
+                       'remove/favorite',
+                       {
+                           user_id: getUserId(),
+                           concert_id: get('id')
+                       },
+                       function(e){
+                           $('#annonce_add_to_fav').text('Ce concert a été retiré de tes favoris');
+                           $('#favorite').css({backgroundImage:'url(./img/icons/BLANC/PNG/star.png'})
+                       },
+                       function(e){
+                           console.log('Erreur ' + e);
+                       }
+                   )
+                });
+        } else {
+
+            $('#favorite').on('click', function(){
+                askDiese(
+                    'create/favorite',
+                    {
+                        user_id: getUserId(),
+                        concert_id: get('id')
+                    },
+                    function(){
+                        console.log("Favori ajouté !");
+                        /*Kévin a écrit ça aussi*/
+                        $('#annonce_add_to_fav').text('Ce concert a été ajouté à tes favoris');
+                        $('#favorite').css({backgroundImage:'url(./img/icons/BLANC/PNG/white_star.png'});
+                    },
+                    function(e){
+                        console.log("Error " + e);
+                    }
+                )
+            });
         }
+
         $('#concert-venue').text(dateToStr(data.start_time)+', '+data.city);
         $('#banner').css({
            'backgroundImage' : 'url('+image+')'
@@ -70,26 +108,6 @@ function getConcert(){
 }
 
 function addConcertListener(){
-    $('#favorite').on('click', function(){
-
-        askDiese(
-            'create/favorite',
-            {
-                user_id: getUserId(),
-                concert_id: get('id')
-            },
-            function(){
-                console.log("Favori ajouté !");
-                /*Kévin a écrit ça aussi*/
-                $('#annonce_add_to_fav').text('Ce concert a été ajouté à tes favoris');
-                $('#favorite').css({backgroundImage:'url(./img/icons/BLANC/PNG/white_star.png'});
-            },
-            function(e){
-                console.log("Error " + e);
-            }
-        )
-    });
-
     $('#find-buddy').on('click', function(){
         var loading = '<p id="patience">Patience !</p>'
                     +'<p id="recherche_en_cours"> On recherche ton pote de concert idéal !</p>';
